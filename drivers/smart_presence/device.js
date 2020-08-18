@@ -7,7 +7,6 @@ const Network = require('../../lib/network');
 module.exports = class SmartPresenceDevice extends Homey.Device {
 
   async onInit() {
-    this.log('device initialized');
   }
 
   getHost() {
@@ -15,7 +14,8 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   getPort() {
-    return '443'
+    const numbers = ['1', '32000'];
+    return numbers[Math.floor(Math.random() * numbers.length)];
   }
 
   getTimeout() {
@@ -54,18 +54,19 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     try {
       if (!this._scanning) {
         this._scanning = true;
-        this.log(`${this.toString()}: scanning...`);
+        const port = this.getPort();
+        //this.log(`${this.getHost()}:${port}: scanning...`);
         const client = new Network({ log: this.log });
-        client.scan(this.getHost(), this.getPort(), this.getTimeout())
+        client.scan(this.getHost(), port, this.getTimeout())
           .then(result => {
             this.updateLastSeen();
             this.setPresent(true);
-            this.log(`${this.toString()}: online`);
+            //this.log(`${this.getHost()}:${port}: online`);
             this._scanning = false;
           })
           .catch(err => {
             this.setPresent(false);
-            this.log(`${this.toString()}: offline:`, err.message);
+            //this.log(`${this.getHost()}:${port}: offline:`, err.message);
             this._scanning = false;
           });
       }
@@ -78,6 +79,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     const currentPresent = this.getCapabilityValue('onoff');
 
     if (present && !currentPresent) {
+      this.log(`${this.getHost()} - ${this.getDeviceName()}: is online`);
       await this.setCapabilityValue('onoff', present);
       Homey.app.deviceArrived(this);
       Homey.app.userEnteredTrigger.trigger(this, this.getFlowCardTokens(), {});
@@ -88,22 +90,31 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
       if (this.isGuest()) {
         Homey.app.guestArrivedTrigger.trigger(this.getFlowCardTokens(), {});
       }
-    } else if (!present && currentPresent && !this.shouldDelayAwayStateSwitch()) {
-      await this.setCapabilityValue('onoff', present);
-      Homey.app.deviceLeft(this);
-      Homey.app.userLeftTrigger.trigger(this, this.getFlowCardTokens(), {});
-      Homey.app.someoneLeftTrigger.trigger(this.getFlowCardTokens(), {});
-      if (this.isHouseHoldMember()) {
-        Homey.app.householdMemberLeftTrigger.trigger(this.getFlowCardTokens(), {});
-      }
-      if (this.isGuest()) {
-        Homey.app.guestLeftTrigger.trigger(this.getFlowCardTokens(), {});
+    } else if (!present && currentPresent) {
+      if (!this.shouldDelayAwayStateSwitch()) {
+        this.log(`${this.getHost()} - ${this.getDeviceName()}: is marked as offline`);
+        await this.setCapabilityValue('onoff', present);
+        Homey.app.deviceLeft(this);
+        Homey.app.userLeftTrigger.trigger(this, this.getFlowCardTokens(), {});
+        Homey.app.someoneLeftTrigger.trigger(this.getFlowCardTokens(), {});
+        if (this.isHouseHoldMember()) {
+          Homey.app.householdMemberLeftTrigger.trigger(this.getFlowCardTokens(), {});
+        }
+        if (this.isGuest()) {
+          Homey.app.guestLeftTrigger.trigger(this.getFlowCardTokens(), {});
+        }
+      } else {
+        this.log(`${this.getHost()} - ${this.getDeviceName()}: is offline`);
       }
     }
   }
 
+  getDeviceName() {
+    return this.getSetting('name') || this.getName();
+  }
+
   getFlowCardTokens() {
-    return { who: this.getSetting('name') || this.getName() };
+    return { who: this.getDeviceName() };
   }
 
   async userAtHome() {
@@ -111,10 +122,6 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   clearTimers() {
-  }
-
-  toString() {
-    return `${this.getHost()}:${this.getPort()}`;
   }
 
 };

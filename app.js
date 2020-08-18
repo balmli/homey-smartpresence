@@ -139,7 +139,7 @@ module.exports = class SmartPresenceApp extends Homey.App {
         lastSeen: device.getLastSeen()
       });
     }
-    this.log('getPresenceStatus', status);
+    //this.log('getPresenceStatus', status);
     return status;
   }
 
