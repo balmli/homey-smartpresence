@@ -3,7 +3,6 @@
 const Homey = require('homey');
 const Network = require('../../lib/network');
 
-
 module.exports = class SmartPresenceDevice extends Homey.Device {
 
   async onInit() {
@@ -18,12 +17,28 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     return numbers[Math.floor(Math.random() * numbers.length)];
   }
 
-  getTimeout() {
+  getNormalModeInterval() {
+    return this.getSetting('normal_mode_interval');
+  }
+
+  getNormalModeTimeout() {
     return this.getSetting('host_timeout') * 1000;
   }
 
   getAwayDelayInMillis() {
     return this.getSetting('away_delay') * 1000;
+  }
+
+  getStressModeInterval() {
+    return this.getSetting('stress_mode_interval');
+  }
+
+  getStressModeTimeout() {
+    return this.getSetting('stress_host_timeout') * 1000;
+  }
+
+  getStressAtInMillis() {
+    return this.getSetting('start_stressing_at') * 1000;
   }
 
   isHouseHoldMember() {
@@ -50,23 +65,37 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     return this.getSeenMillisAgo() < this.getAwayDelayInMillis();
   }
 
+  shouldStressCheck() {
+    return this.getCapabilityValue('onoff') &&
+      ((this.getAwayDelayInMillis() - this.getSeenMillisAgo()) < this.getStressAtInMillis());
+  }
+
   async scan() {
     try {
-      if (!this._scanning) {
+      const now = Date.now();
+      const stressTest = this.shouldStressCheck();
+      const shouldScan = !this._lastScan ||
+        stressTest && (now - this._lastScan > this.getStressModeInterval()) ||
+        !stressTest && (now - this._lastScan > this.getNormalModeInterval());
+
+      if (shouldScan && !this._scanning) {
         this._scanning = true;
+        this._lastScan = Date.now();
+        const host = this.getHost();
         const port = this.getPort();
-        //this.log(`${this.getHost()}:${port}: scanning...`);
+        const timeout = stressTest ? this.getStressModeTimeout() : this.getNormalModeTimeout();
+        //this.log(`${host}:${port}: scanning, stress: ${stressTest}`);
         const client = new Network({ log: this.log });
-        client.scan(this.getHost(), port, this.getTimeout())
+        client.scan(host, port, timeout)
           .then(result => {
             this.updateLastSeen();
             this.setPresent(true);
-            //this.log(`${this.getHost()}:${port}: online`);
+            //this.log(`${host}:${port}: online`);
             this._scanning = false;
           })
           .catch(err => {
             this.setPresent(false);
-            //this.log(`${this.getHost()}:${port}: offline:`, err.message);
+            //this.log(`${host}:${port}: offline:`, err.message);
             this._scanning = false;
           });
       }

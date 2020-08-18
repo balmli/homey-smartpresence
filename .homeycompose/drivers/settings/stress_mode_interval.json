@@ -1,0 +1,12 @@
+{
+  "id": "stress_mode_interval",
+  "type": "number",
+  "value": 500,
+  "label": {
+    "en": "Stress mode check interval"
+  },
+  "attr": {
+    "min": 500,
+    "max": 60000
+  }
+}

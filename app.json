@@ -457,6 +457,18 @@
               }
             },
             {
+              "id": "normal_mode_interval",
+              "type": "number",
+              "value": 1500,
+              "label": {
+                "en": "Normal mode check interval"
+              },
+              "attr": {
+                "min": 1500,
+                "max": 60000
+              }
+            },
+            {
               "id": "host_timeout",
               "type": "number",
               "value": 2,
@@ -470,6 +482,18 @@
               },
               "hint": {
                 "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting."
+              }
+            },
+            {
+              "id": "stress_mode_interval",
+              "type": "number",
+              "value": 500,
+              "label": {
+                "en": "Stress mode check interval"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
               }
             },
             {

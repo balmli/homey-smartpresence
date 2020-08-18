@@ -28,8 +28,16 @@
         "id": "away_delay"
       },
       {
+        "$extends": "normal_mode_interval",
+        "id": "normal_mode_interval"
+      },
+      {
         "$extends": "host_timeout",
         "id": "host_timeout"
+      },
+      {
+        "$extends": "stress_mode_interval",
+        "id": "stress_mode_interval"
       },
       {
         "$extends": "start_stressing_at",

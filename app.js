@@ -95,12 +95,12 @@ module.exports = class SmartPresenceApp extends Homey.App {
     }
   }
 
-  scheduleScans(interval = 10) {
+  scheduleScans(interval = 500) {
     if (this._deleted) {
       return;
     }
     this.clearScanTimer();
-    this.scanTimer = setTimeout(this.doScan.bind(this), interval * 1000);
+    this.scanTimer = setTimeout(this.doScan.bind(this), interval);
   }
 
   async doScan() {
@@ -122,9 +122,7 @@ module.exports = class SmartPresenceApp extends Homey.App {
     const driver = Homey.ManagerDrivers.getDriver('smart_presence');
     const devices = driver.getDevices();
     for (let device of devices) {
-      if (device.getHost && device.getPort) {
-        device.scan();
-      }
+      device.scan();
     }
   }
 
@@ -174,6 +172,7 @@ module.exports = class SmartPresenceApp extends Homey.App {
   _onUninstall() {
     this._deleted = true;
     try {
+      this.clearScanTimer();
       this._clearTimers();
     } catch (err) {
       this.log('_onUninstall error', err);
