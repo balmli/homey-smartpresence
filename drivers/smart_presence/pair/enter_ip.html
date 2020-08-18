@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="material-components-web.min.js"></script>
+  <link rel="stylesheet" href="material-components-web.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src='homey-settings-mock.js'></script>
+</head>
+<body>
+
+<div id="block_settings">
+
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center">
+        <img class="logo" src="logo.png" alt="Smart Presence"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center">
+        <span data-i18n="pair.configuration.name" class="mdc-typography--subtitle2">Name:</span>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center">
+        <div class="mdc-text-field">
+          <input class="mdc-text-field__input input_field"
+                 id="devicename"
+                 maxlength="70">
+          <div class="mdc-line-ripple"></div>
+          <label for="devicename" class="mdc-floating-label"></label>
+        </div>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center grid_top">
+        <span data-i18n="pair.configuration.ip_address" class="mdc-typography--subtitle2">IP address:</span>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center">
+        <div class="mdc-text-field">
+          <input class="mdc-text-field__input input_field"
+                 id="ip_address"
+                 maxlength="70">
+          <div class="mdc-line-ripple"></div>
+          <label for="ip_address" class="mdc-floating-label"></label>
+        </div>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center grid_top">
+        <span data-i18n="pair.configuration.is_guest"
+              class="mdc-typography--subtitle2">Guest:</span>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center">
+        <input type="checkbox"
+               class="mdc-checkbox__native-control"
+               id="is_guest"/>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center">
+        <button class="mdc-button mdc-button--raised save_button"
+                id="add_device"
+                style="color: white; background-color: #00c341;">
+          <span data-i18n="pair.configuration.add_device_btn"
+                class="mdc-button__label ">Add device</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  Homey.setTitle(Homey.__('settings.title'));
+
+  const MDCSwitch = mdc.switchControl.MDCSwitch;
+  //  const guestElement = new MDCSwitch(document.querySelector('.mdc-switch'));
+
+  document.getElementById('add_device').onclick = (e) => {
+    e.preventDefault();
+    const devicename = document.getElementById("devicename").value;
+    const ip_address = document.getElementById("ip_address").value;
+    const guest = document.getElementById("is_guest").checked; // guestElement.checked;
+
+    Homey.emit('device_input', { devicename, ip_address, guest }, (err, result) => {
+      Homey.hideLoadingOverlay();
+      if (err) {
+        Homey.alert(err, 'error', () => {
+        });
+      } else if (result) {
+        const newDevice = {
+          name: devicename,
+          data: {
+            id: "SmartPhone" + Date.now()
+          },
+          settings: {
+            host: ip_address,
+            name: devicename,
+            is_guest: guest
+          }
+        };
+
+        Homey.setViewStoreValue('add_my_device', 'devices', [newDevice], (err, data) => {
+          Homey.showView('add_my_device');
+        });
+
+      }
+    });
+
+  };
+</script>
+</body>
+</html>

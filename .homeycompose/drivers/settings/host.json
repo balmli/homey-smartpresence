@@ -1,0 +1,13 @@
+{
+  "id": "host",
+  "type": "text",
+  "value": "0.0.0.0",
+  "label": {
+    "en": "IP address",
+    "nl": "IP adres"
+  },
+  "hint": {
+    "en": "The IP address must be staticly assigned to the device.",
+    "nl": "Het IP moet zijn statisch zijn toegewezen aan dit apparaat."
+  }
+}

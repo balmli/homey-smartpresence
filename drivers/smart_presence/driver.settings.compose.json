@@ -1,0 +1,44 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Basic settings",
+      "nl": "Basis instellingen"
+    },
+    "children": [
+      {
+        "$extends": "host",
+        "id": "host"
+      },
+      {
+        "$extends": "is_guest",
+        "id": "is_guest"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Advanced settings",
+      "nl": "Geavanceerde instellingen"
+    },
+    "children": [
+      {
+        "$extends": "away_delay",
+        "id": "away_delay"
+      },
+      {
+        "$extends": "host_timeout",
+        "id": "host_timeout"
+      },
+      {
+        "$extends": "start_stressing_at",
+        "id": "start_stressing_at"
+      },
+      {
+        "$extends": "stress_host_timeout",
+        "id": "stress_host_timeout"
+      }
+    ]
+  }
+]

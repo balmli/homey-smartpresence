@@ -1,0 +1,20 @@
+{
+  "id": "last_guest_left",
+  "title": {
+    "en": "Last guest left",
+    "nl": "Laatste gast is weggegaan"
+  },
+  "tokens": [
+    {
+      "name": "who",
+      "title": {
+        "nl": "Wie",
+        "en": "Who"
+      },
+      "example": {
+        "en": "John Doe",
+        "nl": "Jan de Vries"
+      }
+    }
+  ]
+}

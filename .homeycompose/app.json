@@ -1,0 +1,66 @@
+{
+  "id": "nl.terryhendrix.smartpresence",
+  "version": "0.6.0",
+  "compatibility": ">=3.0.0",
+  "sdk": 2,
+  "brandColor": "#1BB7E9",
+  "name": {
+    "en": "Smart Presence",
+    "nl": "Smart Presence"
+  },
+  "description": {
+    "en": "Presence detection based on smartphones connected to your Wifi.",
+    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wifi zitten."
+  },
+  "category": [
+    "internet",
+    "tools"
+  ],
+  "tags": {
+    "en": [
+      "smart",
+      "presence",
+      "wifi",
+      "smartphone"
+    ]
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Bjørnar Almli",
+    "email": "bjornar.almli@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Terry Hendrix",
+        "email": "terryhendrix90@gmail.com"
+      },
+      {
+        "name": "Tobias Lins"
+      },
+      {
+        "name": "Marijn Roverts"
+      },
+      {
+        "name": "Bjørnar Almli",
+        "email": "bjornar.almli@gmail.com"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "bjornaralmli"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/balmli/homey-smartpresence/issues"
+  },
+  "homeyCommunityTopicId": 0,
+  "source": "https://github.com/balmli/homey-smartpresence"
+}

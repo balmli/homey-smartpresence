@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "title": "Smart Presence",
+    "application_settings": "Applicatie instellingen",
+    "log_message_count": "De hoeveelheid log regels die bewaard worden",
+    "loglegend": "Logs",
+    "host_check_interval" : "Controleer hosts elke secondes",
+    "host_timeout" : "Host timeout in secondes",
+    "save_changes" : "Wijzigingen opslaan",
+    "port_numbers" : "Scan TCP poorten (komma gescheiden)"
+  },
+  "pair": {
+    "configuration" : {
+      "name": "Name",
+      "ip_address" : "IP adres",
+      "is_guest" : "Is gast",
+      "add_device_btn": "Add device",
+      "invalid_device_name": "Missing device name",
+      "invalid_ip_address": "Missing IP address",
+      "configure" : "Stel in",
+      "guide_through_text" : "<h3>1. Vast IP adres</h3> Zorg ervoor dat de smart phone een vast IP adres heeft, dit kan in uw router worden ingesteld. <br/> <br/> <h3>2. Vul dit formulier in</h3>",
+      "away_delay" : "Vertraging",
+      "away_delay_explanation" : "Wanneer een telefoon wisselt tussen aanwezig en afwezig terwijl u thuis bent, dan dient u in de instellingen de 'vertraging' te verhogen.",
+      "away_delay_incorrect": "De afwezigheidsvertraging is niet correct. Kies een waarde tussen 1 en 3600."
+    }
+  }
+}

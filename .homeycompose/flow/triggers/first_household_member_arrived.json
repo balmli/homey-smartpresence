@@ -1,0 +1,20 @@
+{
+  "id": "first_household_member_arrived",
+  "title": {
+    "en": "First household member arrived",
+    "nl": "Eerste gezinslid is aangekomen"
+  },
+  "tokens": [
+    {
+      "name": "who",
+      "title": {
+        "nl": "Wie",
+        "en": "Who"
+      },
+      "example": {
+        "en": "John Doe",
+        "nl": "Jan de Vries"
+      }
+    }
+  ]
+}

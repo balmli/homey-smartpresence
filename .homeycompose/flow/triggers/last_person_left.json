@@ -1,0 +1,20 @@
+{
+  "id": "last_person_left",
+  "title": {
+    "en": "Last person left",
+    "nl": "Laatste persoon die het huis verlaten"
+  },
+  "tokens": [
+    {
+      "name": "who",
+      "title": {
+        "nl": "Wie",
+        "en": "Who"
+      },
+      "example": {
+        "en": "John Doe",
+        "nl": "Jan de Vries"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "someone_left",
+  "title": {
+    "en": "Someone left",
+    "nl": "Iemand ging weg"
+  },
+  "tokens": [
+    {
+      "name": "who",
+      "title": {
+        "nl": "Wie",
+        "en": "Who"
+      },
+      "example": {
+        "en": "John Doe",
+        "nl": "Jan de Vries"
+      }
+    }
+  ]
+}

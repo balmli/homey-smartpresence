@@ -1,0 +1,35 @@
+.grid_status_table {
+  min-width: 100%;
+}
+
+.grid_status_label {
+  font-size: 10pt;
+  padding-left: 10px !important;
+}
+
+.grid_status_info {
+  font-family: "Courier New", serif;
+  font-size: 9pt;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.grid_top {
+  margin-top: 10px;
+}
+
+.grid_center {
+  text-align: center;
+}
+
+.input_field {
+  text-align: center;
+  font-family: "Courier New", serif;
+  font-size: 14pt;
+}
+
+.save_button {
+  margin-top: 30px;
+  background-color: #00c341;
+  color: white;
+}

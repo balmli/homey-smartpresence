@@ -1,0 +1,14 @@
+{
+  "id": "user_left",
+  "title": {
+    "en": "User left",
+    "nl": "Gebruiker ging weg"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=smart_presence"
+    }
+  ]
+}

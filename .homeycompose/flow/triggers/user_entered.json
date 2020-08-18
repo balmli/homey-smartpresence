@@ -1,0 +1,14 @@
+{
+  "id": "user_entered",
+  "title": {
+    "en": "User entered",
+    "nl": "Gebruiker kwam binnen"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=smart_presence"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "first_person_entered",
+  "title": {
+    "en": "First person entered",
+    "nl": "Eerste persoon die binnen komt"
+  },
+  "tokens": [
+    {
+      "name": "who",
+      "title": {
+        "nl": "Wie",
+        "en": "Who"
+      },
+      "example": {
+        "en": "John Doe",
+        "nl": "Jan de Vries"
+      }
+    }
+  ]
+}

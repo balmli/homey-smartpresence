@@ -1,0 +1,20 @@
+{
+  "id": "first_guest_arrived",
+  "title": {
+    "en": "First guest arrived",
+    "nl": "Eerste gast is aangekomen"
+  },
+  "tokens": [
+    {
+      "name": "who",
+      "title": {
+        "nl": "Wie",
+        "en": "Who"
+      },
+      "example": {
+        "en": "John Doe",
+        "nl": "Jan de Vries"
+      }
+    }
+  ]
+}

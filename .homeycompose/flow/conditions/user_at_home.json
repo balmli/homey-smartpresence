@@ -1,0 +1,14 @@
+{
+  "id": "user_at_home",
+  "title": {
+    "en": "User is !{{home|away}}",
+    "nl": "Gebruiker is !{{thuis|weg}}"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=smart_presence"
+    }
+  ]
+}

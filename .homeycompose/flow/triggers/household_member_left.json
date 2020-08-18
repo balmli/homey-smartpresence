@@ -1,0 +1,20 @@
+{
+  "id": "household_member_left",
+  "title": {
+    "en": "A household member left",
+    "nl": "Een gezinslid is weggegaan"
+  },
+  "tokens": [
+    {
+      "name": "who",
+      "title": {
+        "nl": "Wie",
+        "en": "Who"
+      },
+      "example": {
+        "en": "John Doe",
+        "nl": "Jan de Vries"
+      }
+    }
+  ]
+}

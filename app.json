@@ -1,0 +1,526 @@
+{
+  "id": "nl.terryhendrix.smartpresence",
+  "version": "0.6.0",
+  "compatibility": ">=3.0.0",
+  "sdk": 2,
+  "brandColor": "#1BB7E9",
+  "name": {
+    "en": "Smart Presence",
+    "nl": "Smart Presence"
+  },
+  "description": {
+    "en": "Presence detection based on smartphones connected to your Wifi.",
+    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wifi zitten."
+  },
+  "category": [
+    "internet",
+    "tools"
+  ],
+  "tags": {
+    "en": [
+      "smart",
+      "presence",
+      "wifi",
+      "smartphone"
+    ]
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Bjørnar Almli",
+    "email": "bjornar.almli@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Terry Hendrix",
+        "email": "terryhendrix90@gmail.com"
+      },
+      {
+        "name": "Tobias Lins"
+      },
+      {
+        "name": "Marijn Roverts"
+      },
+      {
+        "name": "Bjørnar Almli",
+        "email": "bjornar.almli@gmail.com"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "bjornaralmli"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/balmli/homey-smartpresence/issues"
+  },
+  "homeyCommunityTopicId": 0,
+  "source": "https://github.com/balmli/homey-smartpresence",
+  "flow": {
+    "triggers": [
+      {
+        "id": "first_guest_arrived",
+        "title": {
+          "en": "First guest arrived",
+          "nl": "Eerste gast is aangekomen"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "first_household_member_arrived",
+        "title": {
+          "en": "First household member arrived",
+          "nl": "Eerste gezinslid is aangekomen"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "first_person_entered",
+        "title": {
+          "en": "First person entered",
+          "nl": "Eerste persoon die binnen komt"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "guest_arrived",
+        "title": {
+          "en": "A guest arrived",
+          "nl": "Een gast is aangekomen"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "guest_left",
+        "title": {
+          "en": "A guest left",
+          "nl": "Een gast is weggegaan"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "household_member_arrived",
+        "title": {
+          "en": "A household member arrived",
+          "nl": "Een gezinslid is aangekomen"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "household_member_left",
+        "title": {
+          "en": "A household member left",
+          "nl": "Een gezinslid is weggegaan"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "last_guest_left",
+        "title": {
+          "en": "Last guest left",
+          "nl": "Laatste gast is weggegaan"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "last_household_member_left",
+        "title": {
+          "en": "Last household member left",
+          "nl": "Laatste gezinslid is weggegaan"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "last_person_left",
+        "title": {
+          "en": "Last person left",
+          "nl": "Laatste persoon die het huis verlaten"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "someone_entered",
+        "title": {
+          "en": "Someone entered",
+          "nl": "Iemand kwam binnen"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "someone_left",
+        "title": {
+          "en": "Someone left",
+          "nl": "Iemand ging weg"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ]
+      },
+      {
+        "id": "user_entered",
+        "title": {
+          "en": "User entered",
+          "nl": "Gebruiker kwam binnen"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=smart_presence"
+          }
+        ]
+      },
+      {
+        "id": "user_left",
+        "title": {
+          "en": "User left",
+          "nl": "Gebruiker ging weg"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=smart_presence"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "a_household_member_is_home",
+        "title": {
+          "en": "!{{A|No}} household member home",
+          "nl": "Er is !{{een|geen}} gezinslid thuis"
+        }
+      },
+      {
+        "id": "having_guests",
+        "title": {
+          "en": "!{{Having|Not having}} guests",
+          "nl": "Er is !{{|geen}} bezoek"
+        }
+      },
+      {
+        "id": "someone_at_home",
+        "title": {
+          "en": "!{{Someone|Nobody}} at home",
+          "nl": "Er is !{{iemand|niemand}} thuis"
+        }
+      },
+      {
+        "id": "user_at_home",
+        "title": {
+          "en": "User is !{{home|away}}",
+          "nl": "Gebruiker is !{{thuis|weg}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=smart_presence"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "smart_presence",
+      "name": {
+        "en": "Smartphone",
+        "nl": "Smartphone"
+      },
+      "icon": "/drivers/smart_presence/assets/icon.svg",
+      "images": {
+        "large": "/drivers/smart_presence/assets/images/large.png",
+        "small": "/drivers/smart_presence/assets/images/small.png"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "onoff"
+      ],
+      "pair": [
+        {
+          "id": "enter_ip"
+        },
+        {
+          "id": "add_my_device",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Basic settings",
+            "nl": "Basis instellingen"
+          },
+          "children": [
+            {
+              "id": "host",
+              "type": "text",
+              "value": "0.0.0.0",
+              "label": {
+                "en": "IP address",
+                "nl": "IP adres"
+              },
+              "hint": {
+                "en": "The IP address must be staticly assigned to the device.",
+                "nl": "Het IP moet zijn statisch zijn toegewezen aan dit apparaat."
+              }
+            },
+            {
+              "id": "is_guest",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Is guest",
+                "nl": "Is gast"
+              },
+              "hint": {
+                "en": "Check the box if this person is a guest.",
+                "nl": "Vink aan als dit een gast betreft."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "nl": "Geavanceerde instellingen"
+          },
+          "children": [
+            {
+              "id": "away_delay",
+              "type": "number",
+              "value": 900,
+              "label": {
+                "en": "Away delay",
+                "nl": "Afwezigheid vertraging"
+              },
+              "attr": {
+                "min": 1,
+                "max": 3600
+              },
+              "hint": {
+                "en": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows."
+              }
+            },
+            {
+              "id": "host_timeout",
+              "type": "number",
+              "value": 2,
+              "label": {
+                "en": "Host timeout",
+                "nl": "Host timeout"
+              },
+              "attr": {
+                "min": 0.1,
+                "max": 5
+              },
+              "hint": {
+                "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting."
+              }
+            },
+            {
+              "id": "start_stressing_at",
+              "type": "number",
+              "value": 0,
+              "label": {
+                "en": "Stress period",
+                "nl": "Stres periode"
+              },
+              "attr": {
+                "min": 0,
+                "max": 600
+              },
+              "hint": {
+                "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled."
+              }
+            },
+            {
+              "id": "stress_host_timeout",
+              "type": "number",
+              "value": 2,
+              "label": {
+                "en": "Stress host timeout",
+                "nl": "Stres host timeout"
+              },
+              "attr": {
+                "min": 0.1,
+                "max": 5
+              },
+              "hint": {
+                "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "onoff": {
+      "type": "boolean",
+      "uiComponent": null,
+      "uiQuickAction": true,
+      "getable": true,
+      "setable": false,
+      "insights": false,
+      "title": {
+        "en": "Entered",
+        "nl": "Kwam binnen"
+      }
+    }
+  }
+}
