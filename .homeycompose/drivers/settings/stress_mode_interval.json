@@ -7,6 +7,9 @@
   },
   "attr": {
     "min": 500,
-    "max": 60000
+    "max": 10000
+  },
+  "hint": {
+    "en": "Time in milliseconds between each check when in stress mode."
   }
 }
