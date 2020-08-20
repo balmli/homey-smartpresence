@@ -3,14 +3,14 @@
   "version": "0.6.0",
   "compatibility": ">=3.0.0",
   "sdk": 2,
-  "brandColor": "#1BB7E9",
+  "brandColor": "#2A6FE8",
   "name": {
     "en": "Smart Presence",
     "nl": "Smart Presence"
   },
   "description": {
-    "en": "Presence detection based on smartphones connected to your Wifi.",
-    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wifi zitten."
+    "en": "Presence detection based on smartphones connected to your Wi-Fi.",
+    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wi-Fi zitten."
   },
   "category": [
     "internet",
@@ -21,6 +21,7 @@
       "smart",
       "presence",
       "wifi",
+      "wi-fi",
       "smartphone"
     ]
   },
@@ -61,14 +62,14 @@
   "bugs": {
     "url": "https://github.com/balmli/homey-smartpresence/issues"
   },
-  "homeyCommunityTopicId": 0,
+  "homeyCommunityTopicId": 33794,
   "source": "https://github.com/balmli/homey-smartpresence",
   "flow": {
     "triggers": [
       {
         "id": "first_guest_arrived",
         "title": {
-          "en": "First guest arrived",
+          "en": "The first guest arrived",
           "nl": "Eerste gast is aangekomen"
         },
         "tokens": [
@@ -88,7 +89,7 @@
       {
         "id": "first_household_member_arrived",
         "title": {
-          "en": "First household member arrived",
+          "en": "The first household member arrived",
           "nl": "Eerste gezinslid is aangekomen"
         },
         "tokens": [
@@ -108,7 +109,7 @@
       {
         "id": "first_person_entered",
         "title": {
-          "en": "First person entered",
+          "en": "The first person arrived",
           "nl": "Eerste persoon die binnen komt"
         },
         "tokens": [
@@ -208,7 +209,7 @@
       {
         "id": "last_guest_left",
         "title": {
-          "en": "Last guest left",
+          "en": "The last guest left",
           "nl": "Laatste gast is weggegaan"
         },
         "tokens": [
@@ -228,7 +229,7 @@
       {
         "id": "last_household_member_left",
         "title": {
-          "en": "Last household member left",
+          "en": "The last household member left",
           "nl": "Laatste gezinslid is weggegaan"
         },
         "tokens": [
@@ -248,7 +249,7 @@
       {
         "id": "last_person_left",
         "title": {
-          "en": "Last person left",
+          "en": "The last person left",
           "nl": "Laatste persoon die het huis verlaten"
         },
         "tokens": [
@@ -268,7 +269,7 @@
       {
         "id": "someone_entered",
         "title": {
-          "en": "Someone entered",
+          "en": "Someone arrived",
           "nl": "Iemand kwam binnen"
         },
         "tokens": [
@@ -308,7 +309,7 @@
       {
         "id": "user_entered",
         "title": {
-          "en": "User entered",
+          "en": "A specific user arrived",
           "nl": "Gebruiker kwam binnen"
         },
         "args": [
@@ -322,7 +323,7 @@
       {
         "id": "user_left",
         "title": {
-          "en": "User left",
+          "en": "A specific user left",
           "nl": "Gebruiker ging weg"
         },
         "args": [
@@ -338,7 +339,7 @@
       {
         "id": "a_household_member_is_home",
         "title": {
-          "en": "!{{A|No}} household member home",
+          "en": "!{{Household|No household}} members home",
           "nl": "Er is !{{een|geen}} gezinslid thuis"
         }
       },
@@ -352,14 +353,14 @@
       {
         "id": "someone_at_home",
         "title": {
-          "en": "!{{Someone|Nobody}} at home",
+          "en": "!{{Someone|Nobody}} is home",
           "nl": "Er is !{{iemand|niemand}} thuis"
         }
       },
       {
         "id": "user_at_home",
         "title": {
-          "en": "User is !{{home|away}}",
+          "en": "A specific user is !{{home|away}}",
           "nl": "Gebruiker is !{{thuis|weg}}"
         },
         "args": [
@@ -436,8 +437,7 @@
         {
           "type": "group",
           "label": {
-            "en": "Advanced settings",
-            "nl": "Geavanceerde instellingen"
+            "en": "Normal mode settings"
           },
           "children": [
             {
@@ -451,6 +451,9 @@
               "attr": {
                 "min": 1,
                 "max": 3600
+              },
+              "units": {
+                "en": "seconds"
               },
               "hint": {
                 "en": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows."
@@ -466,6 +469,9 @@
               "attr": {
                 "min": 1500,
                 "max": 60000
+              },
+              "units": {
+                "en": "ms"
               },
               "hint": {
                 "en": "Time in milliseconds between each check when in normal mode."
@@ -483,8 +489,38 @@
                 "min": 0.1,
                 "max": 5
               },
+              "units": {
+                "en": "seconds"
+              },
               "hint": {
                 "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Stress mode settings"
+          },
+          "children": [
+            {
+              "id": "start_stressing_at",
+              "type": "number",
+              "value": 0,
+              "label": {
+                "en": "Stress period",
+                "nl": "Stres periode"
+              },
+              "attr": {
+                "min": 0,
+                "max": 600
+              },
+              "units": {
+                "en": "seconds"
+              },
+              "hint": {
+                "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled."
               }
             },
             {
@@ -498,24 +534,11 @@
                 "min": 500,
                 "max": 10000
               },
+              "units": {
+                "en": "ms"
+              },
               "hint": {
                 "en": "Time in milliseconds between each check when in stress mode."
-              }
-            },
-            {
-              "id": "start_stressing_at",
-              "type": "number",
-              "value": 0,
-              "label": {
-                "en": "Stress period",
-                "nl": "Stres periode"
-              },
-              "attr": {
-                "min": 0,
-                "max": 600
-              },
-              "hint": {
-                "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled."
               }
             },
             {
@@ -529,6 +552,9 @@
               "attr": {
                 "min": 0.1,
                 "max": 5
+              },
+              "units": {
+                "en": "seconds"
               },
               "hint": {
                 "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress."
