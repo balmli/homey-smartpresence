@@ -19,8 +19,7 @@
   {
     "type": "group",
     "label": {
-      "en": "Advanced settings",
-      "nl": "Geavanceerde instellingen"
+      "en": "Normal mode settings"
     },
     "children": [
       {
@@ -34,14 +33,22 @@
       {
         "$extends": "host_timeout",
         "id": "host_timeout"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Stress mode settings"
+    },
+    "children": [
+      {
+        "$extends": "start_stressing_at",
+        "id": "start_stressing_at"
       },
       {
         "$extends": "stress_mode_interval",
         "id": "stress_mode_interval"
-      },
-      {
-        "$extends": "start_stressing_at",
-        "id": "start_stressing_at"
       },
       {
         "$extends": "stress_host_timeout",
