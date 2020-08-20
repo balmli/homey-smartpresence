@@ -51,4 +51,4 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 #### 0.5.1
 
-- Device tile will now greyout when an user is not home and vice versa
+- Device tile will now grey out when an user is not home and vice versa
