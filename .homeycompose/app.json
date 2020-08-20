@@ -3,7 +3,7 @@
   "version": "0.6.0",
   "compatibility": ">=3.0.0",
   "sdk": 2,
-  "brandColor": "#1BB7E9",
+  "brandColor": "#2A6FE8",
   "name": {
     "en": "Smart Presence",
     "nl": "Smart Presence"
