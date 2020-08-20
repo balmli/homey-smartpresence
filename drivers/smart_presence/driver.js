@@ -1,6 +1,7 @@
 'use strict';
 
 const Homey = require('homey');
+const net = require("net");
 
 module.exports = class SmartPresenceDriver extends Homey.Driver {
 
@@ -13,7 +14,7 @@ module.exports = class SmartPresenceDriver extends Homey.Driver {
       //this.log('device_input', data);
       if (!data.devicename) {
         callback(new Error(Homey.__('pair.configuration.invalid_device_name')));
-      } else if (!data.ip_address) {
+      } else if (!data.ip_address || !net.isIP(data.ip_address)) {
         callback(new Error(Homey.__('pair.configuration.invalid_ip_address')));
       } else {
         callback(null, true);
