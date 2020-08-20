@@ -10,6 +10,9 @@
     "min": 0.1,
     "max": 5.0
   },
+  "units": {
+    "en": "seconds"
+  },
   "hint": {
     "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress."
   }

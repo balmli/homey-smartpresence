@@ -1,7 +1,7 @@
 {
   "id": "a_household_member_is_home",
   "title": {
-    "en": "!{{A|No}} household member home",
+    "en": "!{{Household|No household}} members home",
     "nl": "Er is !{{een|geen}} gezinslid thuis"
   }
 }

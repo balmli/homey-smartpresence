@@ -1,13 +1,6 @@
 {
   "settings": {
-    "title": "Smart Presence",
-    "application_settings": "Application settings",
-    "log_message_count": "The number of log messages to keep",
-    "loglegend": "Logs",
-    "host_check_interval" : "Check hosts every seconds",
-    "host_timeout" : "Host timeout in seconds",
-    "save_changes" : "Save changes",
-    "port_numbers" : "Scan TCP ports (comma seperated)"
+    "title": "Smart Presence"
   },
   "pair": {
     "configuration" : {
@@ -16,12 +9,7 @@
       "is_guest" : "Is guest:",
       "add_device_btn": "Add device",
       "invalid_device_name": "Missing device name",
-      "invalid_ip_address": "Missing IP address",
-      "configure" : "Configure",
-      "guide_through_text" : "<h3>1. Static IP address</h3> Ensure the smart phone has the same IP address, this can most likely be done by a DHCP reservation in your router. <br/> <br/> <h3>2. Fill out the form below</h3>",
-      "away_delay" : "Away delay",
-      "away_delay_explanation" : "If a smartphone flips between away and present while you're home, then increase the 'Away delay' in the settings.",
-      "away_delay_incorrect": "The away delay value is incorrect, it must be a number between 1 and 3600"
+      "invalid_ip_address": "Missing IP address"
     }
   }
 }

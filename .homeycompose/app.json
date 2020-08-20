@@ -9,8 +9,8 @@
     "nl": "Smart Presence"
   },
   "description": {
-    "en": "Presence detection based on smartphones connected to your Wifi.",
-    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wifi zitten."
+    "en": "Presence detection based on smartphones connected to your Wi-Fi.",
+    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wi-Fi zitten."
   },
   "category": [
     "internet",
@@ -21,6 +21,7 @@
       "smart",
       "presence",
       "wifi",
+      "wi-fi",
       "smartphone"
     ]
   },

@@ -1,7 +1,7 @@
 {
   "id": "user_entered",
   "title": {
-    "en": "User entered",
+    "en": "A specific user arrived",
     "nl": "Gebruiker kwam binnen"
   },
   "args": [

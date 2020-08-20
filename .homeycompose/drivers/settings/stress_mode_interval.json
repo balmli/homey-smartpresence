@@ -9,6 +9,9 @@
     "min": 500,
     "max": 10000
   },
+  "units": {
+    "en": "ms"
+  },
   "hint": {
     "en": "Time in milliseconds between each check when in stress mode."
   }

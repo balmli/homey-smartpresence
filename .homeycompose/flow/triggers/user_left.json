@@ -1,7 +1,7 @@
 {
   "id": "user_left",
   "title": {
-    "en": "User left",
+    "en": "A specific user left",
     "nl": "Gebruiker ging weg"
   },
   "args": [

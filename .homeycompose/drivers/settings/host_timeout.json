@@ -10,6 +10,9 @@
     "min": 0.1,
     "max": 5.0
   },
+  "units": {
+    "en": "seconds"
+  },
   "hint": {
     "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting."
   }

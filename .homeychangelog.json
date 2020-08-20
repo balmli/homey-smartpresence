@@ -1,5 +1,8 @@
 {
   "0.6.0": {
-    "en": "New version compatible with Homey firmware 5.0.0."
+    "en": "New version compatible with Homey firmware 5.x. "
+  },
+  "0.5.1": {
+    "en": "Device card updates. "
   }
 }

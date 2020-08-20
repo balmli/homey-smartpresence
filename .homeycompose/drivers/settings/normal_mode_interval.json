@@ -9,6 +9,9 @@
     "min": 1500,
     "max": 60000
   },
+  "units": {
+    "en": "ms"
+  },
   "hint": {
     "en": "Time in milliseconds between each check when in normal mode."
   }
