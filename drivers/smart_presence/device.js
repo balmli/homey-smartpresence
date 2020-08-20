@@ -150,7 +150,4 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     return this.getCapabilityValue('onoff');
   }
 
-  clearTimers() {
-  }
-
 };

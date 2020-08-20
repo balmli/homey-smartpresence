@@ -137,7 +137,6 @@ module.exports = class SmartPresenceApp extends Homey.App {
         lastSeen: device.getLastSeen()
       });
     }
-    //this.log('getPresenceStatus', status);
     return status;
   }
 
@@ -173,26 +172,8 @@ module.exports = class SmartPresenceApp extends Homey.App {
     this._deleted = true;
     try {
       this.clearScanTimer();
-      this._clearTimers();
     } catch (err) {
       this.log('_onUninstall error', err);
-    }
-  }
-
-  _clearTimers() {
-    const drivers = Homey.ManagerDrivers.getDrivers();
-    if (drivers) {
-      for (let key in drivers) {
-        if (drivers.hasOwnProperty(key)) {
-          const driver = drivers[key];
-          const devices = driver.getDevices();
-          for (let device of devices) {
-            if (device.clearTimers) {
-              device.clearTimers();
-            }
-          }
-        }
-      }
     }
   }
 
