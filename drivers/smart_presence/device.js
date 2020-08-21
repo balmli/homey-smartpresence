@@ -6,6 +6,7 @@ const Network = require('../../lib/network');
 module.exports = class SmartPresenceDevice extends Homey.Device {
 
   async onInit() {
+    this._client = new Network({ log: this.log });
   }
 
   getHost() {
@@ -50,7 +51,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   getLastSeen() {
-    return this.getStoreValue('lastSeen');
+    return this.getStoreValue('lastSeen') || 0;
   }
 
   async updateLastSeen() {
@@ -66,7 +67,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   shouldStressCheck() {
-    return this.getCapabilityValue('onoff') &&
+    return !!this.getCapabilityValue('onoff') &&
       ((this.getAwayDelayInMillis() - this.getSeenMillisAgo()) < this.getStressAtInMillis());
   }
 
@@ -85,8 +86,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
         const port = this.getPort();
         const timeout = stressTest ? this.getStressModeTimeout() : this.getNormalModeTimeout();
         //this.log(`${host}:${port}: scanning, stress: ${stressTest}`);
-        const client = new Network({ log: this.log });
-        client.scan(host, port, timeout)
+        this._client.scan(host, port, timeout)
           .then(result => {
             this.updateLastSeen();
             this.setPresent(true);
@@ -119,7 +119,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
       if (this.isGuest()) {
         Homey.app.guestArrivedTrigger.trigger(this.getFlowCardTokens(), {});
       }
-    } else if (!present && currentPresent) {
+    } else if (!present && (currentPresent || currentPresent === null)) {
       if (!this.shouldDelayAwayStateSwitch()) {
         this.log(`${this.getHost()} - ${this.getDeviceName()}: is marked as offline`);
         await this.setCapabilityValue('onoff', present);
@@ -147,7 +147,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   async userAtHome() {
-    return this.getCapabilityValue('onoff');
+    return !!this.getCapabilityValue('onoff');
   }
 
 };

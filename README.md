@@ -45,6 +45,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.6.1
+
+- Fixed issue with adding devices
+
 #### 0.6.0
 
 - New version compatible with Homey firmware 5.x
