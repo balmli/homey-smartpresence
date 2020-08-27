@@ -4,6 +4,19 @@
     "en": "A specific user left",
     "nl": "Gebruiker ging weg"
   },
+  "tokens": [
+    {
+      "name": "who",
+      "title": {
+        "nl": "Wie",
+        "en": "Who"
+      },
+      "example": {
+        "en": "John Doe",
+        "nl": "Jan de Vries"
+      }
+    }
+  ],
   "args": [
     {
       "name": "device",

@@ -1,6 +1,6 @@
 {
   "id": "nl.terryhendrix.smartpresence",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "brandColor": "#2A6FE8",
@@ -312,6 +312,19 @@
           "en": "A specific user arrived",
           "nl": "Gebruiker kwam binnen"
         },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ],
         "args": [
           {
             "name": "device",
@@ -326,6 +339,19 @@
           "en": "A specific user left",
           "nl": "Gebruiker ging weg"
         },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "nl": "Wie",
+              "en": "Who"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan de Vries"
+            }
+          }
+        ],
         "args": [
           {
             "name": "device",
