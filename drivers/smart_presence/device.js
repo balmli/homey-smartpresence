@@ -6,7 +6,18 @@ const Network = require('../../lib/network');
 module.exports = class SmartPresenceDevice extends Homey.Device {
 
   async onInit() {
+    await this._migrate();
     this._client = new Network({ log: this.log });
+  }
+
+  async _migrate() {
+    try {
+      if (!this.hasCapability('onoff')) {
+        await this.addCapability('onoff');
+      }
+    } catch (err) {
+      this.log('Migration failed', err);
+    }
   }
 
   getHost() {

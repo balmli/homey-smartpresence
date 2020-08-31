@@ -1,4 +1,7 @@
 {
+  "0.6.3": {
+    "en": "New version compatible with Homey firmware 5.x. Fixed issue with adding devices. Added token for user entered / user left triggers. Fixed missing capability. "
+  },
   "0.6.2": {
     "en": "New version compatible with Homey firmware 5.x. Fixed issue with adding devices. Added token for user entered / user left triggers. "
   },

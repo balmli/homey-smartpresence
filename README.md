@@ -45,6 +45,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.6.3
+
+- Fixed missing capability
+
 #### 0.6.2
 
 - Added token for user entered / user left triggers
