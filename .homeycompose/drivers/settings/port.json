@@ -1,0 +1,19 @@
+{
+  "id": "port",
+  "type": "number",
+  "value": 32000,
+  "label": {
+    "en": "Port number",
+    "nl": "Port number",
+    "no": "Port-nummer"
+  },
+  "attr": {
+    "min": 1,
+    "max": 65535
+  },
+  "hint": {
+    "en": "The port number that is checked to see if the device is online.",
+    "nl": "The port number that is checked to see if the device is online.",
+    "no": "The port number that is checked to see if the device is online."
+  }
+}

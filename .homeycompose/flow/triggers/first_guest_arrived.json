@@ -2,7 +2,8 @@
   "id": "first_guest_arrived",
   "title": {
     "en": "The first guest arrived",
-    "nl": "Eerste gast is aangekomen"
+    "nl": "Eerste gast is aangekomen",
+    "no": "Første gjest ankom"
   },
   "tokens": [
     {

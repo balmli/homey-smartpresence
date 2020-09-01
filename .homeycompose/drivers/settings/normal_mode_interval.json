@@ -3,16 +3,22 @@
   "type": "number",
   "value": 1500,
   "label": {
-    "en": "Normal mode check interval"
+    "en": "Normal mode check interval",
+    "nl": "Normal mode check interval",
+    "no": "Normal mode check interval"
   },
   "attr": {
     "min": 1500,
     "max": 60000
   },
   "units": {
-    "en": "ms"
+    "en": "ms",
+    "nl": "ms",
+    "no": "ms"
   },
   "hint": {
-    "en": "Time in milliseconds between each check when in normal mode."
+    "en": "Time in milliseconds between each check when in normal mode.",
+    "nl": "Time in milliseconds between each check when in normal mode.",
+    "no": "Time in milliseconds between each check when in normal mode."
   }
 }

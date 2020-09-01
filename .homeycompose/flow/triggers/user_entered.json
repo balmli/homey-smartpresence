@@ -2,18 +2,21 @@
   "id": "user_entered",
   "title": {
     "en": "A specific user arrived",
-    "nl": "Gebruiker kwam binnen"
+    "nl": "Gebruiker kwam binnen",
+    "no": "En spesifikk bruker kom hjem"
   },
   "tokens": [
     {
       "name": "who",
       "title": {
+        "en": "Who",
         "nl": "Wie",
-        "en": "Who"
+        "no": "Hvem"
       },
       "example": {
         "en": "John Doe",
-        "nl": "Jan de Vries"
+        "nl": "Jan de Vries",
+        "no": "Ola Nordmann"
       }
     }
   ],

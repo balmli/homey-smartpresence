@@ -4,16 +4,21 @@
   "value": 900,
   "label": {
     "en": "Away delay",
-    "nl": "Afwezigheid vertraging"
+    "nl": "Afwezigheid vertraging",
+    "no": "Away delay"
   },
   "attr": {
     "min": 1,
     "max": 3600
   },
   "units": {
-    "en": "seconds"
+    "en": "seconds",
+    "nl": "seconden",
+    "no": "sekunder"
   },
   "hint": {
-    "en": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows."
+    "en": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows.",
+    "nl": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows.",
+    "no": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows."
   }
 }

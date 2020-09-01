@@ -2,7 +2,8 @@
   "id": "guest_left",
   "title": {
     "en": "A guest left",
-    "nl": "Een gast is weggegaan"
+    "nl": "Een gast is weggegaan",
+    "no": "En gjest forlot hjemmet"
   },
   "tokens": [
     {

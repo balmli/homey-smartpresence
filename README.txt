@@ -10,4 +10,4 @@ For adding a device, please follow these steps:
 3. Add the device by entering a name, and the IP address of the smartphone.  Check the 'Is guest' - checkbox for guests.
 
 
-For more information, click the Homey Community - link on this page.
+For more information, click the 'Visit forum' - link on this page.

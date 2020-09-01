@@ -2,7 +2,8 @@
   "id": "someone_entered",
   "title": {
     "en": "Someone arrived",
-    "nl": "Iemand kwam binnen"
+    "nl": "Iemand kwam binnen",
+    "no": "Noen kom hjem"
   },
   "tokens": [
     {

@@ -45,6 +45,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.7.0
+
+- The port number can be configured from advanced settings
+
 #### 0.6.3
 
 - Fixed missing capability

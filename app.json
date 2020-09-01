@@ -1,16 +1,18 @@
 {
   "id": "nl.terryhendrix.smartpresence",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "brandColor": "#2A6FE8",
   "name": {
     "en": "Smart Presence",
-    "nl": "Smart Presence"
+    "nl": "Smart Presence",
+    "no": "Smart Presence"
   },
   "description": {
     "en": "Presence detection based on smartphones connected to your Wi-Fi.",
-    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wi-Fi zitten."
+    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wi-Fi zitten.",
+    "no": "Tilstedeværelse basert på smarttelefon koblet til Wi-Fi-nettverket."
   },
   "category": [
     "internet",
@@ -23,6 +25,21 @@
       "wifi",
       "wi-fi",
       "smartphone"
+    ],
+    "nl": [
+      "smart",
+      "presence",
+      "wifi",
+      "wi-fi",
+      "smartphone"
+    ],
+    "no": [
+      "smart",
+      "presence",
+      "wifi",
+      "wi-fi",
+      "smartphone",
+      "smarttelefon"
     ]
   },
   "images": {
@@ -50,7 +67,8 @@
         "name": "Bjørnar Almli",
         "email": "bjornar.almli@gmail.com"
       }
-    ]
+    ],
+    "translators": []
   },
   "contributing": {
     "donate": {
@@ -70,7 +88,8 @@
         "id": "first_guest_arrived",
         "title": {
           "en": "The first guest arrived",
-          "nl": "Eerste gast is aangekomen"
+          "nl": "Eerste gast is aangekomen",
+          "no": "Første gjest ankom"
         },
         "tokens": [
           {
@@ -90,7 +109,8 @@
         "id": "first_household_member_arrived",
         "title": {
           "en": "The first household member arrived",
-          "nl": "Eerste gezinslid is aangekomen"
+          "nl": "Eerste gezinslid is aangekomen",
+          "no": "Første medlem av husstanden kom hjem"
         },
         "tokens": [
           {
@@ -110,7 +130,8 @@
         "id": "first_person_entered",
         "title": {
           "en": "The first person arrived",
-          "nl": "Eerste persoon die binnen komt"
+          "nl": "Eerste persoon die binnen komt",
+          "no": "Første person kom hjem"
         },
         "tokens": [
           {
@@ -130,7 +151,8 @@
         "id": "guest_arrived",
         "title": {
           "en": "A guest arrived",
-          "nl": "Een gast is aangekomen"
+          "nl": "Een gast is aangekomen",
+          "no": "En gjest ankom"
         },
         "tokens": [
           {
@@ -150,7 +172,8 @@
         "id": "guest_left",
         "title": {
           "en": "A guest left",
-          "nl": "Een gast is weggegaan"
+          "nl": "Een gast is weggegaan",
+          "no": "En gjest forlot hjemmet"
         },
         "tokens": [
           {
@@ -170,7 +193,8 @@
         "id": "household_member_arrived",
         "title": {
           "en": "A household member arrived",
-          "nl": "Een gezinslid is aangekomen"
+          "nl": "Een gezinslid is aangekomen",
+          "no": "Et medlem av husstanden kom hjem"
         },
         "tokens": [
           {
@@ -190,7 +214,8 @@
         "id": "household_member_left",
         "title": {
           "en": "A household member left",
-          "nl": "Een gezinslid is weggegaan"
+          "nl": "Een gezinslid is weggegaan",
+          "no": "Et medlem av husstanden dro hjemmefra"
         },
         "tokens": [
           {
@@ -210,7 +235,8 @@
         "id": "last_guest_left",
         "title": {
           "en": "The last guest left",
-          "nl": "Laatste gast is weggegaan"
+          "nl": "Laatste gast is weggegaan",
+          "no": "Den siste gjesten forlot hjemmet"
         },
         "tokens": [
           {
@@ -230,7 +256,8 @@
         "id": "last_household_member_left",
         "title": {
           "en": "The last household member left",
-          "nl": "Laatste gezinslid is weggegaan"
+          "nl": "Laatste gezinslid is weggegaan",
+          "no": "Siste medlem av husstanden dro hjemmefra"
         },
         "tokens": [
           {
@@ -250,7 +277,8 @@
         "id": "last_person_left",
         "title": {
           "en": "The last person left",
-          "nl": "Laatste persoon die het huis verlaten"
+          "nl": "Laatste persoon die het huis verlaten",
+          "no": "Siste person dro hjemmefra"
         },
         "tokens": [
           {
@@ -270,7 +298,8 @@
         "id": "someone_entered",
         "title": {
           "en": "Someone arrived",
-          "nl": "Iemand kwam binnen"
+          "nl": "Iemand kwam binnen",
+          "no": "Noen kom hjem"
         },
         "tokens": [
           {
@@ -290,7 +319,8 @@
         "id": "someone_left",
         "title": {
           "en": "Someone left",
-          "nl": "Iemand ging weg"
+          "nl": "Iemand ging weg",
+          "no": "Noen dro hjemmefra"
         },
         "tokens": [
           {
@@ -310,18 +340,21 @@
         "id": "user_entered",
         "title": {
           "en": "A specific user arrived",
-          "nl": "Gebruiker kwam binnen"
+          "nl": "Gebruiker kwam binnen",
+          "no": "En spesifikk bruker kom hjem"
         },
         "tokens": [
           {
             "name": "who",
             "title": {
+              "en": "Who",
               "nl": "Wie",
-              "en": "Who"
+              "no": "Hvem"
             },
             "example": {
               "en": "John Doe",
-              "nl": "Jan de Vries"
+              "nl": "Jan de Vries",
+              "no": "Ola Nordmann"
             }
           }
         ],
@@ -337,18 +370,21 @@
         "id": "user_left",
         "title": {
           "en": "A specific user left",
-          "nl": "Gebruiker ging weg"
+          "nl": "Gebruiker ging weg",
+          "no": "En spesifikk bruker dro hjemmefra"
         },
         "tokens": [
           {
             "name": "who",
             "title": {
+              "en": "Who",
               "nl": "Wie",
-              "en": "Who"
+              "no": "Hvem"
             },
             "example": {
               "en": "John Doe",
-              "nl": "Jan de Vries"
+              "nl": "Jan de Vries",
+              "no": "Ola Nordmann"
             }
           }
         ],
@@ -366,28 +402,32 @@
         "id": "a_household_member_is_home",
         "title": {
           "en": "!{{Household|No household}} members home",
-          "nl": "Er is !{{een|geen}} gezinslid thuis"
+          "nl": "Er is !{{een|geen}} gezinslid thuis",
+          "no": "!{{Medlem|Ingen medlemmer}} av husstanden er hjemme"
         }
       },
       {
         "id": "having_guests",
         "title": {
           "en": "!{{Having|Not having}} guests",
-          "nl": "Er is !{{|geen}} bezoek"
+          "nl": "Er is !{{|geen}} bezoek",
+          "no": "!{{Har|Har ikke}} gjester"
         }
       },
       {
         "id": "someone_at_home",
         "title": {
           "en": "!{{Someone|Nobody}} is home",
-          "nl": "Er is !{{iemand|niemand}} thuis"
+          "nl": "Er is !{{iemand|niemand}} thuis",
+          "no": "!{{Noen|Ingen}} er hjemme"
         }
       },
       {
         "id": "user_at_home",
         "title": {
           "en": "A specific user is !{{home|away}}",
-          "nl": "Gebruiker is !{{thuis|weg}}"
+          "nl": "Gebruiker is !{{thuis|weg}}",
+          "no": "En spesifikk bruker er !{{hjemme|borte}}"
         },
         "args": [
           {
@@ -404,7 +444,8 @@
       "id": "smart_presence",
       "name": {
         "en": "Smartphone",
-        "nl": "Smartphone"
+        "nl": "Smartphone",
+        "no": "Smartphone"
       },
       "icon": "/drivers/smart_presence/assets/icon.svg",
       "images": {
@@ -429,7 +470,8 @@
           "type": "group",
           "label": {
             "en": "Basic settings",
-            "nl": "Basis instellingen"
+            "nl": "Basis instellingen",
+            "no": "Grunnleggende instillinger"
           },
           "children": [
             {
@@ -438,11 +480,32 @@
               "value": "0.0.0.0",
               "label": {
                 "en": "IP address",
-                "nl": "IP adres"
+                "nl": "IP adres",
+                "no": "IP-adresse"
               },
               "hint": {
                 "en": "The IP address must be staticly assigned to the device.",
-                "nl": "Het IP moet zijn statisch zijn toegewezen aan dit apparaat."
+                "nl": "Het IP moet zijn statisch zijn toegewezen aan dit apparaat.",
+                "no": "Enheten bør tilordnes en statisk IP-adresse."
+              }
+            },
+            {
+              "id": "port",
+              "type": "number",
+              "value": 32000,
+              "label": {
+                "en": "Port number",
+                "nl": "Port number",
+                "no": "Port-nummer"
+              },
+              "attr": {
+                "min": 1,
+                "max": 65535
+              },
+              "hint": {
+                "en": "The port number that is checked to see if the device is online.",
+                "nl": "The port number that is checked to see if the device is online.",
+                "no": "The port number that is checked to see if the device is online."
               }
             },
             {
@@ -451,11 +514,13 @@
               "value": false,
               "label": {
                 "en": "Is guest",
-                "nl": "Is gast"
+                "nl": "Is gast",
+                "no": "Er gjest"
               },
               "hint": {
                 "en": "Check the box if this person is a guest.",
-                "nl": "Vink aan als dit een gast betreft."
+                "nl": "Vink aan als dit een gast betreft.",
+                "no": "Kryss av hvis personen er en gjest."
               }
             }
           ]
@@ -463,7 +528,9 @@
         {
           "type": "group",
           "label": {
-            "en": "Normal mode settings"
+            "en": "Normal mode settings",
+            "nl": "Normal mode settings",
+            "no": "Normal mode settings"
           },
           "children": [
             {
@@ -472,17 +539,22 @@
               "value": 900,
               "label": {
                 "en": "Away delay",
-                "nl": "Afwezigheid vertraging"
+                "nl": "Afwezigheid vertraging",
+                "no": "Away delay"
               },
               "attr": {
                 "min": 1,
                 "max": 3600
               },
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden",
+                "no": "sekunder"
               },
               "hint": {
-                "en": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows."
+                "en": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows.",
+                "nl": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows.",
+                "no": "Some devices turn of their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. Must be a value between 1 and 3600. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows."
               }
             },
             {
@@ -490,17 +562,23 @@
               "type": "number",
               "value": 1500,
               "label": {
-                "en": "Normal mode check interval"
+                "en": "Normal mode check interval",
+                "nl": "Normal mode check interval",
+                "no": "Normal mode check interval"
               },
               "attr": {
                 "min": 1500,
                 "max": 60000
               },
               "units": {
-                "en": "ms"
+                "en": "ms",
+                "nl": "ms",
+                "no": "ms"
               },
               "hint": {
-                "en": "Time in milliseconds between each check when in normal mode."
+                "en": "Time in milliseconds between each check when in normal mode.",
+                "nl": "Time in milliseconds between each check when in normal mode.",
+                "no": "Time in milliseconds between each check when in normal mode."
               }
             },
             {
@@ -509,17 +587,22 @@
               "value": 2,
               "label": {
                 "en": "Host timeout",
-                "nl": "Host timeout"
+                "nl": "Host timeout",
+                "no": "Host timeout"
               },
               "attr": {
                 "min": 0.1,
                 "max": 5
               },
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden",
+                "no": "sekunder"
               },
               "hint": {
-                "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting."
+                "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
+                "nl": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
+                "no": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting."
               }
             }
           ]
@@ -527,7 +610,9 @@
         {
           "type": "group",
           "label": {
-            "en": "Stress mode settings"
+            "en": "Stress mode settings",
+            "nl": "Stress mode settings",
+            "no": "Stress mode settings"
           },
           "children": [
             {
@@ -536,17 +621,22 @@
               "value": 0,
               "label": {
                 "en": "Stress period",
-                "nl": "Stres periode"
+                "nl": "Stres periode",
+                "no": "Stress periode"
               },
               "attr": {
                 "min": 0,
                 "max": 600
               },
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden",
+                "no": "sekunder"
               },
               "hint": {
-                "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled."
+                "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled.",
+                "nl": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled.",
+                "no": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled."
               }
             },
             {
@@ -554,17 +644,23 @@
               "type": "number",
               "value": 500,
               "label": {
-                "en": "Stress mode check interval"
+                "en": "Stress mode check interval",
+                "nl": "Stress mode check interval",
+                "no": "Stress mode check interval"
               },
               "attr": {
                 "min": 500,
                 "max": 10000
               },
               "units": {
-                "en": "ms"
+                "en": "ms",
+                "nl": "ms",
+                "no": "ms"
               },
               "hint": {
-                "en": "Time in milliseconds between each check when in stress mode."
+                "en": "Time in milliseconds between each check when in stress mode.",
+                "nl": "Time in milliseconds between each check when in stress mode.",
+                "no": "Time in milliseconds between each check when in stress mode."
               }
             },
             {
@@ -573,17 +669,22 @@
               "value": 2,
               "label": {
                 "en": "Stress host timeout",
-                "nl": "Stres host timeout"
+                "nl": "Stres host timeout",
+                "no": "Stress host timeout"
               },
               "attr": {
                 "min": 0.1,
                 "max": 5
               },
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden",
+                "no": "sekunder"
               },
               "hint": {
-                "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress."
+                "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
+                "nl": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
+                "no": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress."
               }
             }
           ]
@@ -600,8 +701,9 @@
       "setable": false,
       "insights": false,
       "title": {
-        "en": "Entered",
-        "nl": "Kwam binnen"
+        "en": "Present",
+        "nl": "Kwam binnen",
+        "no": "Tilstede"
       }
     }
   }

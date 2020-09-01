@@ -2,7 +2,8 @@
   "id": "last_person_left",
   "title": {
     "en": "The last person left",
-    "nl": "Laatste persoon die het huis verlaten"
+    "nl": "Laatste persoon die het huis verlaten",
+    "no": "Siste person dro hjemmefra"
   },
   "tokens": [
     {

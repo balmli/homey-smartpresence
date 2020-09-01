@@ -2,6 +2,7 @@
   "id": "having_guests",
   "title": {
     "en": "!{{Having|Not having}} guests",
-    "nl": "Er is !{{|geen}} bezoek"
+    "nl": "Er is !{{|geen}} bezoek",
+    "no": "!{{Har|Har ikke}} gjester"
   }
 }

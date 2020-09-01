@@ -3,12 +3,17 @@
     "type": "group",
     "label": {
       "en": "Basic settings",
-      "nl": "Basis instellingen"
+      "nl": "Basis instellingen",
+      "no": "Grunnleggende instillinger"
     },
     "children": [
       {
         "$extends": "host",
         "id": "host"
+      },
+      {
+        "$extends": "port",
+        "id": "port"
       },
       {
         "$extends": "is_guest",
@@ -19,7 +24,9 @@
   {
     "type": "group",
     "label": {
-      "en": "Normal mode settings"
+      "en": "Normal mode settings",
+      "nl": "Normal mode settings",
+      "no": "Normal mode settings"
     },
     "children": [
       {
@@ -39,7 +46,9 @@
   {
     "type": "group",
     "label": {
-      "en": "Stress mode settings"
+      "en": "Stress mode settings",
+      "nl": "Stress mode settings",
+      "no": "Stress mode settings"
     },
     "children": [
       {

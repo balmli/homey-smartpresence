@@ -4,16 +4,21 @@
   "value": 0,
   "label": {
     "en": "Stress period",
-    "nl": "Stres periode"
+    "nl": "Stres periode",
+    "no": "Stress periode"
   },
   "attr": {
     "min": 0,
     "max": 600
   },
   "units": {
-    "en": "seconds"
+    "en": "seconds",
+    "nl": "seconden",
+    "no": "sekunder"
   },
   "hint": {
-    "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled."
+    "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled.",
+    "nl": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled.",
+    "no": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. Must be a value between 0 and 600.\n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled."
   }
 }

@@ -2,7 +2,8 @@
   "id": "first_person_entered",
   "title": {
     "en": "The first person arrived",
-    "nl": "Eerste persoon die binnen komt"
+    "nl": "Eerste persoon die binnen komt",
+    "no": "Første person kom hjem"
   },
   "tokens": [
     {

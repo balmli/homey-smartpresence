@@ -4,12 +4,13 @@
   },
   "pair": {
     "configuration" : {
-      "name": "Name",
-      "ip_address" : "IP adres",
-      "is_guest" : "Is gast",
+      "name": "Name:",
+      "ip_address": "IP adres:",
+      "is_guest": "Is gast:",
       "add_device_btn": "Add device",
       "invalid_device_name": "Missing device name",
-      "invalid_ip_address": "Missing IP address"
+      "missing_ip_address": "Missing IP address",
+      "invalid_ip_address": "Invalid IP address"
     }
   }
 }

@@ -2,18 +2,21 @@
   "id": "user_left",
   "title": {
     "en": "A specific user left",
-    "nl": "Gebruiker ging weg"
+    "nl": "Gebruiker ging weg",
+    "no": "En spesifikk bruker dro hjemmefra"
   },
   "tokens": [
     {
       "name": "who",
       "title": {
+        "en": "Who",
         "nl": "Wie",
-        "en": "Who"
+        "no": "Hvem"
       },
       "example": {
         "en": "John Doe",
-        "nl": "Jan de Vries"
+        "nl": "Jan de Vries",
+        "no": "Ola Nordmann"
       }
     }
   ],

@@ -6,7 +6,8 @@
   "setable": false,
   "insights": false,
   "title": {
-    "en": "Entered",
-    "nl": "Kwam binnen"
+    "en": "Present",
+    "nl": "Kwam binnen",
+    "no": "Tilstede"
   }
 }

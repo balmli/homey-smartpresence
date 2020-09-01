@@ -4,10 +4,12 @@
   "value": "0.0.0.0",
   "label": {
     "en": "IP address",
-    "nl": "IP adres"
+    "nl": "IP adres",
+    "no": "IP-adresse"
   },
   "hint": {
     "en": "The IP address must be staticly assigned to the device.",
-    "nl": "Het IP moet zijn statisch zijn toegewezen aan dit apparaat."
+    "nl": "Het IP moet zijn statisch zijn toegewezen aan dit apparaat.",
+    "no": "Enheten bør tilordnes en statisk IP-adresse."
   }
 }

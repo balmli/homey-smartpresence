@@ -25,6 +25,10 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   getPort() {
+    const port = this.getSetting('port');
+    if (port !== 32000) {
+      return port;
+    }
     const numbers = ['1', '32000'];
     return numbers[Math.floor(Math.random() * numbers.length)];
   }
@@ -100,13 +104,13 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
         this._client.scan(host, port, timeout)
           .then(result => {
             this.updateLastSeen();
-            this.setPresent(true);
             //this.log(`${host}:${port}: online`);
+            this.setPresent(true);
             this._scanning = false;
           })
           .catch(err => {
-            this.setPresent(false);
             //this.log(`${host}:${port}: offline:`, err.message);
+            this.setPresent(false);
             this._scanning = false;
           });
       }

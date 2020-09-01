@@ -1,16 +1,18 @@
 {
   "id": "nl.terryhendrix.smartpresence",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "brandColor": "#2A6FE8",
   "name": {
     "en": "Smart Presence",
-    "nl": "Smart Presence"
+    "nl": "Smart Presence",
+    "no": "Smart Presence"
   },
   "description": {
     "en": "Presence detection based on smartphones connected to your Wi-Fi.",
-    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wi-Fi zitten."
+    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wi-Fi zitten.",
+    "no": "Tilstedeværelse basert på smarttelefon koblet til Wi-Fi-nettverket."
   },
   "category": [
     "internet",
@@ -23,6 +25,21 @@
       "wifi",
       "wi-fi",
       "smartphone"
+    ],
+    "nl": [
+      "smart",
+      "presence",
+      "wifi",
+      "wi-fi",
+      "smartphone"
+    ],
+    "no": [
+      "smart",
+      "presence",
+      "wifi",
+      "wi-fi",
+      "smartphone",
+      "smarttelefon"
     ]
   },
   "images": {
@@ -50,6 +67,8 @@
         "name": "Bjørnar Almli",
         "email": "bjornar.almli@gmail.com"
       }
+    ],
+    "translators": [
     ]
   },
   "contributing": {

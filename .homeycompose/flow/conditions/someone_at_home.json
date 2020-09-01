@@ -2,6 +2,7 @@
   "id": "someone_at_home",
   "title": {
     "en": "!{{Someone|Nobody}} is home",
-    "nl": "Er is !{{iemand|niemand}} thuis"
+    "nl": "Er is !{{iemand|niemand}} thuis",
+    "no": "!{{Noen|Ingen}} er hjemme"
   }
 }

@@ -2,6 +2,7 @@
   "id": "a_household_member_is_home",
   "title": {
     "en": "!{{Household|No household}} members home",
-    "nl": "Er is !{{een|geen}} gezinslid thuis"
+    "nl": "Er is !{{een|geen}} gezinslid thuis",
+    "no": "!{{Medlem|Ingen medlemmer}} av husstanden er hjemme"
   }
 }

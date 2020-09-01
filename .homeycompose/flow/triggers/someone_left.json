@@ -2,7 +2,8 @@
   "id": "someone_left",
   "title": {
     "en": "Someone left",
-    "nl": "Iemand ging weg"
+    "nl": "Iemand ging weg",
+    "no": "Noen dro hjemmefra"
   },
   "tokens": [
     {

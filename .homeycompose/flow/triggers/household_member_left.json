@@ -2,7 +2,8 @@
   "id": "household_member_left",
   "title": {
     "en": "A household member left",
-    "nl": "Een gezinslid is weggegaan"
+    "nl": "Een gezinslid is weggegaan",
+    "no": "Et medlem av husstanden dro hjemmefra"
   },
   "tokens": [
     {

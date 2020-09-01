@@ -2,7 +2,8 @@
   "id": "household_member_arrived",
   "title": {
     "en": "A household member arrived",
-    "nl": "Een gezinslid is aangekomen"
+    "nl": "Een gezinslid is aangekomen",
+    "no": "Et medlem av husstanden kom hjem"
   },
   "tokens": [
     {

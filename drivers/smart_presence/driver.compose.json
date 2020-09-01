@@ -2,7 +2,8 @@
   "id": "smart_presence",
   "name": {
     "en": "Smartphone",
-    "nl": "Smartphone"
+    "nl": "Smartphone",
+    "no": "Smartphone"
   },
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {

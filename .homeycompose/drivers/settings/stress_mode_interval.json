@@ -3,16 +3,22 @@
   "type": "number",
   "value": 500,
   "label": {
-    "en": "Stress mode check interval"
+    "en": "Stress mode check interval",
+    "nl": "Stress mode check interval",
+    "no": "Stress mode check interval"
   },
   "attr": {
     "min": 500,
     "max": 10000
   },
   "units": {
-    "en": "ms"
+    "en": "ms",
+    "nl": "ms",
+    "no": "ms"
   },
   "hint": {
-    "en": "Time in milliseconds between each check when in stress mode."
+    "en": "Time in milliseconds between each check when in stress mode.",
+    "nl": "Time in milliseconds between each check when in stress mode.",
+    "no": "Time in milliseconds between each check when in stress mode."
   }
 }

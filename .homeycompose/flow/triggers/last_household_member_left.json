@@ -2,7 +2,8 @@
   "id": "last_household_member_left",
   "title": {
     "en": "The last household member left",
-    "nl": "Laatste gezinslid is weggegaan"
+    "nl": "Laatste gezinslid is weggegaan",
+    "no": "Siste medlem av husstanden dro hjemmefra"
   },
   "tokens": [
     {

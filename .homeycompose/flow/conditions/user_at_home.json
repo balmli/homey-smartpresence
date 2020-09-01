@@ -2,7 +2,8 @@
   "id": "user_at_home",
   "title": {
     "en": "A specific user is !{{home|away}}",
-    "nl": "Gebruiker is !{{thuis|weg}}"
+    "nl": "Gebruiker is !{{thuis|weg}}",
+    "no": "En spesifikk bruker er !{{hjemme|borte}}"
   },
   "args": [
     {

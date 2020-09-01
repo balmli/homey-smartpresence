@@ -2,7 +2,8 @@
   "id": "first_household_member_arrived",
   "title": {
     "en": "The first household member arrived",
-    "nl": "Eerste gezinslid is aangekomen"
+    "nl": "Eerste gezinslid is aangekomen",
+    "no": "Første medlem av husstanden kom hjem"
   },
   "tokens": [
     {

@@ -2,7 +2,8 @@
   "id": "last_guest_left",
   "title": {
     "en": "The last guest left",
-    "nl": "Laatste gast is weggegaan"
+    "nl": "Laatste gast is weggegaan",
+    "no": "Den siste gjesten forlot hjemmet"
   },
   "tokens": [
     {
