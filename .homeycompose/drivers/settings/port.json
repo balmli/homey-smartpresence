@@ -6,7 +6,7 @@
     "en": "Port number",
     "nl": "Poort nummer",
     "de": "Port number",
-    "no": "Port-nummer",
+    "no": "Portnummer",
     "da": "Portnummer"
   },
   "attr": {
@@ -17,7 +17,7 @@
     "en": "The port number that is checked to see if the device is online.",
     "nl": "Het poort nummer dat wordt getoetst op online zijn in het netwerk.",
     "de": "The port number that is checked to see if the device is online.",
-    "no": "Port-nummer som benyttes for å se om enheten er online.",
+    "no": "Portnummer som benyttes for å se om enheten er online.",
     "da": "Portnummeret som anvendes for at se om enheder er online."
   }
 }
