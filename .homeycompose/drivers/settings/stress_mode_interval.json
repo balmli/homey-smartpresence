@@ -1,7 +1,7 @@
 {
   "id": "stress_mode_interval",
   "type": "number",
-  "value": 500,
+  "value": 1500,
   "label": {
     "en": "Stress mode check interval",
     "nl": "Stress mode controleer interval",
