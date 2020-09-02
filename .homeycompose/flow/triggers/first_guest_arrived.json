@@ -3,18 +3,26 @@
   "title": {
     "en": "The first guest arrived",
     "nl": "Eerste gast is aangekomen",
-    "no": "Første gjest ankom"
+    "de": "The first guest arrived",
+    "no": "Første gjest ankom",
+    "da": "Den første gæst ankom"
   },
   "tokens": [
     {
       "name": "who",
       "title": {
+        "en": "Who",
         "nl": "Wie",
-        "en": "Who"
+        "de": "Wer",
+        "no": "Hvem",
+        "da": "Hvem"
       },
       "example": {
         "en": "John Doe",
-        "nl": "Jan de Vries"
+        "nl": "Jan Jansen",
+        "de": "Max Mustermann",
+        "no": "Ola Nordmann",
+        "da": "Navn Navnesen"
       }
     }
   ]

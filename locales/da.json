@@ -1,0 +1,16 @@
+{
+  "settings": {
+    "title": "Smart Presence"
+  },
+  "pair": {
+    "configuration" : {
+      "name": "Navn:",
+      "ip_address" : "IP-adresse:",
+      "is_guest" : "Er gæst:",
+      "add_device_btn": "Tilføj enhed",
+      "invalid_device_name": "Enheds navn mangler",
+      "missing_ip_address": "IP-adresse mangler",
+      "invalid_ip_address": "Ugydig IP-adresses"
+    }
+  }
+}

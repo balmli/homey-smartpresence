@@ -7,7 +7,9 @@
   "insights": false,
   "title": {
     "en": "Present",
-    "nl": "Kwam binnen",
-    "no": "Tilstede"
+    "nl": "Aanwezigheid detectie",
+    "de": "Present",
+    "no": "Tilstede",
+    "da": "Tilstede"
   }
 }

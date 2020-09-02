@@ -3,7 +3,9 @@
   "title": {
     "en": "A specific user is !{{home|away}}",
     "nl": "Gebruiker is !{{thuis|weg}}",
-    "no": "En spesifikk bruker er !{{hjemme|borte}}"
+    "de": "A specific user is !{{home|away}}",
+    "no": "En spesifikk bruker er !{{hjemme|borte}}",
+    "da": "En bestem bruger er !{{hjemme|ude}}"
   },
   "args": [
     {

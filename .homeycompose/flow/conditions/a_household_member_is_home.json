@@ -3,6 +3,8 @@
   "title": {
     "en": "!{{Household|No household}} members home",
     "nl": "Er is !{{een|geen}} gezinslid thuis",
-    "no": "!{{Medlem|Ingen medlemmer}} av husstanden er hjemme"
+    "de": "!{{Household|No household}} members home",
+    "no": "!{{Medlem|Ingen medlemmer}} av husstanden er hjemme",
+    "da": "!{{Medlem|Ingen medlemmer}} af hustanden er hjemme"
   }
 }

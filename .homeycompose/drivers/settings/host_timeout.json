@@ -3,9 +3,11 @@
   "type": "number",
   "value": 2.0,
   "label": {
-    "en": "Host timeout",
-    "nl": "Host timeout",
-    "no": "Host timeout"
+    "en": "Normal mode timeout",
+    "nl": "Normaal mode time-out",
+    "de": "Normal mode timeout",
+    "no": "Normal modus timeout",
+    "da": "Normal-tilstand timeout"
   },
   "attr": {
     "min": 0.1,
@@ -14,11 +16,15 @@
   "units": {
     "en": "seconds",
     "nl": "seconden",
-    "no": "sekunder"
+    "de": "Sekunden",
+    "no": "sekunder",
+    "da": "sekunder"
   },
   "hint": {
     "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
-    "nl": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
-    "no": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting."
+    "nl": "Hoe lang moet het duren (in seconden) voordat Smart Presence staakt om je telefoon te detecteren op het WiFi netwerk. Waarde moet liggen tussen 0.5 en 5.0\n\nIndien je een snel netwerk hebt, kun je experimenteren met een laagere waarde. Bij een traag netwerk kun je juist proberen de waarde wat te verhogen.",
+    "de": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? Must be a value between 0.1 and 5.0. \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
+    "no": "Hvor lang tid i sekunder før enheten ikke kan registreres på nettverket?  Verdien må være mellom 0,1 og 0,5. \n\nHvis du har et hurtig nettverk, så kan verdien være minde. \nHvis du har et tregt nettverk, bør verdien være større.",
+    "da": "Hvor lang tid i sekunder, før enheden ikke kan registeres på netværket? Værdien skal være mellem 0.1 og 0.5 \n\nHvis du har et hurtigt netværk, så skal værdien værre mindre. \nHvis du har et langtsomt netværk, så skal værdien værre højere."
   }
 }

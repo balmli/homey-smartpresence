@@ -5,11 +5,15 @@
   "label": {
     "en": "Is guest",
     "nl": "Is gast",
-    "no": "Er gjest"
+    "de": "Is guest",
+    "no": "Er gjest",
+    "da": "Er gæst"
   },
   "hint": {
     "en": "Check the box if this person is a guest.",
     "nl": "Vink aan als dit een gast betreft.",
-    "no": "Kryss av hvis personen er en gjest."
+    "de": "Check the box if this person is a guest.",
+    "no": "Kryss av hvis personen er en gjest.",
+    "da": "Sæt flueben hvis personen er gæst."
   }
 }

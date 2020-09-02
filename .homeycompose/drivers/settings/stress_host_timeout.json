@@ -4,8 +4,10 @@
   "value": 2.0,
   "label": {
     "en": "Stress host timeout",
-    "nl": "Stres host timeout",
-    "no": "Stress host timeout"
+    "nl": "Stress mode time-out",
+    "de": "Stress host timeout",
+    "no": "Stress-modus timeout",
+    "da": "Stress-tilstand timeout"
   },
   "attr": {
     "min": 0.1,
@@ -14,11 +16,15 @@
   "units": {
     "en": "seconds",
     "nl": "seconden",
-    "no": "sekunder"
+    "de": "Sekunden",
+    "no": "sekunder",
+    "da": "sekunder"
   },
   "hint": {
     "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
-    "nl": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
-    "no": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress."
+    "nl": "Hetzelfde als ‘normaal mode’ time-out, maar nu voor ‘stress mode’. Hiermee kun je afwijken van de standaard ‘host timeout’.",
+    "de": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
+    "no": "Det samme som 'Normal-modus timeout', men for 'Stress-modus'. Hvis du ønsker å fravike standarden 'Normal-modus timeout', mens enheten er i stress-modus.",
+    "da": "Det samme som 'Normal-tilstand timeout', men for 'Stres-tilstand'. Hvis du ønsker at fravige standarden 'Normal-tilstand timeout', mens enheden ikke er registreret online."
   }
 }

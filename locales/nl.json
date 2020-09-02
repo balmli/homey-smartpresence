@@ -4,13 +4,13 @@
   },
   "pair": {
     "configuration" : {
-      "name": "Name:",
+      "name": "Naam:",
       "ip_address": "IP adres:",
       "is_guest": "Is gast:",
       "add_device_btn": "Add device",
-      "invalid_device_name": "Missing device name",
-      "missing_ip_address": "Missing IP address",
-      "invalid_ip_address": "Invalid IP address"
+      "invalid_device_name": "Apparaatnaam ontbreekt",
+      "missing_ip_address": "IP-adres ontbreekt",
+      "invalid_ip_address": "Ongeldig IP-adres"
     }
   }
 }

@@ -3,18 +3,26 @@
   "title": {
     "en": "The last guest left",
     "nl": "Laatste gast is weggegaan",
-    "no": "Den siste gjesten forlot hjemmet"
+    "de": "The last guest left",
+    "no": "Den siste gjesten forlot hjemmet",
+    "da": "Den sidste gæst forlod hjemmet"
   },
   "tokens": [
     {
       "name": "who",
       "title": {
+        "en": "Who",
         "nl": "Wie",
-        "en": "Who"
+        "de": "Wer",
+        "no": "Hvem",
+        "da": "Hvem"
       },
       "example": {
         "en": "John Doe",
-        "nl": "Jan de Vries"
+        "nl": "Jan Jansen",
+        "de": "Max Mustermann",
+        "no": "Ola Nordmann",
+        "da": "Navn Navnesen"
       }
     }
   ]

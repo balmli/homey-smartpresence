@@ -3,6 +3,8 @@
   "title": {
     "en": "!{{Someone|Nobody}} is home",
     "nl": "Er is !{{iemand|niemand}} thuis",
-    "no": "!{{Noen|Ingen}} er hjemme"
+    "de": "!{{Someone|Nobody}} is home",
+    "no": "!{{Noen|Ingen}} er hjemme",
+    "da": "!{{Nogen|Ingen}} er hjemme"
   }
 }

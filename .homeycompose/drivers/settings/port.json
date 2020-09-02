@@ -4,8 +4,10 @@
   "value": 32000,
   "label": {
     "en": "Port number",
-    "nl": "Port number",
-    "no": "Port-nummer"
+    "nl": "Poort nummer",
+    "de": "Port number",
+    "no": "Port-nummer",
+    "da": "Portnummer"
   },
   "attr": {
     "min": 1,
@@ -13,7 +15,9 @@
   },
   "hint": {
     "en": "The port number that is checked to see if the device is online.",
-    "nl": "The port number that is checked to see if the device is online.",
-    "no": "The port number that is checked to see if the device is online."
+    "nl": "Het poort nummer dat wordt getoetst op online zijn in het netwerk.",
+    "de": "The port number that is checked to see if the device is online.",
+    "no": "Port-nummer som benyttes for å se om enheten er online.",
+    "da": "Portnummeret som anvendes for at se om enheder er online."
   }
 }

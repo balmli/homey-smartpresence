@@ -7,12 +7,16 @@
   "name": {
     "en": "Smart Presence",
     "nl": "Smart Presence",
-    "no": "Smart Presence"
+    "de": "Smart Presence",
+    "no": "Smart Presence",
+    "da": "Smart Presence"
   },
   "description": {
-    "en": "Presence detection based on smartphones connected to your Wi-Fi.",
-    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan de Wi-Fi zitten.",
-    "no": "Tilstedeværelse basert på smarttelefon koblet til Wi-Fi-nettverket."
+    "en": "Presence detection based on smartphones connected to your Wi-Fi",
+    "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan het locale Wi-Fi netwerk gekoppeld zijn",
+    "de": "Presence detection based on smartphones connected to your Wi-Fi",
+    "no": "Tilstedeværelse basert på smarttelefon koblet til Wi-Fi-nettverket",
+    "da": "Registrering af tilstedeværelse baseret på om din mobiltelefon er forbundet til Wi-Fi"
   },
   "category": [
     "internet",
@@ -33,6 +37,13 @@
       "wi-fi",
       "smartphone"
     ],
+    "de": [
+      "smart",
+      "presence",
+      "wifi",
+      "wi-fi",
+      "smartphone"
+    ],
     "no": [
       "smart",
       "presence",
@@ -40,6 +51,13 @@
       "wi-fi",
       "smartphone",
       "smarttelefon"
+    ],
+    "da": [
+      "smart",
+      "presence",
+      "wifi",
+      "wi-fi",
+      "smartphone"
     ]
   },
   "images": {
@@ -69,6 +87,21 @@
       }
     ],
     "translators": [
+      {
+        "name": "🇬🇧Bjørnar Almli"
+      },
+      {
+        "name": "🇳🇱Ernst van den Bosch"
+      },
+      {
+        "name": "🇩🇪Dirk Goebel"
+      },
+      {
+        "name": "🇳🇴Bjørnar Almli"
+      },
+      {
+        "name": "🇩🇰Gert Nielsen"
+      }
     ]
   },
   "contributing": {

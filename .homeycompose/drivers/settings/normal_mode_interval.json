@@ -4,8 +4,10 @@
   "value": 1500,
   "label": {
     "en": "Normal mode check interval",
-    "nl": "Normal mode check interval",
-    "no": "Normal mode check interval"
+    "nl": "Normaal mode interval check.",
+    "de": "Normal mode check interval",
+    "no": "Normal mode check interval",
+    "da": "Normal-tilstand kontrolinterval"
   },
   "attr": {
     "min": 1500,
@@ -14,11 +16,15 @@
   "units": {
     "en": "ms",
     "nl": "ms",
-    "no": "ms"
+    "de": "ms",
+    "no": "ms",
+    "da": "ms"
   },
   "hint": {
     "en": "Time in milliseconds between each check when in normal mode.",
-    "nl": "Time in milliseconds between each check when in normal mode.",
-    "no": "Time in milliseconds between each check when in normal mode."
+    "nl": "Tijd in milliseconden tussen elke check, in 'normaal mode'.",
+    "de": "Time in milliseconds between each check when in normal mode.",
+    "no": "Tid i millisekunder mellom hver sjekk i normal-modus.",
+    "da": "Tid i millisekunder i mellem hver kontrol i normal-tilstand."
   }
 }

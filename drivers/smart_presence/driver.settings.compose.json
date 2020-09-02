@@ -4,7 +4,9 @@
     "label": {
       "en": "Basic settings",
       "nl": "Basis instellingen",
-      "no": "Grunnleggende instillinger"
+      "de": "Basic settings",
+      "no": "Grunnleggende innstillinger",
+      "da": "Grundindstillinger"
     },
     "children": [
       {
@@ -25,8 +27,10 @@
     "type": "group",
     "label": {
       "en": "Normal mode settings",
-      "nl": "Normal mode settings",
-      "no": "Normal mode settings"
+      "nl": "Instellingen voor normale mode",
+      "de": "Normal mode settings",
+      "no": "Innstillinger for normal modus",
+      "da": "Indstillinger for normal tilstand"
     },
     "children": [
       {
@@ -47,8 +51,10 @@
     "type": "group",
     "label": {
       "en": "Stress mode settings",
-      "nl": "Stress mode settings",
-      "no": "Stress mode settings"
+      "nl": "Instellingen voor stress mode",
+      "de": "Stress mode settings",
+      "no": "Innstillinger for stress-modus",
+      "da": "Indstillinger for stres tilstand"
     },
     "children": [
       {

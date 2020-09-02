@@ -3,7 +3,9 @@
   "title": {
     "en": "A specific user arrived",
     "nl": "Gebruiker kwam binnen",
-    "no": "En spesifikk bruker kom hjem"
+    "de": "A specific user arrived",
+    "no": "En bestemt person kom hjem",
+    "da": "En bestemt person kom hjem"
   },
   "tokens": [
     {
@@ -11,12 +13,16 @@
       "title": {
         "en": "Who",
         "nl": "Wie",
-        "no": "Hvem"
+        "de": "Wer",
+        "no": "Hvem",
+        "da": "Hvem"
       },
       "example": {
         "en": "John Doe",
-        "nl": "Jan de Vries",
-        "no": "Ola Nordmann"
+        "nl": "Jan Jansen",
+        "de": "Max Mustermann",
+        "no": "Ola Nordmann",
+        "da": "Navn Navnesen"
       }
     }
   ],
