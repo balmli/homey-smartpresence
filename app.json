@@ -840,7 +840,7 @@
                 "nl": "Stress mode controleer interval",
                 "de": "Stress-Modus Prüfintervall",
                 "no": "Stress-modus sjekk-intervall",
-                "da": "Stres tilstand kontrolinterval"
+                "da": "Stress-tilstand kontrolinterval"
               },
               "attr": {
                 "min": 500,
@@ -888,7 +888,7 @@
                 "nl": "Hetzelfde als ‘normaal mode’ time-out, maar nu voor ‘stress mode’. Hiermee kun je afwijken van de standaard ‘host timeout’.",
                 "de": "Dasselbe wie 'Host Time-out' nur für den 'Stress-Modus'. Weil Sie bei Problemen eventuell vom Standard-'Host Time-out' abweichen wollen.",
                 "no": "Det samme som 'Normal-modus timeout', men for 'Stress-modus'. Hvis du ønsker å fravike standarden 'Normal-modus timeout', mens enheten er i stress-modus.",
-                "da": "Det samme som 'Normal-tilstand timeout', men for 'Stres-tilstand'. Hvis du ønsker at fravige standarden 'Normal-tilstand timeout', mens enheden ikke er registreret online."
+                "da": "Det samme som 'Normal-tilstand timeout', men for 'Stress-tilstand'. Hvis du ønsker at fravige standarden 'Normal-tilstand timeout', mens enheden ikke er registreret online."
               }
             }
           ]
