@@ -10,4 +10,4 @@ For at tilføje enhed, skal du gøre følgende:
 3. Tilføj enheden ved at angive et navn og IP-adresse. Sæt flueben checkboksen 'Er gæst' hvis det er gæst.
 
 
-For mere information, klik på linket 'Besøk forum' på denne side.
+For mere information, klik på linket 'Besøg forum' på denne side.

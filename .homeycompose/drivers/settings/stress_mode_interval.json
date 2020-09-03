@@ -7,7 +7,7 @@
     "nl": "Stress mode controleer interval",
     "de": "Stress-Modus Prüfintervall",
     "no": "Stress-modus sjekk-intervall",
-    "da": "Stres tilstand kontrolinterval"
+    "da": "Stress-tilstand kontrolinterval"
   },
   "attr": {
     "min": 500,
