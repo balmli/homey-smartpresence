@@ -7,10 +7,10 @@
       "name": "Naam:",
       "ip_address": "IP adres:",
       "is_guest": "Is gast:",
-      "add_device_btn": "Add device",
-      "invalid_device_name": "Apparaatnaam ontbreekt",
+      "add_device_btn": "Voeg apparaat toe",
+      "invalid_device_name": "Apparaat naam ontbreekt",
       "missing_ip_address": "IP-adres ontbreekt",
-      "invalid_ip_address": "Ongeldig IP-adres"
+      "invalid_ip_address": "IP-adres is ongeldig"
     }
   }
 }
