@@ -5,12 +5,12 @@
   "pair": {
     "configuration" : {
       "name": "Name:",
-      "ip_address" : "IP address:",
-      "is_guest" : "Is guest:",
-      "add_device_btn": "Add device",
-      "invalid_device_name": "Missing device name",
-      "missing_ip_address": "Missing IP address",
-      "invalid_ip_address": "Invalid IP address"
+      "ip_address" : "IP-Adresse:",
+      "is_guest" : "Ist Gast:",
+      "add_device_btn": "Gerät hinzufügen",
+      "invalid_device_name": "Fehlender Gerätename",
+      "missing_ip_address": "Fehlende IP-Adresse",
+      "invalid_ip_address": "Ungültige IP-Adresse"
     }
   }
 }

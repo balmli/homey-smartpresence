@@ -4,7 +4,7 @@
     "label": {
       "en": "Basic settings",
       "nl": "Basis instellingen",
-      "de": "Basic settings",
+      "de": "Grundeinstellungen",
       "no": "Grunnleggende innstillinger",
       "da": "Grundindstillinger"
     },
@@ -28,7 +28,7 @@
     "label": {
       "en": "Normal mode settings",
       "nl": "Instellingen voor normale mode",
-      "de": "Normal mode settings",
+      "de": "Einstellungen Normal-Modus",
       "no": "Innstillinger for normal modus",
       "da": "Indstillinger for normal tilstand"
     },
@@ -52,7 +52,7 @@
     "label": {
       "en": "Stress mode settings",
       "nl": "Instellingen voor stress mode",
-      "de": "Stress mode settings",
+      "de": "Einstellungen Stress-Modus",
       "no": "Innstillinger for stress-modus",
       "da": "Indstillinger for stres tilstand"
     },

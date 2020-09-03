@@ -14,7 +14,7 @@
   "description": {
     "en": "Presence detection based on smartphones connected to your Wi-Fi",
     "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan het locale Wi-Fi netwerk gekoppeld zijn",
-    "de": "Presence detection based on smartphones connected to your Wi-Fi",
+    "de": "Anwesenheitserkennung auf Grundlage mit Ihrem Wi-Fi verbundenen Smartphones",
     "no": "Tilstedeværelse basert på smarttelefon koblet til Wi-Fi-nettverket",
     "da": "Registrering af tilstedeværelse baseret på om din mobiltelefon er forbundet til Wi-Fi"
   },
@@ -94,6 +94,9 @@
         "name": "🇳🇱Ernst van den Bosch"
       },
       {
+        "name": "🇩🇪Dirk Göbel"
+      },
+      {
         "name": "🇳🇴Bjørnar Almli"
       },
       {
@@ -120,7 +123,7 @@
         "title": {
           "en": "The first guest arrived",
           "nl": "Eerste gast is aangekomen",
-          "de": "The first guest arrived",
+          "de": "Der erste Gast ist angekommen",
           "no": "Første gjest ankom",
           "da": "Den første gæst ankom"
         },
@@ -149,7 +152,7 @@
         "title": {
           "en": "The first household member arrived",
           "nl": "Eerste gezinslid is aangekomen",
-          "de": "The first household member arrived",
+          "de": "Das erste Haushaltsmitglied ist angekommen",
           "no": "Første medlem av husstanden kom hjem",
           "da": "Det første medlem i husstanden kom hjem"
         },
@@ -178,7 +181,7 @@
         "title": {
           "en": "The first person arrived",
           "nl": "Eerste persoon die binnen komt",
-          "de": "The first person arrived",
+          "de": "Die erste Person ist angekommen",
           "no": "Første person kom hjem",
           "da": "Den første person kom hjem"
         },
@@ -207,7 +210,7 @@
         "title": {
           "en": "A guest arrived",
           "nl": "Een gast is aangekomen",
-          "de": "A guest arrived",
+          "de": "Ein Gast ist angekommen",
           "no": "En gjest ankom",
           "da": "En gæst ankom"
         },
@@ -236,7 +239,7 @@
         "title": {
           "en": "A guest left",
           "nl": "Een gast is weggegaan",
-          "de": "A guest left",
+          "de": "Ein Gast ist gegangen",
           "no": "En gjest forlot hjemmet",
           "da": "En gæst forlod hjemmet"
         },
@@ -265,7 +268,7 @@
         "title": {
           "en": "A household member arrived",
           "nl": "Een gezinslid is aangekomen",
-          "de": "A household member arrived",
+          "de": "Ein Haushaltsmitglied ist angekommen",
           "no": "Et medlem av husstanden kom hjem",
           "da": "Et medlem af husstanden kom hjem"
         },
@@ -294,7 +297,7 @@
         "title": {
           "en": "A household member left",
           "nl": "Een gezinslid is weggegaan",
-          "de": "A household member left",
+          "de": "Ein Haushaltsmitglied ist gegangen",
           "no": "Et medlem av husstanden dro hjemmefra",
           "da": "Et medlem af husstanden forlod hjemmet"
         },
@@ -323,7 +326,7 @@
         "title": {
           "en": "The last guest left",
           "nl": "Laatste gast is weggegaan",
-          "de": "The last guest left",
+          "de": "Der letzte Gast ist gegangen",
           "no": "Den siste gjesten forlot hjemmet",
           "da": "Den sidste gæst forlod hjemmet"
         },
@@ -352,7 +355,7 @@
         "title": {
           "en": "The last household member left",
           "nl": "Laatste gezinslid is weggegaan",
-          "de": "The last household member left",
+          "de": "Das letzte Haushaltsmitglied ist gegangen",
           "no": "Siste medlem av husstanden dro hjemmefra",
           "da": "Det sidste medlem af husstanden forlod hjemmet"
         },
@@ -381,7 +384,7 @@
         "title": {
           "en": "The last person left",
           "nl": "Laatste persoon die het huis verlaten",
-          "de": "The last person left",
+          "de": "Die letzte Person ist gegangen",
           "no": "Siste person dro hjemmefra",
           "da": "Den sidste person forlod hjemmet"
         },
@@ -410,7 +413,7 @@
         "title": {
           "en": "Someone arrived",
           "nl": "Iemand kwam binnen",
-          "de": "Someone arrived",
+          "de": "Jemand ist angekommen",
           "no": "Noen kom hjem",
           "da": "Nogen kom hjem"
         },
@@ -439,7 +442,7 @@
         "title": {
           "en": "Someone left",
           "nl": "Iemand ging weg",
-          "de": "Someone left",
+          "de": "Jemand ist gegangen",
           "no": "Noen dro hjemmefra",
           "da": "Nogen forlod hjemmet"
         },
@@ -468,7 +471,7 @@
         "title": {
           "en": "A specific user arrived",
           "nl": "Gebruiker kwam binnen",
-          "de": "A specific user arrived",
+          "de": "Ein bestimmter Benutzer ist angekommen",
           "no": "En bestemt person kom hjem",
           "da": "En bestemt person kom hjem"
         },
@@ -504,7 +507,7 @@
         "title": {
           "en": "A specific user left",
           "nl": "Gebruiker ging weg",
-          "de": "A specific user left",
+          "de": "Ein bestimmter Benutzer ist gegangen",
           "no": "En bestemt person dro hjemmefra",
           "da": "En bestemt person forlod hjemmet"
         },
@@ -542,7 +545,7 @@
         "title": {
           "en": "!{{Household|No household}} members home",
           "nl": "Er is !{{een|geen}} gezinslid thuis",
-          "de": "!{{Household|No household}} members home",
+          "de": "!{{Haushalt|Kein Haushalt}} Haushaltsmitglieder",
           "no": "!{{Medlem|Ingen medlemmer}} av husstanden er hjemme",
           "da": "!{{Medlem|Ingen medlemmer}} af hustanden er hjemme"
         }
@@ -552,7 +555,7 @@
         "title": {
           "en": "!{{Having|Not having}} guests",
           "nl": "Er is !{{|geen}} bezoek",
-          "de": "!{{Having|Not having}} guests",
+          "de": "!{{Haben|Nicht haben}} Gäste",
           "no": "!{{Har|Har ikke}} gjester",
           "da": "!{{Har|Har ikke}} gæster"
         }
@@ -562,7 +565,7 @@
         "title": {
           "en": "!{{Someone|Nobody}} is home",
           "nl": "Er is !{{iemand|niemand}} thuis",
-          "de": "!{{Someone|Nobody}} is home",
+          "de": "!{{Jemand|Niemand}} ist zu Hause",
           "no": "!{{Noen|Ingen}} er hjemme",
           "da": "!{{Nogen|Ingen}} er hjemme"
         }
@@ -572,7 +575,7 @@
         "title": {
           "en": "A specific user is !{{home|away}}",
           "nl": "Gebruiker is !{{thuis|weg}}",
-          "de": "A specific user is !{{home|away}}",
+          "de": "Ein bestimmter Benutzer ist !{{zu Hause|abwesend}}",
           "no": "En bestemt bruker er !{{hjemme|borte}}",
           "da": "En bestem bruger er !{{hjemme|ude}}"
         },
@@ -618,7 +621,7 @@
           "label": {
             "en": "Basic settings",
             "nl": "Basis instellingen",
-            "de": "Basic settings",
+            "de": "Grundeinstellungen",
             "no": "Grunnleggende innstillinger",
             "da": "Grundindstillinger"
           },
@@ -630,14 +633,14 @@
               "label": {
                 "en": "IP address",
                 "nl": "IP adres",
-                "de": "IP address",
+                "de": "IP-Adresse",
                 "no": "IP-adresse",
                 "da": "IP-adresse"
               },
               "hint": {
                 "en": "The IP address must be staticly assigned to the device.",
                 "nl": "Het IP adres moet statisch zijn toegewezen aan dit apparaat.",
-                "de": "The IP address must be staticly assigned to the device.",
+                "de": "Dem Gerät muss eine feste IP-Adresse zugewiesen sein.",
                 "no": "Enheten bør tilordnes en statisk IP-adresse.",
                 "da": "Enheden bør have fast IP-adresse."
               }
@@ -649,7 +652,7 @@
               "label": {
                 "en": "Port number",
                 "nl": "Poort nummer",
-                "de": "Port number",
+                "de": "Port-Nummer",
                 "no": "Portnummer",
                 "da": "Portnummer"
               },
@@ -660,7 +663,7 @@
               "hint": {
                 "en": "The port number that is checked to see if the device is online.",
                 "nl": "Het poort nummer dat wordt getoetst op online zijn in het netwerk.",
-                "de": "The port number that is checked to see if the device is online.",
+                "de": "Die Port-Nummer, die überprüft wird, um festzustellen, ob das Gerät online ist.",
                 "no": "Portnummer som benyttes for å se om enheten er online.",
                 "da": "Portnummeret som anvendes for at se om enheder er online."
               }
@@ -672,14 +675,14 @@
               "label": {
                 "en": "Is guest",
                 "nl": "Is gast",
-                "de": "Is guest",
+                "de": "Ist Gast",
                 "no": "Er gjest",
                 "da": "Er gæst"
               },
               "hint": {
                 "en": "Check the box if this person is a guest.",
                 "nl": "Vink aan als dit een gast betreft.",
-                "de": "Check the box if this person is a guest.",
+                "de": "Aktivieren Sie den Schieber, wenn diese Person ein Gast ist.",
                 "no": "Kryss av hvis personen er en gjest.",
                 "da": "Sæt flueben hvis personen er gæst."
               }
@@ -691,7 +694,7 @@
           "label": {
             "en": "Normal mode settings",
             "nl": "Instellingen voor normale mode",
-            "de": "Normal mode settings",
+            "de": "Einstellungen Normal-Modus",
             "no": "Innstillinger for normal modus",
             "da": "Indstillinger for normal tilstand"
           },
@@ -703,7 +706,7 @@
               "label": {
                 "en": "Away delay",
                 "nl": "Vertraging voor melden 'afwezig'",
-                "de": "Away delay",
+                "de": "Abwesenheitsverzögerung",
                 "no": "Forsinkelse for bortemodus",
                 "da": "Offline forsinkelse"
               },
@@ -721,7 +724,7 @@
               "hint": {
                 "en": "Some devices turn off their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows.",
                 "nl": "Sommige apparaten zetten de WiFi uit wanneer het scherm uitgaat en re-activeren vervolgens periodiek de WiFi verbinding. Hierdoor is het mogelijk dat Smart Presence niet goed werkt. Probeer in dat geval ‘Vertraging voor melden 'afwezig' waarde te verhogen. In sommige gevallen is het ook zinnig om de “Stress Mode’ aan te zetten. \n\nExperimenteer met deze waarden om een betere aanwezigheid detectie te krijgen. Let op! Bij een te kleine waarde kan het apparaat ‘knipperen’ tussen aan- en afwezig. Een te hoge waarde levert echter te lange vertraging op bij aanwezigheid detectie en de flows die hierdoor getrieerd worden.",
-                "de": "Some devices turn off their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows.",
+                "de": "Wenn der Bildschirm des Smartphones ausgeschaltet wird, schalten einige Geräte ihr Wi-Fi aus. Ab und zu verbinden sie sich wieder mit dem Wi-Fi, um sich nach kurzer Zeit wieder zu trennen. Aufgrund eines schlechten Timings ist es möglich, dass das nicht erkannt wird.\n\nVerlängern Sie die 'Abwesenheitsverzögerung' um einige Sekunden, damit das Gerät weiterhin erkannt wird. In einigen Fällen kann der 'Stress-Modus' zusätzlich Abhilfe schaffen.\n\nEine Feinabstimmung ist notwendig! Wenn der Wert zu klein ist, wechselt das Gerät möglicherweise zwischen 'anwesend' und 'abwesend'. Ist der Wert zu groß, dauert es eventuell zu lange bis Flows getriggert werden.",
                 "no": "Noen enheter skrur av Wi-Fi når skjermen slukkes. Enheten gjenetablerer løpende forbindelsen, og mister deretter forbindelsen igjen etter kort tid.  Det er derfor en sjanse for at enheten ikke registreres, pga. koordinering av registrering mellom Homey og enheten.\n\nHvis du øker 'Forsinkelse for bortemodus' så blir enheten værende online i et bestemt antall sekunder.  I noen tilfeller kan stress-modus hjelpe.\n\nFinjustering er nødvendig!  Hvis verdien er for lav, vil enheten bytte mellom 'online' og 'offline'.  Hvis verdien er for høy, så vil det gå lang tid før enheten markeres som 'offline'.",
                 "da": "Nogle enheder slukker for enhedens WI-FI, når skærmen er slukket. Enheden genetablerer løbende forbindelsen, hvorefter den mister forbindelsen igen efter kort tid. Der er chance for at enheden ikke registreres, grundet koordinering af registrering mellem Homey og enhed!\n\nHvis du øger 'Offline forsinkelse' så bliver enheden værende online i bestemt antal sekunder. I nogen tilfælde kan stres tilstand hjælp. \n\nFinjustering er nødvendig! Hvis værdien er for lille, vil enheden henholdsvis skifte mellem 'offline' og 'online'. Hvis værdien er for høj, så vil der gå lang tid før enheden bliver registreret som offline."
               }
@@ -733,7 +736,7 @@
               "label": {
                 "en": "Normal mode check interval",
                 "nl": "Normaal mode interval check.",
-                "de": "Normal mode check interval",
+                "de": "Normal-Modus Prüfintervall",
                 "no": "Normal modus sjekk-intervall",
                 "da": "Normal-tilstand kontrolinterval"
               },
@@ -751,7 +754,7 @@
               "hint": {
                 "en": "Time in milliseconds between each check when in normal mode.",
                 "nl": "Tijd in milliseconden tussen elke check, in 'normaal mode'.",
-                "de": "Time in milliseconds between each check when in normal mode.",
+                "de": "Zeit in Millisekunden zwischen den einzelnen Prüfungen im Normal-Modus.",
                 "no": "Tid i millisekunder mellom hver sjekk i normal-modus.",
                 "da": "Tid i millisekunder i mellem hver kontrol i normal-tilstand."
               }
@@ -763,7 +766,7 @@
               "label": {
                 "en": "Normal mode timeout",
                 "nl": "Normaal mode time-out",
-                "de": "Normal mode timeout",
+                "de": "Normal-Modus Time-out",
                 "no": "Normal modus timeout",
                 "da": "Normal-tilstand timeout"
               },
@@ -781,7 +784,7 @@
               "hint": {
                 "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
                 "nl": "Hoe lang moet het duren (in seconden) voordat Smart Presence staakt om je telefoon te detecteren op het WiFi netwerk.\n\nIndien je een snel netwerk hebt, kun je experimenteren met een laagere waarde. Bij een traag netwerk kun je juist proberen de waarde wat te verhogen.",
-                "de": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
+                "de": "Wie lange soll die Suche Ihres Telefons im Netz dauern (in Sekunden), bis Smart Presence aufhört zu suchen?\n\nWenn Sie ein schnelles Netzwerk haben, kann diese Einstellung heruntergesetzt werden. \nWenn Sie ein langsames Netzwerk haben, sollten Sie diese Einstellung eventuell erhöhen.",
                 "no": "Hvor lang tid i sekunder før enheten ikke kan registreres på nettverket?\n\nHvis du har et hurtig nettverk, så kan verdien være minde. \nHvis du har et tregt nettverk, bør verdien være større.",
                 "da": "Hvor lang tid i sekunder, før enheden ikke kan registeres på netværket? \n\nHvis du har et hurtigt netværk, så skal værdien værre mindre. \\nHvis du har et langtsomt netværk, så skal værdien værre højere."
               }
@@ -793,7 +796,7 @@
           "label": {
             "en": "Stress mode settings",
             "nl": "Instellingen voor stress mode",
-            "de": "Stress mode settings",
+            "de": "Einstellungen Stress-Modus",
             "no": "Innstillinger for stress-modus",
             "da": "Indstillinger for stres tilstand"
           },
@@ -805,7 +808,7 @@
               "label": {
                 "en": "Stress period",
                 "nl": "Stress periode",
-                "de": "Stress period",
+                "de": "Stressperiode",
                 "no": "Periode for stress-sjekking",
                 "da": "Periode for stress kontrol"
               },
@@ -823,7 +826,7 @@
               "hint": {
                 "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. \n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled.",
                 "nl": "'Stress mode' wordt geactiveerd als een apparaat niet gevonden kan worden, maar vanwege de “Vertraging voor melden 'afwezig' ” nog niet als offline is aangemerkt. ‘x’ seconden voor het apparaat daadwerkelijk als afwezig wordt aangemerkt, wordt het frequenter gecheckt. \n\nAls een apparaat problemen oplevert, kun je met deze instellingen experimenteren om een betere/stabieler resultaat te verkrijgen.\n\nZet deze waarde nooit hoger dan de ‘Vertraging voor melden 'afwezig' ’ vertraging, want dan wordt elke check een stress check! Als je het de waarde ‘0’ geeft, is ‘stress mode’ uitgeschakeld.",
-                "de": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. \n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled.",
+                "de": "Der Stress-Modus wird aktiviert, wenn ein Gerät nicht erreicht werden kann. Aufgrund der Einstellung 'Abwesenheitsverzögerung' ist es jedoch noch nicht als 'abwesend' markiert. 'x' Sekunden bevor das Gerät als 'abwesend' markiert wird, wird es häufiger überprüft.\n\nWenn Sie Probleme mit einem Gerät haben, kann dies helfen stabilere Ergebnisse zu erzielen.\n\nKonfigurieren Sie diesen Wert niemals höher als den Wert für 'Abwesenheitsverzögerung', da dann jede Prüfung eine Belastungsprüfung ist! Wenn Sie diese Einstellung auf 0 konfigurieren, wird der Stress-Modus deaktiviert.",
                 "no": "Stress-modus aktiveres når enheten ikke er online, men pga. 'Offline forsinkelse' er enheten ikke ennå markerrt som offline.  Det går et angitt antall sekunder før enheten registreres som offline og intervall mellom kontroller er kortere.  \n\nHvis du har problemer med enheten, kan det hjelpe på stabil registrering.\n\nMerk at du ikke må angi en verdi som er større enn 'Offline forsinkelse', siden da blir hver kontroll stress-kontroll! Hvis du angir verdien som 0, så blir stress-modus inaktiv.",
                 "da": "Stress-tilstand aktiveres når enheden ikke er registreret online, men grundet indstilling af 'Offline forsinkelse' er enheden ikke markeret som offline. Der går det angivet antal sekunder før enheden registreres som offline og interval i mellem kontroller er kortere.\n\nHvis du har problemer med enheden, kan det hjælpe på stabil registrering. \n\nBemærk at du ikke må angive en værdi som større end 'Offline forsinkelse', fordi hver kontrol bliver stress kontrol! Hvis du angiver værdien som 0, så bliver stress-tilstand inaktiv."
               }
@@ -835,7 +838,7 @@
               "label": {
                 "en": "Stress mode check interval",
                 "nl": "Stress mode controleer interval",
-                "de": "Stress mode check interval",
+                "de": "Stress-Modus Prüfintervall",
                 "no": "Stress-modus sjekk-intervall",
                 "da": "Stres tilstand kontrolinterval"
               },
@@ -853,7 +856,7 @@
               "hint": {
                 "en": "Time in milliseconds between each check when in stress mode.",
                 "nl": "Tijd in milliseconden tussen elke check in stress mode.",
-                "de": "Time in milliseconds between each check when in stress mode.",
+                "de": "Zeit in Millisekunden zwischen den einzelnen Prüfungen im Stress-Modus.",
                 "no": "Tid i millisekunder mellom hver sjekk i stress-modus.",
                 "da": "Tid i milisekunder i mellem hver kontrol i stress-tilstand"
               }
@@ -865,7 +868,7 @@
               "label": {
                 "en": "Stress host timeout",
                 "nl": "Stress mode time-out",
-                "de": "Stress host timeout",
+                "de": "Stress Host Time-out",
                 "no": "Stress-modus timeout",
                 "da": "Stress-tilstand timeout"
               },
@@ -883,7 +886,7 @@
               "hint": {
                 "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
                 "nl": "Hetzelfde als ‘normaal mode’ time-out, maar nu voor ‘stress mode’. Hiermee kun je afwijken van de standaard ‘host timeout’.",
-                "de": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
+                "de": "Dasselbe wie 'Host Time-out' nur für den 'Stress-Modus'. Weil Sie bei Problemen eventuell vom Standard-'Host Time-out' abweichen wollen.",
                 "no": "Det samme som 'Normal-modus timeout', men for 'Stress-modus'. Hvis du ønsker å fravike standarden 'Normal-modus timeout', mens enheten er i stress-modus.",
                 "da": "Det samme som 'Normal-tilstand timeout', men for 'Stres-tilstand'. Hvis du ønsker at fravige standarden 'Normal-tilstand timeout', mens enheden ikke er registreret online."
               }
@@ -904,7 +907,7 @@
       "title": {
         "en": "Present",
         "nl": "Aanwezigheid detectie",
-        "de": "Present",
+        "de": "Anwesenheitserkennung",
         "no": "Tilstede",
         "da": "Tilstede"
       }

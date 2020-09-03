@@ -14,7 +14,7 @@
   "description": {
     "en": "Presence detection based on smartphones connected to your Wi-Fi",
     "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan het locale Wi-Fi netwerk gekoppeld zijn",
-    "de": "Presence detection based on smartphones connected to your Wi-Fi",
+    "de": "Anwesenheitserkennung auf Grundlage mit Ihrem Wi-Fi verbundenen Smartphones",
     "no": "Tilstedeværelse basert på smarttelefon koblet til Wi-Fi-nettverket",
     "da": "Registrering af tilstedeværelse baseret på om din mobiltelefon er forbundet til Wi-Fi"
   },
@@ -92,6 +92,9 @@
       },
       {
         "name": "🇳🇱Ernst van den Bosch"
+      },
+      {
+        "name": "🇩🇪Dirk Göbel"
       },
       {
         "name": "🇳🇴Bjørnar Almli"
