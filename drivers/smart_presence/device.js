@@ -15,6 +15,19 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
       if (!this.hasCapability('onoff')) {
         await this.addCapability('onoff');
       }
+      const ver = this.getStoreValue('ver');
+      if (ver === null) {
+        if (this.getNormalModeInterval() < 3000) {
+          await this.setSettings({ normal_mode_interval: 3000 });
+          this.log('_migrate: normal_mode_interval set to', this.getNormalModeInterval());
+        }
+        if (this.getStressModeInterval() < 1500) {
+          await this.setSettings({ stress_mode_interval: 1500 });
+          this.log('_migrate: stress_mode_interval set to', this.getStressModeInterval());
+        }
+        await this.setStoreValue('ver', 1);
+        this.log('_migrate: set ver to', this.getStoreValue('ver'));
+      }
     } catch (err) {
       this.log('Migration failed', err);
     }
@@ -148,7 +161,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
           Homey.app.guestLeftTrigger.trigger(this.getFlowCardTokens(), {});
         }
       } else {
-        this.log(`${this.getHost()} - ${this.getDeviceName()}: is offline`);
+        //this.log(`${this.getHost()} - ${this.getDeviceName()}: is offline`);
       }
     }
   }

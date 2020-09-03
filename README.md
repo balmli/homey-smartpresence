@@ -48,6 +48,7 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 #### 0.7.0
 
 - The port number can be configured from advanced settings
+- Increased check intervals for better performance
 
 #### 0.6.3
 

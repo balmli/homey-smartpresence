@@ -1,7 +1,7 @@
 {
   "id": "normal_mode_interval",
   "type": "number",
-  "value": 3000,
+  "value": 5000,
   "label": {
     "en": "Normal mode check interval",
     "nl": "Normaal mode interval check.",
