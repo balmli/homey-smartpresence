@@ -1,4 +1,7 @@
 {
+  "0.7.1": {
+    "en": "The port number can be configured from advanced settings. Increased check intervals for better performance. "
+  },
   "0.7.0": {
     "en": "The port number can be configured from advanced settings. Increased check intervals for better performance. "
   },

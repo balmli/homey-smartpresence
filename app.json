@@ -1,6 +1,6 @@
 {
   "id": "nl.terryhendrix.smartpresence",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "brandColor": "#2A6FE8",
