@@ -48,6 +48,7 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 #### 0.7.2
 
 - Better language support
+- Better performance
 
 #### 0.7.1
 

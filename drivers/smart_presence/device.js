@@ -8,6 +8,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   async onInit() {
     await this._migrate();
     this._client = new Network({ log: this.log });
+    this.scan();
   }
 
   async _migrate() {
@@ -31,6 +32,12 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     } catch (err) {
       this.log('Migration failed', err);
     }
+  }
+
+  onDeleted() {
+    this._deleted = true;
+    this.clearScanTimer();
+    this.log('device deleted');
   }
 
   getHost() {
@@ -99,36 +106,38 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
       ((this.getAwayDelayInMillis() - this.getSeenMillisAgo()) < this.getStressAtInMillis());
   }
 
-  async scan() {
-    try {
-      const now = Date.now();
-      const stressTest = this.shouldStressCheck();
-      const shouldScan = !this._lastScan ||
-        stressTest && (now - this._lastScan > this.getStressModeInterval()) ||
-        !stressTest && (now - this._lastScan > this.getNormalModeInterval());
+  clearScanTimer() {
+    if (this.scanTimer) {
+      clearTimeout(this.scanTimer);
+      this.scanTimer = undefined;
+    }
+  }
 
-      if (shouldScan && !this._scanning) {
-        this._scanning = true;
-        this._lastScan = Date.now();
-        const host = this.getHost();
-        const port = this.getPort();
-        const timeout = stressTest ? this.getStressModeTimeout() : this.getNormalModeTimeout();
-        //this.log(`${host}:${port}: scanning, stress: ${stressTest}`);
-        this._client.scan(host, port, timeout)
-          .then(result => {
-            this.updateLastSeen();
-            //this.log(`${host}:${port}: online`);
-            this.setPresent(true);
-            this._scanning = false;
-          })
-          .catch(err => {
-            //this.log(`${host}:${port}: offline:`, err.message);
-            this.setPresent(false);
-            this._scanning = false;
-          });
-      }
+  scheduleScans(interval) {
+    if (this._deleted) {
+      return;
+    }
+    this.clearScanTimer();
+    this.scanTimer = setTimeout(this.scan.bind(this), interval);
+  }
+
+  async scan() {
+    const host = this.getHost();
+    const port = this.getPort();
+    const stressTest = this.shouldStressCheck();
+    const interval = stressTest ? this.getStressModeInterval() : this.getNormalModeInterval();
+    const timeout = stressTest ? this.getStressModeTimeout() : this.getNormalModeTimeout();
+    try {
+      //this.log(`${host}:${port}: scanning, timeout: ${timeout}, interval: ${interval}`);
+      await this._client.scan(host, port, timeout);
+      await this.updateLastSeen();
+      //this.log(`${host}:${port}: timeout: ${timeout}, interval: ${interval} -> online`);
+      await this.setPresent(true);
     } catch (err) {
-      this._scanning = false;
+      //this.log(`${host}:${port}: timeout: ${timeout}, interval: ${interval} -> offline:`, err.message);
+      await this.setPresent(false);
+    } finally {
+      this.scheduleScans(interval);
     }
   }
 
@@ -160,8 +169,6 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
         if (this.isGuest()) {
           Homey.app.guestLeftTrigger.trigger(this.getFlowCardTokens(), {});
         }
-      } else {
-        //this.log(`${this.getHost()} - ${this.getDeviceName()}: is offline`);
       }
     }
   }

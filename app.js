@@ -9,7 +9,6 @@ module.exports = class SmartPresenceApp extends Homey.App {
       Homey.on('unload', () => this._onUninstall());
       await this.initFlows();
       this._presenceStatus = [];
-      this.scheduleScans();
       this.log('SmartPresenceApp is running...');
     } catch (err) {
       this.log('onInit error', err);
@@ -88,44 +87,6 @@ module.exports = class SmartPresenceApp extends Homey.App {
     return this.getPresenceStatus().filter(d => d.present).length > 0;
   }
 
-  clearScanTimer() {
-    if (this.scanTimer) {
-      clearTimeout(this.scanTimer);
-      this.scanTimer = undefined;
-    }
-  }
-
-  scheduleScans(interval = 500) {
-    if (this._deleted) {
-      return;
-    }
-    this.clearScanTimer();
-    this.scanTimer = setTimeout(this.doScan.bind(this), interval);
-  }
-
-  async doScan() {
-    if (this._deleted) {
-      return;
-    }
-    try {
-      this.clearScanTimer();
-      this.scanDevices();
-    } catch (err) {
-      this.log('doScan error', err);
-    } finally {
-      this.scheduleScans();
-    }
-  }
-
-  scanDevices() {
-    this._presenceStatus = this.getPresenceStatus();
-    const driver = Homey.ManagerDrivers.getDriver('smart_presence');
-    const devices = driver.getDevices();
-    for (let device of devices) {
-      device.scan();
-    }
-  }
-
   getPresenceStatus() {
     const status = [];
     const driver = Homey.ManagerDrivers.getDriver('smart_presence');
@@ -171,9 +132,19 @@ module.exports = class SmartPresenceApp extends Homey.App {
   _onUninstall() {
     this._deleted = true;
     try {
-      this.clearScanTimer();
+      this._clearTimers();
     } catch (err) {
       this.log('_onUninstall error', err);
+    }
+  }
+
+  _clearTimers() {
+    const driver = Homey.ManagerDrivers.getDriver('smart_presence');
+    const devices = driver.getDevices();
+    for (let device of devices) {
+      if (device.clearScanTimer) {
+        device.clearScanTimer();
+      }
     }
   }
 
