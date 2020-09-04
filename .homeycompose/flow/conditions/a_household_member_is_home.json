@@ -5,6 +5,7 @@
     "nl": "Er is !{{een|geen}} gezinslid thuis",
     "de": "!{{Haushalt|Kein Haushalt}} Haushaltsmitglieder",
     "no": "!{{Medlem|Ingen medlemmer}} av husstanden er hjemme",
-    "da": "!{{Medlem|Ingen medlemmer}} af hustanden er hjemme"
+    "da": "!{{Medlem|Ingen medlemmer}} af hustanden er hjemme",
+    "sv": "!{{Någon|Ingen}} i hushållet är närvarande"
   }
 }

@@ -7,7 +7,8 @@
     "nl": "Normaal mode time-out",
     "de": "Normal-Modus Time-out",
     "no": "Normal modus timeout",
-    "da": "Normal-tilstand timeout"
+    "da": "Normal-tilstand timeout",
+    "sv": "Normaltest timeout"
   },
   "attr": {
     "min": 0.1,
@@ -18,13 +19,15 @@
     "nl": "seconden",
     "de": "Sekunden",
     "no": "sekunder",
-    "da": "sekunder"
+    "da": "sekunder",
+    "sv": "sekunder"
   },
   "hint": {
     "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
     "nl": "Hoe lang moet het duren (in seconden) voordat Smart Presence staakt om je telefoon te detecteren op het WiFi netwerk.\n\nIndien je een snel netwerk hebt, kun je experimenteren met een laagere waarde. Bij een traag netwerk kun je juist proberen de waarde wat te verhogen.",
     "de": "Wie lange soll die Suche Ihres Telefons im Netz dauern (in Sekunden), bis Smart Presence aufhört zu suchen?\n\nWenn Sie ein schnelles Netzwerk haben, kann diese Einstellung heruntergesetzt werden. \nWenn Sie ein langsames Netzwerk haben, sollten Sie diese Einstellung eventuell erhöhen.",
     "no": "Hvor lang tid i sekunder før enheten ikke kan registreres på nettverket?\n\nHvis du har et hurtig nettverk, så kan verdien være minde. \nHvis du har et tregt nettverk, bør verdien være større.",
-    "da": "Hvor lang tid i sekunder, før enheden ikke kan registeres på netværket? \n\nHvis du har et hurtigt netværk, så skal værdien værre mindre. \\nHvis du har et langtsomt netværk, så skal værdien værre højere."
+    "da": "Hvor lang tid i sekunder, før enheden ikke kan registeres på netværket? \n\nHvis du har et hurtigt netværk, så skal værdien værre mindre. \\nHvis du har et langtsomt netværk, så skal værdien værre højere.",
+    "sv": "Hur lång tid (sekunder) ska det ta innan Smart Presence slutar söka efter smartmobilen/enheten i ditt nätverk?\n\nOm du har ett snabbt nätverk kan tiden minskas.\nOm du har ett långsamt nätverk kan tiden behöva ökas."
   }
 }

@@ -5,7 +5,8 @@
     "nl": "Laatste persoon die het huis verlaten",
     "de": "Die letzte Person ist gegangen",
     "no": "Siste person dro hjemmefra",
-    "da": "Den sidste person forlod hjemmet"
+    "da": "Den sidste person forlod hjemmet",
+    "sv": "Den sista personen lämnade"
   },
   "tokens": [
     {
@@ -15,14 +16,16 @@
         "nl": "Wie",
         "de": "Wer",
         "no": "Hvem",
-        "da": "Hvem"
+        "da": "Hvem",
+        "sv": "Vem"
       },
       "example": {
         "en": "John Doe",
         "nl": "Jan Jansen",
         "de": "Max Mustermann",
         "no": "Ola Nordmann",
-        "da": "Navn Navnesen"
+        "da": "Navn Navnesen",
+        "sv": "Medel Svensson"
       }
     }
   ]

@@ -7,7 +7,8 @@
     "nl": "Stress mode controleer interval",
     "de": "Stress-Modus Prüfintervall",
     "no": "Stress-modus sjekk-intervall",
-    "da": "Stress-tilstand kontrolinterval"
+    "da": "Stress-tilstand kontrolinterval",
+    "sv": "Intensivtest intervall"
   },
   "attr": {
     "min": 500,
@@ -18,13 +19,15 @@
     "nl": "ms",
     "de": "ms",
     "no": "ms",
-    "da": "ms"
+    "da": "ms",
+    "sv": "ms"
   },
   "hint": {
     "en": "Time in milliseconds between each check when in stress mode.",
     "nl": "Tijd in milliseconden tussen elke check in stress mode.",
     "de": "Zeit in Millisekunden zwischen den einzelnen Prüfungen im Stress-Modus.",
     "no": "Tid i millisekunder mellom hver sjekk i stress-modus.",
-    "da": "Tid i milisekunder i mellem hver kontrol i stress-tilstand"
+    "da": "Tid i milisekunder i mellem hver kontrol i stress-tilstand",
+    "sv": "Tid i millisekunder mellan intensiva närvarotester (motsvarande inställningen för normaltest)."
   }
 }

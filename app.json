@@ -1,6 +1,6 @@
 {
   "id": "nl.terryhendrix.smartpresence",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "brandColor": "#2A6FE8",
@@ -9,14 +9,16 @@
     "nl": "Smart Presence",
     "de": "Smart Presence",
     "no": "Smart Presence",
-    "da": "Smart Presence"
+    "da": "Smart Presence",
+    "sv": "Smart Presence"
   },
   "description": {
     "en": "Presence detection based on smartphones connected to your Wi-Fi",
     "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan het locale Wi-Fi netwerk gekoppeld zijn",
     "de": "Anwesenheitserkennung auf Grundlage mit Ihrem Wi-Fi verbundenen Smartphones",
     "no": "Tilstedeværelse basert på smarttelefon koblet til Wi-Fi-nettverket",
-    "da": "Registrering af tilstedeværelse baseret på om din mobiltelefon er forbundet til Wi-Fi"
+    "da": "Registrering af tilstedeværelse baseret på om din mobiltelefon er forbundet til Wi-Fi",
+    "sv": "Närvaroavläsning baserad på om smartmobiler/enheter är uppkopplade till WiFi-nätverket"
   },
   "category": [
     "internet",
@@ -53,6 +55,13 @@
       "smarttelefon"
     ],
     "da": [
+      "smart",
+      "presence",
+      "wifi",
+      "wi-fi",
+      "smartphone"
+    ],
+    "sv": [
       "smart",
       "presence",
       "wifi",
@@ -101,6 +110,9 @@
       },
       {
         "name": "🇩🇰Gert Nielsen"
+      },
+      {
+        "name": "🇸🇪Morgan Andreasson"
       }
     ]
   },
@@ -125,7 +137,8 @@
           "nl": "Eerste gast is aangekomen",
           "de": "Der erste Gast ist angekommen",
           "no": "Første gjest ankom",
-          "da": "Den første gæst ankom"
+          "da": "Den første gæst ankom",
+          "sv": "Den första gästen anlände"
         },
         "tokens": [
           {
@@ -135,14 +148,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -154,7 +169,8 @@
           "nl": "Eerste gezinslid is aangekomen",
           "de": "Das erste Haushaltsmitglied ist angekommen",
           "no": "Første medlem av husstanden kom hjem",
-          "da": "Det første medlem i husstanden kom hjem"
+          "da": "Det første medlem i husstanden kom hjem",
+          "sv": "Den första personen i hushållet anlände"
         },
         "tokens": [
           {
@@ -164,14 +180,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -183,7 +201,8 @@
           "nl": "Eerste persoon die binnen komt",
           "de": "Die erste Person ist angekommen",
           "no": "Første person kom hjem",
-          "da": "Den første person kom hjem"
+          "da": "Den første person kom hjem",
+          "sv": "Den första personen anlände"
         },
         "tokens": [
           {
@@ -193,14 +212,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -212,7 +233,8 @@
           "nl": "Een gast is aangekomen",
           "de": "Ein Gast ist angekommen",
           "no": "En gjest ankom",
-          "da": "En gæst ankom"
+          "da": "En gæst ankom",
+          "sv": "En gäst anlände"
         },
         "tokens": [
           {
@@ -222,14 +244,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -241,7 +265,8 @@
           "nl": "Een gast is weggegaan",
           "de": "Ein Gast ist gegangen",
           "no": "En gjest forlot hjemmet",
-          "da": "En gæst forlod hjemmet"
+          "da": "En gæst forlod hjemmet",
+          "sv": "En gäst lämnade"
         },
         "tokens": [
           {
@@ -251,14 +276,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -270,7 +297,8 @@
           "nl": "Een gezinslid is aangekomen",
           "de": "Ein Haushaltsmitglied ist angekommen",
           "no": "Et medlem av husstanden kom hjem",
-          "da": "Et medlem af husstanden kom hjem"
+          "da": "Et medlem af husstanden kom hjem",
+          "sv": "En person i hushållet anlände"
         },
         "tokens": [
           {
@@ -280,14 +308,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -299,7 +329,8 @@
           "nl": "Een gezinslid is weggegaan",
           "de": "Ein Haushaltsmitglied ist gegangen",
           "no": "Et medlem av husstanden dro hjemmefra",
-          "da": "Et medlem af husstanden forlod hjemmet"
+          "da": "Et medlem af husstanden forlod hjemmet",
+          "sv": "En person i hushållet lämnade"
         },
         "tokens": [
           {
@@ -309,14 +340,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -328,7 +361,8 @@
           "nl": "Laatste gast is weggegaan",
           "de": "Der letzte Gast ist gegangen",
           "no": "Den siste gjesten forlot hjemmet",
-          "da": "Den sidste gæst forlod hjemmet"
+          "da": "Den sidste gæst forlod hjemmet",
+          "sv": "Den sista gästen lämnade"
         },
         "tokens": [
           {
@@ -338,14 +372,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -357,7 +393,8 @@
           "nl": "Laatste gezinslid is weggegaan",
           "de": "Das letzte Haushaltsmitglied ist gegangen",
           "no": "Siste medlem av husstanden dro hjemmefra",
-          "da": "Det sidste medlem af husstanden forlod hjemmet"
+          "da": "Det sidste medlem af husstanden forlod hjemmet",
+          "sv": "Den sista personen i hushållet lämnade"
         },
         "tokens": [
           {
@@ -367,14 +404,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -386,7 +425,8 @@
           "nl": "Laatste persoon die het huis verlaten",
           "de": "Die letzte Person ist gegangen",
           "no": "Siste person dro hjemmefra",
-          "da": "Den sidste person forlod hjemmet"
+          "da": "Den sidste person forlod hjemmet",
+          "sv": "Den sista personen lämnade"
         },
         "tokens": [
           {
@@ -396,14 +436,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -415,7 +457,8 @@
           "nl": "Iemand kwam binnen",
           "de": "Jemand ist angekommen",
           "no": "Noen kom hjem",
-          "da": "Nogen kom hjem"
+          "da": "Nogen kom hjem",
+          "sv": "Någon anlände"
         },
         "tokens": [
           {
@@ -425,14 +468,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -444,7 +489,8 @@
           "nl": "Iemand ging weg",
           "de": "Jemand ist gegangen",
           "no": "Noen dro hjemmefra",
-          "da": "Nogen forlod hjemmet"
+          "da": "Nogen forlod hjemmet",
+          "sv": "Någon lämnade"
         },
         "tokens": [
           {
@@ -454,14 +500,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ]
@@ -473,7 +521,8 @@
           "nl": "Gebruiker kwam binnen",
           "de": "Ein bestimmter Benutzer ist angekommen",
           "no": "En bestemt person kom hjem",
-          "da": "En bestemt person kom hjem"
+          "da": "En bestemt person kom hjem",
+          "sv": "Personen anlände"
         },
         "tokens": [
           {
@@ -483,14 +532,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ],
@@ -509,7 +560,8 @@
           "nl": "Gebruiker ging weg",
           "de": "Ein bestimmter Benutzer ist gegangen",
           "no": "En bestemt person dro hjemmefra",
-          "da": "En bestemt person forlod hjemmet"
+          "da": "En bestemt person forlod hjemmet",
+          "sv": "Personen lämnade"
         },
         "tokens": [
           {
@@ -519,14 +571,16 @@
               "nl": "Wie",
               "de": "Wer",
               "no": "Hvem",
-              "da": "Hvem"
+              "da": "Hvem",
+              "sv": "Vem"
             },
             "example": {
               "en": "John Doe",
               "nl": "Jan Jansen",
               "de": "Max Mustermann",
               "no": "Ola Nordmann",
-              "da": "Navn Navnesen"
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
             }
           }
         ],
@@ -547,7 +601,8 @@
           "nl": "Er is !{{een|geen}} gezinslid thuis",
           "de": "!{{Haushalt|Kein Haushalt}} Haushaltsmitglieder",
           "no": "!{{Medlem|Ingen medlemmer}} av husstanden er hjemme",
-          "da": "!{{Medlem|Ingen medlemmer}} af hustanden er hjemme"
+          "da": "!{{Medlem|Ingen medlemmer}} af hustanden er hjemme",
+          "sv": "!{{Någon|Ingen}} i hushållet är närvarande"
         }
       },
       {
@@ -557,7 +612,8 @@
           "nl": "Er is !{{|geen}} bezoek",
           "de": "!{{Haben|Nicht haben}} Gäste",
           "no": "!{{Har|Har ikke}} gjester",
-          "da": "!{{Har|Har ikke}} gæster"
+          "da": "!{{Har|Har ikke}} gæster",
+          "sv": "!{{Någon gäst|Ingen gäst}} är närvarande"
         }
       },
       {
@@ -567,7 +623,8 @@
           "nl": "Er is !{{iemand|niemand}} thuis",
           "de": "!{{Jemand|Niemand}} ist zu Hause",
           "no": "!{{Noen|Ingen}} er hjemme",
-          "da": "!{{Nogen|Ingen}} er hjemme"
+          "da": "!{{Nogen|Ingen}} er hjemme",
+          "sv": "!{{Någon|Ingen}} är närvarande"
         }
       },
       {
@@ -577,7 +634,8 @@
           "nl": "Gebruiker is !{{thuis|weg}}",
           "de": "Ein bestimmter Benutzer ist !{{zu Hause|abwesend}}",
           "no": "En bestemt bruker er !{{hjemme|borte}}",
-          "da": "En bestem bruger er !{{hjemme|ude}}"
+          "da": "En bestem bruger er !{{hjemme|ude}}",
+          "sv": "En person är !{{närvarande|inte närvarande}}"
         },
         "args": [
           {
@@ -623,7 +681,8 @@
             "nl": "Basis instellingen",
             "de": "Grundeinstellungen",
             "no": "Grunnleggende innstillinger",
-            "da": "Grundindstillinger"
+            "da": "Grundindstillinger",
+            "sv": "Grundläggande inställningar"
           },
           "children": [
             {
@@ -635,14 +694,16 @@
                 "nl": "IP adres",
                 "de": "IP-Adresse",
                 "no": "IP-adresse",
-                "da": "IP-adresse"
+                "da": "IP-adresse",
+                "sv": "IP-adress"
               },
               "hint": {
                 "en": "The IP address must be staticly assigned to the device.",
                 "nl": "Het IP adres moet statisch zijn toegewezen aan dit apparaat.",
                 "de": "Dem Gerät muss eine feste IP-Adresse zugewiesen sein.",
                 "no": "Enheten bør tilordnes en statisk IP-adresse.",
-                "da": "Enheden bør have fast IP-adresse."
+                "da": "Enheden bør have fast IP-adresse.",
+                "sv": "Enheten måste tilldelas en fast/statisk IP-adress."
               }
             },
             {
@@ -654,7 +715,8 @@
                 "nl": "Poort nummer",
                 "de": "Port-Nummer",
                 "no": "Portnummer",
-                "da": "Portnummer"
+                "da": "Portnummer",
+                "sv": "Portnummer"
               },
               "attr": {
                 "min": 1,
@@ -665,7 +727,8 @@
                 "nl": "Het poort nummer dat wordt getoetst op online zijn in het netwerk.",
                 "de": "Die Port-Nummer, die überprüft wird, um festzustellen, ob das Gerät online ist.",
                 "no": "Portnummer som benyttes for å se om enheten er online.",
-                "da": "Portnummeret som anvendes for at se om enheder er online."
+                "da": "Portnummeret som anvendes for at se om enheder er online.",
+                "sv": "Portnummer i nätverket som används för att testa om smartmobilen/enheten är närvarande."
               }
             },
             {
@@ -677,14 +740,16 @@
                 "nl": "Is gast",
                 "de": "Ist Gast",
                 "no": "Er gjest",
-                "da": "Er gæst"
+                "da": "Er gæst",
+                "sv": "Är gäst"
               },
               "hint": {
                 "en": "Check the box if this person is a guest.",
                 "nl": "Vink aan als dit een gast betreft.",
                 "de": "Aktivieren Sie den Schieber, wenn diese Person ein Gast ist.",
                 "no": "Kryss av hvis personen er en gjest.",
-                "da": "Sæt flueben hvis personen er gæst."
+                "da": "Sæt flueben hvis personen er gæst.",
+                "sv": "Kryssa i om personen är en gäst."
               }
             }
           ]
@@ -696,7 +761,8 @@
             "nl": "Instellingen voor normale mode",
             "de": "Einstellungen Normal-Modus",
             "no": "Innstillinger for normal modus",
-            "da": "Indstillinger for normal tilstand"
+            "da": "Indstillinger for normal tilstand",
+            "sv": "Inställningar för normaltest"
           },
           "children": [
             {
@@ -708,7 +774,8 @@
                 "nl": "Vertraging voor melden 'afwezig'",
                 "de": "Abwesenheitsverzögerung",
                 "no": "Forsinkelse for bortemodus",
-                "da": "Offline forsinkelse"
+                "da": "Offline forsinkelse",
+                "sv": "Fördröjning av frånvarande"
               },
               "attr": {
                 "min": 1,
@@ -719,14 +786,16 @@
                 "nl": "seconden",
                 "de": "Sekunden",
                 "no": "sekunder",
-                "da": "sekunder"
+                "da": "sekunder",
+                "sv": "sekunder"
               },
               "hint": {
                 "en": "Some devices turn off their Wi-fi when their screen is off. They re-connect their Wi-fi every now and then, only to disconnect from the WiFi again after a short while. There is a chance we can't detect them because of bad timing!\n\nIncrease the 'Away delay' to keep the device present for a certain amount of seconds. In some cases the 'Stress mode' may provide additional help. \n\nFinetuning is required! If the value is to small, a device may start flipping between 'present' and 'away'. If the value is to large, it will wait too long before triggering your flows.",
                 "nl": "Sommige apparaten zetten de WiFi uit wanneer het scherm uitgaat en re-activeren vervolgens periodiek de WiFi verbinding. Hierdoor is het mogelijk dat Smart Presence niet goed werkt. Probeer in dat geval ‘Vertraging voor melden 'afwezig' waarde te verhogen. In sommige gevallen is het ook zinnig om de “Stress Mode’ aan te zetten. \n\nExperimenteer met deze waarden om een betere aanwezigheid detectie te krijgen. Let op! Bij een te kleine waarde kan het apparaat ‘knipperen’ tussen aan- en afwezig. Een te hoge waarde levert echter te lange vertraging op bij aanwezigheid detectie en de flows die hierdoor getrieerd worden.",
                 "de": "Wenn der Bildschirm des Smartphones ausgeschaltet wird, schalten einige Geräte ihr Wi-Fi aus. Ab und zu verbinden sie sich wieder mit dem Wi-Fi, um sich nach kurzer Zeit wieder zu trennen. Aufgrund eines schlechten Timings ist es möglich, dass das nicht erkannt wird.\n\nVerlängern Sie die 'Abwesenheitsverzögerung' um einige Sekunden, damit das Gerät weiterhin erkannt wird. In einigen Fällen kann der 'Stress-Modus' zusätzlich Abhilfe schaffen.\n\nEine Feinabstimmung ist notwendig! Wenn der Wert zu klein ist, wechselt das Gerät möglicherweise zwischen 'anwesend' und 'abwesend'. Ist der Wert zu groß, dauert es eventuell zu lange bis Flows getriggert werden.",
                 "no": "Noen enheter skrur av Wi-Fi når skjermen slukkes. Enheten gjenetablerer løpende forbindelsen, og mister deretter forbindelsen igjen etter kort tid.  Det er derfor en sjanse for at enheten ikke registreres, pga. koordinering av registrering mellom Homey og enheten.\n\nHvis du øker 'Forsinkelse for bortemodus' så blir enheten værende online i et bestemt antall sekunder.  I noen tilfeller kan stress-modus hjelpe.\n\nFinjustering er nødvendig!  Hvis verdien er for lav, vil enheten bytte mellom 'online' og 'offline'.  Hvis verdien er for høy, så vil det gå lang tid før enheten markeres som 'offline'.",
-                "da": "Nogle enheder slukker for enhedens WI-FI, når skærmen er slukket. Enheden genetablerer løbende forbindelsen, hvorefter den mister forbindelsen igen efter kort tid. Der er chance for at enheden ikke registreres, grundet koordinering af registrering mellem Homey og enhed!\n\nHvis du øger 'Offline forsinkelse' så bliver enheden værende online i bestemt antal sekunder. I nogen tilfælde kan stres tilstand hjælp. \n\nFinjustering er nødvendig! Hvis værdien er for lille, vil enheden henholdsvis skifte mellem 'offline' og 'online'. Hvis værdien er for høj, så vil der gå lang tid før enheden bliver registreret som offline."
+                "da": "Nogle enheder slukker for enhedens WI-FI, når skærmen er slukket. Enheden genetablerer løbende forbindelsen, hvorefter den mister forbindelsen igen efter kort tid. Der er chance for at enheden ikke registreres, grundet koordinering af registrering mellem Homey og enhed!\n\nHvis du øger 'Offline forsinkelse' så bliver enheden værende online i bestemt antal sekunder. I nogen tilfælde kan stres tilstand hjælp. \n\nFinjustering er nødvendig! Hvis værdien er for lille, vil enheden henholdsvis skifte mellem 'offline' og 'online'. Hvis værdien er for høj, så vil der gå lang tid før enheden bliver registreret som offline.",
+                "sv": "Många smartmobiler/enheter sätter WiFi i energisparläge när skärmen släcks. Enheten kopplar upp sig regelbundet och återgår därefter till energisparläget. Därför kan enheten ibland inte avläsas som närvarande och då kan inställningarna för 'Normaltest', 'Intensivtest' och 'Fördröjning av frånvarande' behöva justeras.\n\nÖka 'Fördröjning av frånvarande' så att enheten hinner koppla upp sig igen och fortsätter att vara registrerad som närvarande. I vissa fall kan justering av \"\"Intensivtest\"\" också hjälpa till.\n\nFinjustering kan behövas! Om 'Fördröjning av frånvarande' är för liten kommer enheten hoppa mellan 'närvarande' och 'frånvarande'. Om fördröjningen är för lång tar det onödigt lång tid innan den markeras som 'frånvarande'."
               }
             },
             {
@@ -738,7 +807,8 @@
                 "nl": "Normaal mode interval check.",
                 "de": "Normal-Modus Prüfintervall",
                 "no": "Normal modus sjekk-intervall",
-                "da": "Normal-tilstand kontrolinterval"
+                "da": "Normal-tilstand kontrolinterval",
+                "sv": "Normaltest intervall"
               },
               "attr": {
                 "min": 1500,
@@ -749,14 +819,16 @@
                 "nl": "ms",
                 "de": "ms",
                 "no": "ms",
-                "da": "ms"
+                "da": "ms",
+                "sv": "ms"
               },
               "hint": {
                 "en": "Time in milliseconds between each check when in normal mode.",
                 "nl": "Tijd in milliseconden tussen elke check, in 'normaal mode'.",
                 "de": "Zeit in Millisekunden zwischen den einzelnen Prüfungen im Normal-Modus.",
                 "no": "Tid i millisekunder mellom hver sjekk i normal-modus.",
-                "da": "Tid i millisekunder i mellem hver kontrol i normal-tilstand."
+                "da": "Tid i millisekunder i mellem hver kontrol i normal-tilstand.",
+                "sv": "Tid i millisekunder mellan normal närvarotest."
               }
             },
             {
@@ -768,7 +840,8 @@
                 "nl": "Normaal mode time-out",
                 "de": "Normal-Modus Time-out",
                 "no": "Normal modus timeout",
-                "da": "Normal-tilstand timeout"
+                "da": "Normal-tilstand timeout",
+                "sv": "Normaltest timeout"
               },
               "attr": {
                 "min": 0.1,
@@ -779,14 +852,16 @@
                 "nl": "seconden",
                 "de": "Sekunden",
                 "no": "sekunder",
-                "da": "sekunder"
+                "da": "sekunder",
+                "sv": "sekunder"
               },
               "hint": {
                 "en": "How long should it take (in seconds) before Smart Presence gives up finding your phone on the network? \n\nIf you have a fast network this setting may be lowered. \nIf you have a slow network, may want to increase this setting.",
                 "nl": "Hoe lang moet het duren (in seconden) voordat Smart Presence staakt om je telefoon te detecteren op het WiFi netwerk.\n\nIndien je een snel netwerk hebt, kun je experimenteren met een laagere waarde. Bij een traag netwerk kun je juist proberen de waarde wat te verhogen.",
                 "de": "Wie lange soll die Suche Ihres Telefons im Netz dauern (in Sekunden), bis Smart Presence aufhört zu suchen?\n\nWenn Sie ein schnelles Netzwerk haben, kann diese Einstellung heruntergesetzt werden. \nWenn Sie ein langsames Netzwerk haben, sollten Sie diese Einstellung eventuell erhöhen.",
                 "no": "Hvor lang tid i sekunder før enheten ikke kan registreres på nettverket?\n\nHvis du har et hurtig nettverk, så kan verdien være minde. \nHvis du har et tregt nettverk, bør verdien være større.",
-                "da": "Hvor lang tid i sekunder, før enheden ikke kan registeres på netværket? \n\nHvis du har et hurtigt netværk, så skal værdien værre mindre. \\nHvis du har et langtsomt netværk, så skal værdien værre højere."
+                "da": "Hvor lang tid i sekunder, før enheden ikke kan registeres på netværket? \n\nHvis du har et hurtigt netværk, så skal værdien værre mindre. \\nHvis du har et langtsomt netværk, så skal værdien værre højere.",
+                "sv": "Hur lång tid (sekunder) ska det ta innan Smart Presence slutar söka efter smartmobilen/enheten i ditt nätverk?\n\nOm du har ett snabbt nätverk kan tiden minskas.\nOm du har ett långsamt nätverk kan tiden behöva ökas."
               }
             }
           ]
@@ -798,7 +873,8 @@
             "nl": "Instellingen voor stress mode",
             "de": "Einstellungen Stress-Modus",
             "no": "Innstillinger for stress-modus",
-            "da": "Indstillinger for stres tilstand"
+            "da": "Indstillinger for stres tilstand",
+            "sv": "Inställningar för stresstest"
           },
           "children": [
             {
@@ -810,7 +886,8 @@
                 "nl": "Stress periode",
                 "de": "Stressperiode",
                 "no": "Periode for stress-sjekking",
-                "da": "Periode for stress kontrol"
+                "da": "Periode for stress kontrol",
+                "sv": "Period för intensivtest"
               },
               "attr": {
                 "min": 0,
@@ -821,14 +898,16 @@
                 "nl": "seconden",
                 "de": "Sekunden",
                 "no": "sekunder",
-                "da": "sekunder"
+                "da": "sekunder",
+                "sv": "sekunder"
               },
               "hint": {
                 "en": "Stress mode activates when a device can't be reached, but because of the 'Away delay' setting, it is not yet marked as 'away'. 'x' seconds before the device will be marked as 'away', it will be checked more often. \n\nIf you have trouble with a device, it can help you to get more stable results.\n\nNever configure this value higher then the 'Away delay' value, cause then every check will be a stress check! If you configure this setting to 0, then Stress mode will be disabled.",
                 "nl": "'Stress mode' wordt geactiveerd als een apparaat niet gevonden kan worden, maar vanwege de “Vertraging voor melden 'afwezig' ” nog niet als offline is aangemerkt. ‘x’ seconden voor het apparaat daadwerkelijk als afwezig wordt aangemerkt, wordt het frequenter gecheckt. \n\nAls een apparaat problemen oplevert, kun je met deze instellingen experimenteren om een betere/stabieler resultaat te verkrijgen.\n\nZet deze waarde nooit hoger dan de ‘Vertraging voor melden 'afwezig' ’ vertraging, want dan wordt elke check een stress check! Als je het de waarde ‘0’ geeft, is ‘stress mode’ uitgeschakeld.",
                 "de": "Der Stress-Modus wird aktiviert, wenn ein Gerät nicht erreicht werden kann. Aufgrund der Einstellung 'Abwesenheitsverzögerung' ist es jedoch noch nicht als 'abwesend' markiert. 'x' Sekunden bevor das Gerät als 'abwesend' markiert wird, wird es häufiger überprüft.\n\nWenn Sie Probleme mit einem Gerät haben, kann dies helfen stabilere Ergebnisse zu erzielen.\n\nKonfigurieren Sie diesen Wert niemals höher als den Wert für 'Abwesenheitsverzögerung', da dann jede Prüfung eine Belastungsprüfung ist! Wenn Sie diese Einstellung auf 0 konfigurieren, wird der Stress-Modus deaktiviert.",
                 "no": "Stress-modus aktiveres når enheten ikke er online, men pga. 'Offline forsinkelse' er enheten ikke ennå markerrt som offline.  Det går et angitt antall sekunder før enheten registreres som offline og intervall mellom kontroller er kortere.  \n\nHvis du har problemer med enheten, kan det hjelpe på stabil registrering.\n\nMerk at du ikke må angi en verdi som er større enn 'Offline forsinkelse', siden da blir hver kontroll stress-kontroll! Hvis du angir verdien som 0, så blir stress-modus inaktiv.",
-                "da": "Stress-tilstand aktiveres når enheden ikke er registreret online, men grundet indstilling af 'Offline forsinkelse' er enheden ikke markeret som offline. Der går det angivet antal sekunder før enheden registreres som offline og interval i mellem kontroller er kortere.\n\nHvis du har problemer med enheden, kan det hjælpe på stabil registrering. \n\nBemærk at du ikke må angive en værdi som større end 'Offline forsinkelse', fordi hver kontrol bliver stress kontrol! Hvis du angiver værdien som 0, så bliver stress-tilstand inaktiv."
+                "da": "Stress-tilstand aktiveres når enheden ikke er registreret online, men grundet indstilling af 'Offline forsinkelse' er enheden ikke markeret som offline. Der går det angivet antal sekunder før enheden registreres som offline og interval i mellem kontroller er kortere.\n\nHvis du har problemer med enheden, kan det hjælpe på stabil registrering. \n\nBemærk at du ikke må angive en værdi som større end 'Offline forsinkelse', fordi hver kontrol bliver stress kontrol! Hvis du angiver værdien som 0, så bliver stress-tilstand inaktiv.",
+                "sv": "Tid i sekunder innan 'Fördröjning av frånvaro' löper ut som Intensivtest ska aktiveras. När smartmobilen/enheten inte kan hittas i nätverket intensifieras testerna med kortare intervall.\n\nOm du har problem med en enhet kan detta ibland ge en stabilare närvaroavläsning.\n\nObservera att detta värde inte får vara större än 'Fördröjning av frånvarande' eftersom intensivtest då används varje gång närvaron testas. Om du anger 0 (noll) inaktiveras intensivtest helt."
               }
             },
             {
@@ -840,7 +919,8 @@
                 "nl": "Stress mode controleer interval",
                 "de": "Stress-Modus Prüfintervall",
                 "no": "Stress-modus sjekk-intervall",
-                "da": "Stress-tilstand kontrolinterval"
+                "da": "Stress-tilstand kontrolinterval",
+                "sv": "Intensivtest intervall"
               },
               "attr": {
                 "min": 500,
@@ -851,14 +931,16 @@
                 "nl": "ms",
                 "de": "ms",
                 "no": "ms",
-                "da": "ms"
+                "da": "ms",
+                "sv": "ms"
               },
               "hint": {
                 "en": "Time in milliseconds between each check when in stress mode.",
                 "nl": "Tijd in milliseconden tussen elke check in stress mode.",
                 "de": "Zeit in Millisekunden zwischen den einzelnen Prüfungen im Stress-Modus.",
                 "no": "Tid i millisekunder mellom hver sjekk i stress-modus.",
-                "da": "Tid i milisekunder i mellem hver kontrol i stress-tilstand"
+                "da": "Tid i milisekunder i mellem hver kontrol i stress-tilstand",
+                "sv": "Tid i millisekunder mellan intensiva närvarotester (motsvarande inställningen för normaltest)."
               }
             },
             {
@@ -870,7 +952,8 @@
                 "nl": "Stress mode time-out",
                 "de": "Stress Host Time-out",
                 "no": "Stress-modus timeout",
-                "da": "Stress-tilstand timeout"
+                "da": "Stress-tilstand timeout",
+                "sv": "Intensivtest timeout"
               },
               "attr": {
                 "min": 0.1,
@@ -881,14 +964,16 @@
                 "nl": "seconden",
                 "de": "Sekunden",
                 "no": "sekunder",
-                "da": "sekunder"
+                "da": "sekunder",
+                "sv": "sekunder"
               },
               "hint": {
                 "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
                 "nl": "Hetzelfde als ‘normaal mode’ time-out, maar nu voor ‘stress mode’. Hiermee kun je afwijken van de standaard ‘host timeout’.",
                 "de": "Dasselbe wie 'Host Time-out' nur für den 'Stress-Modus'. Weil Sie bei Problemen eventuell vom Standard-'Host Time-out' abweichen wollen.",
                 "no": "Det samme som 'Normal-modus timeout', men for 'Stress-modus'. Hvis du ønsker å fravike standarden 'Normal-modus timeout', mens enheten er i stress-modus.",
-                "da": "Det samme som 'Normal-tilstand timeout', men for 'Stress-tilstand'. Hvis du ønsker at fravige standarden 'Normal-tilstand timeout', mens enheden ikke er registreret online."
+                "da": "Det samme som 'Normal-tilstand timeout', men for 'Stress-tilstand'. Hvis du ønsker at fravige standarden 'Normal-tilstand timeout', mens enheden ikke er registreret online.",
+                "sv": "Hur lång tid (sekunder) ska det ta innan Smart Presence slutar söka efter smartmobilen/enheten i ditt nätverk under 'Intensivtest'?\nNormalt är detta värde samma som för 'Normaltest timeout'."
               }
             }
           ]
@@ -909,7 +994,8 @@
         "nl": "Aanwezigheid detectie",
         "de": "Anwesenheitserkennung",
         "no": "Tilstede",
-        "da": "Tilstede"
+        "da": "Tilstede",
+        "sv": "Närvarande"
       }
     }
   }

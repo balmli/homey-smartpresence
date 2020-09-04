@@ -5,6 +5,7 @@
     "nl": "Er is !{{iemand|niemand}} thuis",
     "de": "!{{Jemand|Niemand}} ist zu Hause",
     "no": "!{{Noen|Ingen}} er hjemme",
-    "da": "!{{Nogen|Ingen}} er hjemme"
+    "da": "!{{Nogen|Ingen}} er hjemme",
+    "sv": "!{{Någon|Ingen}} är närvarande"
   }
 }

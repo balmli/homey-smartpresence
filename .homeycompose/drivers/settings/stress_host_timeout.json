@@ -7,7 +7,8 @@
     "nl": "Stress mode time-out",
     "de": "Stress Host Time-out",
     "no": "Stress-modus timeout",
-    "da": "Stress-tilstand timeout"
+    "da": "Stress-tilstand timeout",
+    "sv": "Intensivtest timeout"
   },
   "attr": {
     "min": 0.1,
@@ -18,13 +19,15 @@
     "nl": "seconden",
     "de": "Sekunden",
     "no": "sekunder",
-    "da": "sekunder"
+    "da": "sekunder",
+    "sv": "sekunder"
   },
   "hint": {
     "en": "The same as 'Host timeout' but for 'Stress mode'. Just cause you might may want to deviate from the default 'Host timeout' while in distress.",
     "nl": "Hetzelfde als ‘normaal mode’ time-out, maar nu voor ‘stress mode’. Hiermee kun je afwijken van de standaard ‘host timeout’.",
     "de": "Dasselbe wie 'Host Time-out' nur für den 'Stress-Modus'. Weil Sie bei Problemen eventuell vom Standard-'Host Time-out' abweichen wollen.",
     "no": "Det samme som 'Normal-modus timeout', men for 'Stress-modus'. Hvis du ønsker å fravike standarden 'Normal-modus timeout', mens enheten er i stress-modus.",
-    "da": "Det samme som 'Normal-tilstand timeout', men for 'Stress-tilstand'. Hvis du ønsker at fravige standarden 'Normal-tilstand timeout', mens enheden ikke er registreret online."
+    "da": "Det samme som 'Normal-tilstand timeout', men for 'Stress-tilstand'. Hvis du ønsker at fravige standarden 'Normal-tilstand timeout', mens enheden ikke er registreret online.",
+    "sv": "Hur lång tid (sekunder) ska det ta innan Smart Presence slutar söka efter smartmobilen/enheten i ditt nätverk under 'Intensivtest'?\nNormalt är detta värde samma som för 'Normaltest timeout'."
   }
 }

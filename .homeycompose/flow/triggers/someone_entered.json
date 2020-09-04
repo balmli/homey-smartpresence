@@ -5,7 +5,8 @@
     "nl": "Iemand kwam binnen",
     "de": "Jemand ist angekommen",
     "no": "Noen kom hjem",
-    "da": "Nogen kom hjem"
+    "da": "Nogen kom hjem",
+    "sv": "Någon anlände"
   },
   "tokens": [
     {
@@ -15,14 +16,16 @@
         "nl": "Wie",
         "de": "Wer",
         "no": "Hvem",
-        "da": "Hvem"
+        "da": "Hvem",
+        "sv": "Vem"
       },
       "example": {
         "en": "John Doe",
         "nl": "Jan Jansen",
         "de": "Max Mustermann",
         "no": "Ola Nordmann",
-        "da": "Navn Navnesen"
+        "da": "Navn Navnesen",
+        "sv": "Medel Svensson"
       }
     }
   ]

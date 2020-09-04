@@ -5,7 +5,8 @@
     "nl": "Eerste persoon die binnen komt",
     "de": "Die erste Person ist angekommen",
     "no": "Første person kom hjem",
-    "da": "Den første person kom hjem"
+    "da": "Den første person kom hjem",
+    "sv": "Den första personen anlände"
   },
   "tokens": [
     {
@@ -15,14 +16,16 @@
         "nl": "Wie",
         "de": "Wer",
         "no": "Hvem",
-        "da": "Hvem"
+        "da": "Hvem",
+        "sv": "Vem"
       },
       "example": {
         "en": "John Doe",
         "nl": "Jan Jansen",
         "de": "Max Mustermann",
         "no": "Ola Nordmann",
-        "da": "Navn Navnesen"
+        "da": "Navn Navnesen",
+        "sv": "Medel Svensson"
       }
     }
   ]

@@ -5,7 +5,8 @@
     "nl": "Iemand ging weg",
     "de": "Jemand ist gegangen",
     "no": "Noen dro hjemmefra",
-    "da": "Nogen forlod hjemmet"
+    "da": "Nogen forlod hjemmet",
+    "sv": "Någon lämnade"
   },
   "tokens": [
     {
@@ -15,14 +16,16 @@
         "nl": "Wie",
         "de": "Wer",
         "no": "Hvem",
-        "da": "Hvem"
+        "da": "Hvem",
+        "sv": "Vem"
       },
       "example": {
         "en": "John Doe",
         "nl": "Jan Jansen",
         "de": "Max Mustermann",
         "no": "Ola Nordmann",
-        "da": "Navn Navnesen"
+        "da": "Navn Navnesen",
+        "sv": "Medel Svensson"
       }
     }
   ]

@@ -7,13 +7,15 @@
     "nl": "Is gast",
     "de": "Ist Gast",
     "no": "Er gjest",
-    "da": "Er gæst"
+    "da": "Er gæst",
+    "sv": "Är gäst"
   },
   "hint": {
     "en": "Check the box if this person is a guest.",
     "nl": "Vink aan als dit een gast betreft.",
     "de": "Aktivieren Sie den Schieber, wenn diese Person ein Gast ist.",
     "no": "Kryss av hvis personen er en gjest.",
-    "da": "Sæt flueben hvis personen er gæst."
+    "da": "Sæt flueben hvis personen er gæst.",
+    "sv": "Kryssa i om personen är en gäst."
   }
 }

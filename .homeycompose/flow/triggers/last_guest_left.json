@@ -5,7 +5,8 @@
     "nl": "Laatste gast is weggegaan",
     "de": "Der letzte Gast ist gegangen",
     "no": "Den siste gjesten forlot hjemmet",
-    "da": "Den sidste gæst forlod hjemmet"
+    "da": "Den sidste gæst forlod hjemmet",
+    "sv": "Den sista gästen lämnade"
   },
   "tokens": [
     {
@@ -15,14 +16,16 @@
         "nl": "Wie",
         "de": "Wer",
         "no": "Hvem",
-        "da": "Hvem"
+        "da": "Hvem",
+        "sv": "Vem"
       },
       "example": {
         "en": "John Doe",
         "nl": "Jan Jansen",
         "de": "Max Mustermann",
         "no": "Ola Nordmann",
-        "da": "Navn Navnesen"
+        "da": "Navn Navnesen",
+        "sv": "Medel Svensson"
       }
     }
   ]

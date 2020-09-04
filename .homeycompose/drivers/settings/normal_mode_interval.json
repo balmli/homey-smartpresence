@@ -7,7 +7,8 @@
     "nl": "Normaal mode interval check.",
     "de": "Normal-Modus Prüfintervall",
     "no": "Normal modus sjekk-intervall",
-    "da": "Normal-tilstand kontrolinterval"
+    "da": "Normal-tilstand kontrolinterval",
+    "sv": "Normaltest intervall"
   },
   "attr": {
     "min": 1500,
@@ -18,13 +19,15 @@
     "nl": "ms",
     "de": "ms",
     "no": "ms",
-    "da": "ms"
+    "da": "ms",
+    "sv": "ms"
   },
   "hint": {
     "en": "Time in milliseconds between each check when in normal mode.",
     "nl": "Tijd in milliseconden tussen elke check, in 'normaal mode'.",
     "de": "Zeit in Millisekunden zwischen den einzelnen Prüfungen im Normal-Modus.",
     "no": "Tid i millisekunder mellom hver sjekk i normal-modus.",
-    "da": "Tid i millisekunder i mellem hver kontrol i normal-tilstand."
+    "da": "Tid i millisekunder i mellem hver kontrol i normal-tilstand.",
+    "sv": "Tid i millisekunder mellan normal närvarotest."
   }
 }

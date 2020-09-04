@@ -7,13 +7,15 @@
     "nl": "IP adres",
     "de": "IP-Adresse",
     "no": "IP-adresse",
-    "da": "IP-adresse"
+    "da": "IP-adresse",
+    "sv": "IP-adress"
   },
   "hint": {
     "en": "The IP address must be staticly assigned to the device.",
     "nl": "Het IP adres moet statisch zijn toegewezen aan dit apparaat.",
     "de": "Dem Gerät muss eine feste IP-Adresse zugewiesen sein.",
     "no": "Enheten bør tilordnes en statisk IP-adresse.",
-    "da": "Enheden bør have fast IP-adresse."
+    "da": "Enheden bør have fast IP-adresse.",
+    "sv": "Enheten måste tilldelas en fast/statisk IP-adress."
   }
 }

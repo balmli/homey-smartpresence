@@ -5,6 +5,7 @@
     "nl": "Er is !{{|geen}} bezoek",
     "de": "!{{Haben|Nicht haben}} Gäste",
     "no": "!{{Har|Har ikke}} gjester",
-    "da": "!{{Har|Har ikke}} gæster"
+    "da": "!{{Har|Har ikke}} gæster",
+    "sv": "!{{Någon gäst|Ingen gäst}} är närvarande"
   }
 }

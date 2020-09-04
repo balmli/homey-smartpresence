@@ -5,7 +5,8 @@
     "nl": "Eerste gast is aangekomen",
     "de": "Der erste Gast ist angekommen",
     "no": "Første gjest ankom",
-    "da": "Den første gæst ankom"
+    "da": "Den første gæst ankom",
+    "sv": "Den första gästen anlände"
   },
   "tokens": [
     {
@@ -15,14 +16,16 @@
         "nl": "Wie",
         "de": "Wer",
         "no": "Hvem",
-        "da": "Hvem"
+        "da": "Hvem",
+        "sv": "Vem"
       },
       "example": {
         "en": "John Doe",
         "nl": "Jan Jansen",
         "de": "Max Mustermann",
         "no": "Ola Nordmann",
-        "da": "Navn Navnesen"
+        "da": "Navn Navnesen",
+        "sv": "Medel Svensson"
       }
     }
   ]

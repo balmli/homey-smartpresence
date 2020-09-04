@@ -1,6 +1,6 @@
 {
   "id": "nl.terryhendrix.smartpresence",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "brandColor": "#2A6FE8",
@@ -9,14 +9,16 @@
     "nl": "Smart Presence",
     "de": "Smart Presence",
     "no": "Smart Presence",
-    "da": "Smart Presence"
+    "da": "Smart Presence",
+    "sv": "Smart Presence"
   },
   "description": {
     "en": "Presence detection based on smartphones connected to your Wi-Fi",
     "nl": "Aanwezigheid bepalen aan de hand van smartphones die aan het locale Wi-Fi netwerk gekoppeld zijn",
     "de": "Anwesenheitserkennung auf Grundlage mit Ihrem Wi-Fi verbundenen Smartphones",
     "no": "Tilstedeværelse basert på smarttelefon koblet til Wi-Fi-nettverket",
-    "da": "Registrering af tilstedeværelse baseret på om din mobiltelefon er forbundet til Wi-Fi"
+    "da": "Registrering af tilstedeværelse baseret på om din mobiltelefon er forbundet til Wi-Fi",
+    "sv": "Närvaroavläsning baserad på om smartmobiler/enheter är uppkopplade till WiFi-nätverket"
   },
   "category": [
     "internet",
@@ -53,6 +55,13 @@
       "smarttelefon"
     ],
     "da": [
+      "smart",
+      "presence",
+      "wifi",
+      "wi-fi",
+      "smartphone"
+    ],
+    "sv": [
       "smart",
       "presence",
       "wifi",
@@ -101,6 +110,9 @@
       },
       {
         "name": "🇩🇰Gert Nielsen"
+      },
+      {
+        "name": "🇸🇪Morgan Andreasson"
       }
     ]
   },

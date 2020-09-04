@@ -5,7 +5,8 @@
     "nl": "Gebruiker is !{{thuis|weg}}",
     "de": "Ein bestimmter Benutzer ist !{{zu Hause|abwesend}}",
     "no": "En bestemt bruker er !{{hjemme|borte}}",
-    "da": "En bestem bruger er !{{hjemme|ude}}"
+    "da": "En bestem bruger er !{{hjemme|ude}}",
+    "sv": "En person är !{{närvarande|inte närvarande}}"
   },
   "args": [
     {

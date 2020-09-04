@@ -6,7 +6,8 @@
       "nl": "Basis instellingen",
       "de": "Grundeinstellungen",
       "no": "Grunnleggende innstillinger",
-      "da": "Grundindstillinger"
+      "da": "Grundindstillinger",
+      "sv": "Grundläggande inställningar"
     },
     "children": [
       {
@@ -30,7 +31,8 @@
       "nl": "Instellingen voor normale mode",
       "de": "Einstellungen Normal-Modus",
       "no": "Innstillinger for normal modus",
-      "da": "Indstillinger for normal tilstand"
+      "da": "Indstillinger for normal tilstand",
+      "sv": "Inställningar för normaltest"
     },
     "children": [
       {
@@ -54,7 +56,8 @@
       "nl": "Instellingen voor stress mode",
       "de": "Einstellungen Stress-Modus",
       "no": "Innstillinger for stress-modus",
-      "da": "Indstillinger for stres tilstand"
+      "da": "Indstillinger for stres tilstand",
+      "sv": "Inställningar för stresstest"
     },
     "children": [
       {
