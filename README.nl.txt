@@ -5,7 +5,7 @@ Om te installeren:
 
 1. Zoek uit wat het IP adres is van de smartphone. Dit kan vaak via de instellingen pagina van de router.
 2. Wijs de smartphone een statisch IP adres toe.
-3. Installeer Smart Pressence op je Homey.
+3. Installeer Smart Presence op je Homey.
 4. Ga in de Homey App naar het apparaten (=devices) overzicht.
 5. Voeg een Smart Presence apparaat toe.
 6. Vul een naam en het IP-adres van de smartphone in.
