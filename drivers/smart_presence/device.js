@@ -8,6 +8,9 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   async onInit() {
     await this._migrate();
     this._client = new Network({ log: this.log });
+    this._present = this.getCapabilityValue('onoff');
+    this._settings = this.getSettings();
+    this._lastSeen = this.getStoreValue('lastSeen') || 0;
     this.scan();
   }
 
@@ -20,14 +23,11 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
       if (ver === null) {
         if (this.getNormalModeInterval() < 3000) {
           await this.setSettings({ normal_mode_interval: 3000 });
-          this.log('_migrate: normal_mode_interval set to', this.getNormalModeInterval());
         }
         if (this.getStressModeInterval() < 1500) {
           await this.setSettings({ stress_mode_interval: 1500 });
-          this.log('_migrate: stress_mode_interval set to', this.getStressModeInterval());
         }
         await this.setStoreValue('ver', 1);
-        this.log('_migrate: set ver to', this.getStoreValue('ver'));
       }
     } catch (err) {
       this.log('Migration failed', err);
@@ -40,12 +40,17 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     this.log('device deleted');
   }
 
+  async onSettings(oldSettingsObj, newSettingsObj, changedKeysArr, callback) {
+    this._settings = newSettingsObj;
+    callback(null, true);
+  }
+
   getHost() {
-    return this.getSetting('host');
+    return this._settings.host;
   }
 
   getPort() {
-    const port = this.getSetting('port');
+    const port = this._settings.port;
     if (port !== 32000) {
       return port;
     }
@@ -54,27 +59,27 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   getNormalModeInterval() {
-    return this.getSetting('normal_mode_interval');
+    return this._settings.normal_mode_interval;
   }
 
   getNormalModeTimeout() {
-    return this.getSetting('host_timeout') * 1000;
+    return this._settings.host_timeout * 1000;
   }
 
   getAwayDelayInMillis() {
-    return this.getSetting('away_delay') * 1000;
+    return this._settings.away_delay * 1000;
   }
 
   getStressModeInterval() {
-    return this.getSetting('stress_mode_interval');
+    return this._settings.stress_mode_interval;
   }
 
   getStressModeTimeout() {
-    return this.getSetting('stress_host_timeout') * 1000;
+    return this._settings.stress_host_timeout * 1000;
   }
 
   getStressAtInMillis() {
-    return this.getSetting('start_stressing_at') * 1000;
+    return this._settings.start_stressing_at * 1000;
   }
 
   isHouseHoldMember() {
@@ -82,15 +87,19 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   isGuest() {
-    return this.getSetting('is_guest');
+    return this._settings.is_guest;
   }
 
   getLastSeen() {
-    return this.getStoreValue('lastSeen') || 0;
+    return this._lastSeen;
   }
 
   async updateLastSeen() {
-    await this.setStoreValue('lastSeen', Date.now());
+    this._lastSeen = Date.now();
+    if (!this._lastSeenStored || this._lastSeen - this._lastSeenStored > 60000) {
+      await this.setStoreValue('lastSeen', this._lastSeen);
+      this._lastSeenStored = this._lastSeen;
+    }
   }
 
   getSeenMillisAgo() {
@@ -102,7 +111,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   shouldStressCheck() {
-    return !!this.getCapabilityValue('onoff') &&
+    return !!this.getPresenceStatus() &&
       ((this.getAwayDelayInMillis() - this.getSeenMillisAgo()) < this.getStressAtInMillis());
   }
 
@@ -127,14 +136,15 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     const stressTest = this.shouldStressCheck();
     const interval = stressTest ? this.getStressModeInterval() : this.getNormalModeInterval();
     const timeout = stressTest ? this.getStressModeTimeout() : this.getNormalModeTimeout();
+    const start = Date.now();
     try {
       //this.log(`${host}:${port}: scanning, timeout: ${timeout}, interval: ${interval}`);
       await this._client.scan(host, port, timeout);
       await this.updateLastSeen();
-      //this.log(`${host}:${port}: timeout: ${timeout}, interval: ${interval} -> online`);
+      //this.log(`${host}:${port}: timeout: ${timeout}, interval: ${interval} -> online (${Date.now() - start} ms)`);
       await this.setPresent(true);
     } catch (err) {
-      //this.log(`${host}:${port}: timeout: ${timeout}, interval: ${interval} -> offline:`, err.message);
+      //this.log(`${host}:${port}: timeout: ${timeout}, interval: ${interval} -> offline  (${Date.now() - start} ms):`, err.message);
       await this.setPresent(false);
     } finally {
       this.scheduleScans(interval);
@@ -142,11 +152,11 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   }
 
   async setPresent(present) {
-    const currentPresent = this.getCapabilityValue('onoff');
+    const currentPresent = this.getPresenceStatus();
 
     if (present && !currentPresent) {
       this.log(`${this.getHost()} - ${this.getDeviceName()}: is online`);
-      await this.setCapabilityValue('onoff', present);
+      await this.setPresenceStatus(present);
       Homey.app.deviceArrived(this);
       Homey.app.userEnteredTrigger.trigger(this, this.getFlowCardTokens(), {});
       Homey.app.someoneEnteredTrigger.trigger(this.getFlowCardTokens(), {});
@@ -159,7 +169,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     } else if (!present && (currentPresent || currentPresent === null)) {
       if (!this.shouldDelayAwayStateSwitch()) {
         this.log(`${this.getHost()} - ${this.getDeviceName()}: is marked as offline`);
-        await this.setCapabilityValue('onoff', present);
+        await this.setPresenceStatus(present);
         Homey.app.deviceLeft(this);
         Homey.app.userLeftTrigger.trigger(this, this.getFlowCardTokens(), {});
         Homey.app.someoneLeftTrigger.trigger(this.getFlowCardTokens(), {});
@@ -179,6 +189,15 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
 
   getFlowCardTokens() {
     return { who: this.getDeviceName() };
+  }
+
+  getPresenceStatus() {
+    return this._present;
+  }
+
+  async setPresenceStatus(present) {
+    this._present = present;
+    await this.setCapabilityValue('onoff', present);
   }
 
   async userAtHome() {
