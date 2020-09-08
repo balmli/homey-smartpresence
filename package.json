@@ -1,6 +1,6 @@
 {
   "name": "nl.terryhendrix.smartpresence",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "main": "app.js",
   "devDependencies": {}
 }

@@ -45,6 +45,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.7.4
+
+- Fixed issue with first person, household member and guest triggers
+
 #### 0.7.3
 
 - Performance improvements

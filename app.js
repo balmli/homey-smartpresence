@@ -8,7 +8,6 @@ module.exports = class SmartPresenceApp extends Homey.App {
     try {
       Homey.on('unload', () => this._onUninstall());
       await this.initFlows();
-      this._presenceStatus = [];
       this.log('SmartPresenceApp is running...');
     } catch (err) {
       this.log('onInit error', err);
@@ -93,7 +92,8 @@ module.exports = class SmartPresenceApp extends Homey.App {
     const devices = driver.getDevices();
     for (let device of devices) {
       status.push({
-        present: device.getCapabilityValue('onoff'),
+        id: device.getData().id,
+        present: device.getPresenceStatus(),
         guest: device.isGuest(),
         lastSeen: device.getLastSeen()
       });
@@ -104,13 +104,15 @@ module.exports = class SmartPresenceApp extends Homey.App {
   deviceArrived(device) {
     const currentPrecenseStatus = this.getPresenceStatus();
     this.log('deviceArrived', currentPrecenseStatus);
-    if (this._presenceStatus.filter(d => d.present).length === 0) {
+    const deviceid = device.getData().id;
+    const presentAndNotSameDevice = currentPrecenseStatus.filter(d => d.id !== deviceid && d.present);
+    if (presentAndNotSameDevice.length === 0) {
       Homey.app.firstPersonEnteredTrigger.trigger(device.getFlowCardTokens(), {});
     }
-    if (device.isHouseHoldMember() && this._presenceStatus.filter(d => d.present && !d.guest).length === 0) {
+    if (device.isHouseHoldMember() && presentAndNotSameDevice.filter(d => !d.guest).length === 0) {
       Homey.app.firstHouseholdMemberArrivedTrigger.trigger(device.getFlowCardTokens(), {});
     }
-    if (device.isGuest() && this._presenceStatus.filter(d => d.present && d.guest).length === 0) {
+    if (device.isGuest() && presentAndNotSameDevice.filter(d => d.guest).length === 0) {
       Homey.app.firstGuestArrivedTrigger.trigger(device.getFlowCardTokens(), {});
     }
   }
