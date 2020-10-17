@@ -51,6 +51,16 @@
       </div>
 
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center grid_top">
+        <span data-i18n="pair.configuration.is_kid"
+              class="mdc-typography--subtitle2">Is kid:</span>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center">
+        <input type="checkbox"
+               class="mdc-checkbox__native-control"
+               id="is_kid"/>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 grid_center grid_top">
         <span data-i18n="pair.configuration.is_guest"
               class="mdc-typography--subtitle2">Guest:</span>
       </div>
@@ -76,13 +86,24 @@
 
   Homey.setTitle(Homey.__('settings.title'));
 
-  const MDCSwitch = mdc.switchControl.MDCSwitch;
-  //  const guestElement = new MDCSwitch(document.querySelector('.mdc-switch'));
+  document.getElementById('is_kid').onchange = (e) => {
+    const guest = document.getElementById("is_guest").checked;
+    if (guest) {
+      document.getElementById("is_guest").checked = false;
+    }
+  };
+  document.getElementById('is_guest').onchange = (e) => {
+    const kid = document.getElementById("is_kid").checked;
+    if (kid) {
+      document.getElementById("is_kid").checked = false;
+    }
+  };
 
   document.getElementById('add_device').onclick = (e) => {
     e.preventDefault();
     const devicename = document.getElementById("devicename").value;
     const ip_address = document.getElementById("ip_address").value;
+    const kid = document.getElementById("is_kid").checked;
     const guest = document.getElementById("is_guest").checked; // guestElement.checked;
 
     Homey.emit('device_input', { devicename, ip_address, guest }, (err, result) => {
@@ -99,6 +120,7 @@
           settings: {
             host: ip_address,
             name: devicename,
+            is_kid: kid,
             is_guest: guest
           }
         };

@@ -6,6 +6,7 @@
     "configuration" : {
       "name": "Naam:",
       "ip_address": "IP adres:",
+      "is_kid" : "Is kid:",
       "is_guest": "Is gast:",
       "add_device_btn": "Voeg apparaat toe",
       "invalid_device_name": "Apparaat naam ontbreekt",

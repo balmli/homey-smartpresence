@@ -17,19 +17,23 @@ For adding a device, please follow these steps:
 #### Triggers
 
 - A household member arrived / left
+- A kid (part of the household) arrived / left
 - A specific user arrived / left
 - A guest arrived / left
 - Someone arrived / left
 - The first household member arrived
+- The first kid arrived
 - The first guest arrived
 - The first person arrived
 - The last household member left
+- The last kid left
 - The last guest left
 - The last person left
 
 #### Conditions
 
 - Household members home / No household members home
+- Kids at home / Kids not at home
 - Having guests / Not having guests
 - Someone is home / Nobody is home
 - A specific user is home / away
@@ -44,6 +48,10 @@ For adding a device, please follow these steps:
 Please report issues at the [issues section on Github](https://github.com/balmli/homey-smartpresence/issues).
 
 ## Release Notes:
+
+#### 0.7.5
+
+- Added support for kids
 
 #### 0.7.4
 

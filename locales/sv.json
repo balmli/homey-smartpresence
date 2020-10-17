@@ -6,6 +6,7 @@
     "configuration" : {
       "name": "Namn:",
       "ip_address" : "IP-adress:",
+      "is_kid" : "Is kid:",
       "is_guest" : "Är gäst:",
       "add_device_btn": "Lägg till enhet",
       "invalid_device_name": "Saknar namn på enhet",

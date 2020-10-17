@@ -6,10 +6,10 @@ const Network = require('../../lib/network');
 module.exports = class SmartPresenceDevice extends Homey.Device {
 
   async onInit() {
+    this._settings = this.getSettings();
     await this._migrate();
     this._client = new Network({ log: this.log });
     this._present = this.getCapabilityValue('onoff');
-    this._settings = this.getSettings();
     this._lastSeen = this.getStoreValue('lastSeen') || 0;
     this.scan();
   }
@@ -84,6 +84,10 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
 
   isHouseHoldMember() {
     return !this.isGuest();
+  }
+
+  isKid() {
+    return this._settings.is_kid;
   }
 
   isGuest() {
@@ -163,6 +167,9 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
       if (this.isHouseHoldMember()) {
         Homey.app.householdMemberArrivedTrigger.trigger(this.getFlowCardTokens(), {});
       }
+      if (this.isKid()) {
+        Homey.app.kidArrivedTrigger.trigger(this.getFlowCardTokens(), {});
+      }
       if (this.isGuest()) {
         Homey.app.guestArrivedTrigger.trigger(this.getFlowCardTokens(), {});
       }
@@ -175,6 +182,9 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
         Homey.app.someoneLeftTrigger.trigger(this.getFlowCardTokens(), {});
         if (this.isHouseHoldMember()) {
           Homey.app.householdMemberLeftTrigger.trigger(this.getFlowCardTokens(), {});
+        }
+        if (this.isKid()) {
+          Homey.app.kidLeftTrigger.trigger(this.getFlowCardTokens(), {});
         }
         if (this.isGuest()) {
           Homey.app.guestLeftTrigger.trigger(this.getFlowCardTokens(), {});

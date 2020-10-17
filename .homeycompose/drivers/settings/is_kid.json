@@ -1,0 +1,13 @@
+{
+  "id": "is_kid",
+  "type": "checkbox",
+  "value": false,
+  "label": {
+    "en": "Is kid",
+    "no": "Er barn"
+  },
+  "hint": {
+    "en": "Check the box if this person is a kid.",
+    "no": "Kryss av hvis personen er et barn."
+  }
+}

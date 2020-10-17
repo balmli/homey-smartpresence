@@ -1,6 +1,6 @@
 {
   "id": "nl.terryhendrix.smartpresence",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "brandColor": "#2A6FE8",
@@ -195,6 +195,34 @@
         ]
       },
       {
+        "id": "first_kid_arrived",
+        "title": {
+          "en": "The first kid arrived",
+          "no": "Første barn ankom"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "en": "Who",
+              "nl": "Wie",
+              "de": "Wer",
+              "no": "Hvem",
+              "da": "Hvem",
+              "sv": "Vem"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan Jansen",
+              "de": "Max Mustermann",
+              "no": "Ola Nordmann",
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
+            }
+          }
+        ]
+      },
+      {
         "id": "first_person_entered",
         "title": {
           "en": "The first person arrived",
@@ -355,6 +383,62 @@
         ]
       },
       {
+        "id": "kid_arrived",
+        "title": {
+          "en": "A kid arrived",
+          "no": "Et barn ankom"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "en": "Who",
+              "nl": "Wie",
+              "de": "Wer",
+              "no": "Hvem",
+              "da": "Hvem",
+              "sv": "Vem"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan Jansen",
+              "de": "Max Mustermann",
+              "no": "Ola Nordmann",
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
+            }
+          }
+        ]
+      },
+      {
+        "id": "kid_left",
+        "title": {
+          "en": "A kid left",
+          "no": "Et barn forlot hjemmet"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "en": "Who",
+              "nl": "Wie",
+              "de": "Wer",
+              "no": "Hvem",
+              "da": "Hvem",
+              "sv": "Vem"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan Jansen",
+              "de": "Max Mustermann",
+              "no": "Ola Nordmann",
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
+            }
+          }
+        ]
+      },
+      {
         "id": "last_guest_left",
         "title": {
           "en": "The last guest left",
@@ -395,6 +479,34 @@
           "no": "Siste medlem av husstanden dro hjemmefra",
           "da": "Det sidste medlem af husstanden forlod hjemmet",
           "sv": "Den sista personen i hushållet lämnade"
+        },
+        "tokens": [
+          {
+            "name": "who",
+            "title": {
+              "en": "Who",
+              "nl": "Wie",
+              "de": "Wer",
+              "no": "Hvem",
+              "da": "Hvem",
+              "sv": "Vem"
+            },
+            "example": {
+              "en": "John Doe",
+              "nl": "Jan Jansen",
+              "de": "Max Mustermann",
+              "no": "Ola Nordmann",
+              "da": "Navn Navnesen",
+              "sv": "Medel Svensson"
+            }
+          }
+        ]
+      },
+      {
+        "id": "last_kid_left",
+        "title": {
+          "en": "The last kid left",
+          "no": "Det siste barnet forlot hjemmet"
         },
         "tokens": [
           {
@@ -617,6 +729,13 @@
         }
       },
       {
+        "id": "kids_at_home",
+        "title": {
+          "en": "Kids !{{|not}} at home",
+          "no": "Barna er !{{|ikke}} hjemme"
+        }
+      },
+      {
         "id": "someone_at_home",
         "title": {
           "en": "!{{Someone|Nobody}} is home",
@@ -729,6 +848,19 @@
                 "no": "Portnummer som benyttes for å se om enheten er online.",
                 "da": "Portnummeret som anvendes for at se om enheder er online.",
                 "sv": "Portnummer i nätverket som används för att testa om smartmobilen/enheten är närvarande."
+              }
+            },
+            {
+              "id": "is_kid",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Is kid",
+                "no": "Er barn"
+              },
+              "hint": {
+                "en": "Check the box if this person is a kid.",
+                "no": "Kryss av hvis personen er et barn."
               }
             },
             {

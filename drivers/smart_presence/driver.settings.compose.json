@@ -19,6 +19,10 @@
         "id": "port"
       },
       {
+        "$extends": "is_kid",
+        "id": "is_kid"
+      },
+      {
         "$extends": "is_guest",
         "id": "is_guest"
       }

@@ -6,6 +6,7 @@
     "configuration" : {
       "name": "Name:",
       "ip_address" : "IP-Adresse:",
+      "is_kid" : "Is kid:",
       "is_guest" : "Ist Gast:",
       "add_device_btn": "Gerät hinzufügen",
       "invalid_device_name": "Fehlender Gerätename",

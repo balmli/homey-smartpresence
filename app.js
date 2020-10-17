@@ -21,6 +21,9 @@ module.exports = class SmartPresenceApp extends Homey.App {
     this.firstHouseholdMemberArrivedTrigger = new Homey.FlowCardTrigger('first_household_member_arrived');
     await this.firstHouseholdMemberArrivedTrigger.register();
 
+    this.firstKidArrivedTrigger = new Homey.FlowCardTrigger('first_kid_arrived');
+    await this.firstKidArrivedTrigger.register();
+
     this.firstPersonEnteredTrigger = new Homey.FlowCardTrigger('first_person_entered');
     await this.firstPersonEnteredTrigger.register();
 
@@ -36,11 +39,20 @@ module.exports = class SmartPresenceApp extends Homey.App {
     this.householdMemberLeftTrigger = new Homey.FlowCardTrigger('household_member_left');
     await this.householdMemberLeftTrigger.register();
 
+    this.kidArrivedTrigger = new Homey.FlowCardTrigger('kid_arrived');
+    await this.kidArrivedTrigger.register();
+
+    this.kidLeftTrigger = new Homey.FlowCardTrigger('kid_left');
+    await this.kidLeftTrigger.register();
+
     this.lastGuestLeftTrigger = new Homey.FlowCardTrigger('last_guest_left');
     await this.lastGuestLeftTrigger.register();
 
     this.lastHouseholdMemberLeftTrigger = new Homey.FlowCardTrigger('last_household_member_left');
     await this.lastHouseholdMemberLeftTrigger.register();
+
+    this.lastKidLeftTrigger = new Homey.FlowCardTrigger('last_kid_left');
+    await this.lastKidLeftTrigger.register();
 
     this.lastPersonLeftTrigger = new Homey.FlowCardTrigger('last_person_left');
     await this.lastPersonLeftTrigger.register();
@@ -61,6 +73,10 @@ module.exports = class SmartPresenceApp extends Homey.App {
       .register()
       .registerRunListener((args, state) => this.householdMemberIsHome(args, state));
 
+    new Homey.FlowCardCondition('kids_at_home')
+      .register()
+      .registerRunListener((args, state) => this.kidsAtHome(args, state));
+
     new Homey.FlowCardCondition('having_guests')
       .register()
       .registerRunListener((args, state) => this.havingGuests(args, state));
@@ -76,6 +92,10 @@ module.exports = class SmartPresenceApp extends Homey.App {
 
   async householdMemberIsHome(args, state) {
     return this.getPresenceStatus().filter(d => d.present && !d.guest).length > 0;
+  }
+
+  async kidsAtHome(args, state) {
+    return this.getPresenceStatus().filter(d => d.present && d.kid).length > 0;
   }
 
   async havingGuests(args, state) {
@@ -94,6 +114,7 @@ module.exports = class SmartPresenceApp extends Homey.App {
       status.push({
         id: device.getData().id,
         present: device.getPresenceStatus(),
+        kid: device.isKid(),
         guest: device.isGuest(),
         lastSeen: device.getLastSeen()
       });
@@ -112,6 +133,9 @@ module.exports = class SmartPresenceApp extends Homey.App {
     if (device.isHouseHoldMember() && presentAndNotSameDevice.filter(d => !d.guest).length === 0) {
       Homey.app.firstHouseholdMemberArrivedTrigger.trigger(device.getFlowCardTokens(), {});
     }
+    if (device.isKid() && presentAndNotSameDevice.filter(d => d.kid).length === 0) {
+      Homey.app.firstKidArrivedTrigger.trigger(device.getFlowCardTokens(), {});
+    }
     if (device.isGuest() && presentAndNotSameDevice.filter(d => d.guest).length === 0) {
       Homey.app.firstGuestArrivedTrigger.trigger(device.getFlowCardTokens(), {});
     }
@@ -125,6 +149,9 @@ module.exports = class SmartPresenceApp extends Homey.App {
     }
     if (device.isHouseHoldMember() && currentPrecenseStatus.filter(d => d.present && !d.guest).length === 0) {
       Homey.app.lastHouseholdMemberLeftTrigger.trigger(device.getFlowCardTokens(), {});
+    }
+    if (device.isKid() && currentPrecenseStatus.filter(d => d.present && d.kid).length === 0) {
+      Homey.app.lastKidLeftTrigger.trigger(device.getFlowCardTokens(), {});
     }
     if (device.isGuest() && currentPrecenseStatus.filter(d => d.present && d.guest).length === 0) {
       Homey.app.lastGuestLeftTrigger.trigger(device.getFlowCardTokens(), {});

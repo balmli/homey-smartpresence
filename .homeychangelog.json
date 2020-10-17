@@ -1,4 +1,7 @@
 {
+  "0.7.5": {
+    "en": "Added support for kids. "
+  },
   "0.7.4": {
     "en": "Performance improvements. Fixed issue with first person, household member and guest triggers. "
   },
