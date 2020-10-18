@@ -2,7 +2,11 @@
   "id": "kid_left",
   "title": {
     "en": "A kid left",
-    "no": "Et barn forlot hjemmet"
+    "nl": "Een kind heeeft het huis verlaten",
+    "de": "Ein Kind ist gegangen",
+    "no": "Et barn forlot hjemmet",
+    "da": "Et barn forlod hjemmet",
+    "sv": "Ett barn lämnade"
   },
   "tokens": [
     {

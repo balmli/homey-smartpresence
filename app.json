@@ -1,6 +1,6 @@
 {
   "id": "nl.terryhendrix.smartpresence",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "brandColor": "#2A6FE8",
@@ -198,7 +198,11 @@
         "id": "first_kid_arrived",
         "title": {
           "en": "The first kid arrived",
-          "no": "Første barn ankom"
+          "nl": "Het eerste kind is thuisgekomen",
+          "de": "Das erste Kind ist angekommen",
+          "no": "Første barn ankom",
+          "da": "Første barn kom hjem",
+          "sv": "Det första barnet anlände"
         },
         "tokens": [
           {
@@ -386,7 +390,11 @@
         "id": "kid_arrived",
         "title": {
           "en": "A kid arrived",
-          "no": "Et barn ankom"
+          "nl": "Een kind is thuisgekomen",
+          "de": "Ein Kind ist angekommen",
+          "no": "Et barn ankom",
+          "da": "Et barn kom hjem",
+          "sv": "Ett barn anlände"
         },
         "tokens": [
           {
@@ -414,7 +422,11 @@
         "id": "kid_left",
         "title": {
           "en": "A kid left",
-          "no": "Et barn forlot hjemmet"
+          "nl": "Een kind heeeft het huis verlaten",
+          "de": "Ein Kind ist gegangen",
+          "no": "Et barn forlot hjemmet",
+          "da": "Et barn forlod hjemmet",
+          "sv": "Ett barn lämnade"
         },
         "tokens": [
           {
@@ -506,7 +518,11 @@
         "id": "last_kid_left",
         "title": {
           "en": "The last kid left",
-          "no": "Det siste barnet forlot hjemmet"
+          "nl": "Laatste kind is uit huis vertrokken",
+          "de": "Das letzte Kind ist gegangen",
+          "no": "Det siste barnet forlot hjemmet",
+          "da": "Det sidste barn forlod hjemmet",
+          "sv": "Det sista barnet lämnade"
         },
         "tokens": [
           {
@@ -725,14 +741,18 @@
           "de": "!{{Haben|Nicht haben}} Gäste",
           "no": "!{{Har|Har ikke}} gjester",
           "da": "!{{Har|Har ikke}} gæster",
-          "sv": "!{{Någon gäst|Ingen gäst}} är närvarande"
+          "sv": "!{{Gäst|Ingen gäst}} är närvarande"
         }
       },
       {
         "id": "kids_at_home",
         "title": {
           "en": "Kids !{{|not}} at home",
-          "no": "Barna er !{{|ikke}} hjemme"
+          "nl": "Kinderen !{{|niet}} thuis",
+          "de": "Kind !{{|nicht}} zu Hause",
+          "no": "Barna er !{{|ikke}} hjemme",
+          "da": "Børn !{{ikke}} hjemme",
+          "sv": "!{{Barn|Inget barn}} är närvarande"
         }
       },
       {
@@ -856,7 +876,11 @@
               "value": false,
               "label": {
                 "en": "Is kid",
-                "no": "Er barn"
+                "nl": "Is kind",
+                "de": "Ist Kind",
+                "no": "Er barn",
+                "da": "Er barn",
+                "sv": "Är barn"
               },
               "hint": {
                 "en": "Check the box if this person is a kid.",
@@ -1006,7 +1030,7 @@
             "de": "Einstellungen Stress-Modus",
             "no": "Innstillinger for stress-modus",
             "da": "Indstillinger for stres tilstand",
-            "sv": "Inställningar för stresstest"
+            "sv": "Inställningar för intensivtest"
           },
           "children": [
             {

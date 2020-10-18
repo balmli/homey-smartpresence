@@ -4,7 +4,11 @@
   "value": false,
   "label": {
     "en": "Is kid",
-    "no": "Er barn"
+    "nl": "Is kind",
+    "de": "Ist Kind",
+    "no": "Er barn",
+    "da": "Er barn",
+    "sv": "Är barn"
   },
   "hint": {
     "en": "Check the box if this person is a kid.",

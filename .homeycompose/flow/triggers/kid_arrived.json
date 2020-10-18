@@ -2,7 +2,11 @@
   "id": "kid_arrived",
   "title": {
     "en": "A kid arrived",
-    "no": "Et barn ankom"
+    "nl": "Een kind is thuisgekomen",
+    "de": "Ein Kind ist angekommen",
+    "no": "Et barn ankom",
+    "da": "Et barn kom hjem",
+    "sv": "Ett barn anlände"
   },
   "tokens": [
     {

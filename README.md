@@ -49,6 +49,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.7.6
+
+- Language support
+
 #### 0.7.5
 
 - Added support for kids

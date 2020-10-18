@@ -2,7 +2,11 @@
   "id": "first_kid_arrived",
   "title": {
     "en": "The first kid arrived",
-    "no": "Første barn ankom"
+    "nl": "Het eerste kind is thuisgekomen",
+    "de": "Das erste Kind ist angekommen",
+    "no": "Første barn ankom",
+    "da": "Første barn kom hjem",
+    "sv": "Det första barnet anlände"
   },
   "tokens": [
     {

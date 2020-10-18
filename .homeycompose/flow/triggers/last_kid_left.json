@@ -2,7 +2,11 @@
   "id": "last_kid_left",
   "title": {
     "en": "The last kid left",
-    "no": "Det siste barnet forlot hjemmet"
+    "nl": "Laatste kind is uit huis vertrokken",
+    "de": "Das letzte Kind ist gegangen",
+    "no": "Det siste barnet forlot hjemmet",
+    "da": "Det sidste barn forlod hjemmet",
+    "sv": "Det sista barnet lämnade"
   },
   "tokens": [
     {
