@@ -1,0 +1,32 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Present",
+    "nl": "Aanwezigheid detectie",
+    "de": "Anwesenheitserkennung",
+    "no": "Tilstede",
+    "da": "Tilstede",
+    "sv": "Närvarande"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiQuickAction": true,
+  "insightsTitleTrue": {
+    "en": "Present",
+    "nl": "Aanwezigheid detectie",
+    "de": "Anwesenheitserkennung",
+    "no": "Tilstede",
+    "da": "Tilstede",
+    "sv": "Närvarande"
+  },
+  "insightsTitleFalse": {
+    "en": "Not present",
+    "nl": "Geen aanwezigheid detectie",
+    "de": "Keine Anwesenheitserkennung",
+    "no": "Fraværende",
+    "da": "Fraværende",
+    "sv": "Frånvarande"
+  },
+  "uiComponent": null
+}

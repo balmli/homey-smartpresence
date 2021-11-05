@@ -9,16 +9,13 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     this._settings = this.getSettings();
     await this._migrate();
     this._client = new Network({ homey: this.homey, log: this.log });
-    this._present = this.getCapabilityValue('onoff');
+    this._present = this.getCapabilityValue('presence');
     this._lastSeen = this.getStoreValue('lastSeen') || 0;
     this.scan();
   }
 
   async _migrate() {
     try {
-      if (!this.hasCapability('onoff')) {
-        await this.addCapability('onoff');
-      }
       const ver = this.getStoreValue('ver');
       if (ver === null) {
         if (this.getNormalModeInterval() < 3000) {
@@ -27,7 +24,15 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
         if (this.getStressModeInterval() < 1500) {
           await this.setSettings({ stress_mode_interval: 1500 });
         }
-        await this.setStoreValue('ver', 1);
+      }
+      if (ver < 2) {
+        if (this.hasCapability('onoff')) {
+          const presence = this.getCapabilityValue('onoff');
+          await this.removeCapability('onoff');
+          await this.addCapability('presence');
+          await this.setCapabilityValue('presence', presence).catch(this.error);
+        }
+        await this.setStoreValue('ver', 2);
       }
     } catch (err) {
       this.log('Migration failed', err);
@@ -40,8 +45,8 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     this.log('device deleted');
   }
 
-  async onSettings({ oldSettingsObj, newSettingsObj, changedKeysArr }) {
-    this._settings = newSettingsObj;
+  async onSettings({ oldSettings, newSettings, changedKeys }) {
+    this._settings = newSettings;
   }
 
   getHost() {
@@ -202,11 +207,11 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
 
   async setPresenceStatus(present) {
     this._present = present;
-    await this.setCapabilityValue('onoff', present);
+    await this.setCapabilityValue('presence', present).catch(this.error);
   }
 
   async userAtHome() {
-    return !!this.getCapabilityValue('onoff');
+    return !!this.getCapabilityValue('presence');
   }
 
 };

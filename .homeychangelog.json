@@ -1,6 +1,6 @@
 {
   "0.8.0": {
-    "en": "Fixed rename bug. Migrated to SDK3. "
+    "en": "Added presence to the Timeline. Fixed rename bug. Migrated to SDK3. "
   },
   "0.7.6": {
     "en": "Added support for kids. "

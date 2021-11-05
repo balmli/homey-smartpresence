@@ -12,7 +12,7 @@
   },
   "class": "sensor",
   "capabilities": [
-    "onoff"
+    "presence"
   ],
   "pair": [
     {

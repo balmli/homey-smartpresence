@@ -50,6 +50,7 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 #### 0.8.0
 
+- Added presence to the Timeline
 - Fixed rename bug
 - Migrated to SDK3
 

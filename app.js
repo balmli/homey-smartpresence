@@ -14,41 +14,41 @@ module.exports = class SmartPresenceApp extends Homey.App {
   }
 
   async initFlows() {
-    this.firstGuestArrivedTrigger = this.homey.flow.getDeviceTriggerCard('first_guest_arrived');
+    this.firstGuestArrivedTrigger = this.homey.flow.getTriggerCard('first_guest_arrived');
 
-    this.firstHouseholdMemberArrivedTrigger = this.homey.flow.getDeviceTriggerCard('first_household_member_arrived');
+    this.firstHouseholdMemberArrivedTrigger = this.homey.flow.getTriggerCard('first_household_member_arrived');
 
-    this.firstKidArrivedTrigger = this.homey.flow.getDeviceTriggerCard('first_kid_arrived');
+    this.firstKidArrivedTrigger = this.homey.flow.getTriggerCard('first_kid_arrived');
 
-    this.firstPersonEnteredTrigger = this.homey.flow.getDeviceTriggerCard('first_person_entered');
+    this.firstPersonEnteredTrigger = this.homey.flow.getTriggerCard('first_person_entered');
 
-    this.guestArrivedTrigger = this.homey.flow.getDeviceTriggerCard('guest_arrived');
+    this.guestArrivedTrigger = this.homey.flow.getTriggerCard('guest_arrived');
 
-    this.guestLeftTrigger = this.homey.flow.getDeviceTriggerCard('guest_left');
+    this.guestLeftTrigger = this.homey.flow.getTriggerCard('guest_left');
 
-    this.householdMemberArrivedTrigger = this.homey.flow.getDeviceTriggerCard('household_member_arrived');
+    this.householdMemberArrivedTrigger = this.homey.flow.getTriggerCard('household_member_arrived');
 
-    this.householdMemberLeftTrigger = this.homey.flow.getDeviceTriggerCard('household_member_left');
+    this.householdMemberLeftTrigger = this.homey.flow.getTriggerCard('household_member_left');
 
-    this.kidArrivedTrigger = this.homey.flow.getDeviceTriggerCard('kid_arrived');
+    this.kidArrivedTrigger = this.homey.flow.getTriggerCard('kid_arrived');
 
-    this.kidLeftTrigger = this.homey.flow.getDeviceTriggerCard('kid_left');
+    this.kidLeftTrigger = this.homey.flow.getTriggerCard('kid_left');
 
-    this.lastGuestLeftTrigger = this.homey.flow.getDeviceTriggerCard('last_guest_left');
+    this.lastGuestLeftTrigger = this.homey.flow.getTriggerCard('last_guest_left');
 
-    this.lastHouseholdMemberLeftTrigger = this.homey.flow.getDeviceTriggerCard('last_household_member_left');
+    this.lastHouseholdMemberLeftTrigger = this.homey.flow.getTriggerCard('last_household_member_left');
 
-    this.lastKidLeftTrigger = this.homey.flow.getDeviceTriggerCard('last_kid_left');
+    this.lastKidLeftTrigger = this.homey.flow.getTriggerCard('last_kid_left');
 
-    this.lastPersonLeftTrigger = this.homey.flow.getDeviceTriggerCard('last_person_left');
+    this.lastPersonLeftTrigger = this.homey.flow.getTriggerCard('last_person_left');
 
-    this.someoneEnteredTrigger = this.homey.flow.getDeviceTriggerCard('someone_entered');
+    this.someoneEnteredTrigger = this.homey.flow.getTriggerCard('someone_entered');
 
-    this.someoneLeftTrigger = this.homey.flow.getDeviceTriggerCard('someone_left');
+    this.someoneLeftTrigger = this.homey.flow.getTriggerCard('someone_left');
 
-    this.userEnteredTrigger = this.homey.flow.getDeviceTriggerCardDevice('user_entered');
+    this.userEnteredTrigger = this.homey.flow.getDeviceTriggerCard('user_entered');
 
-    this.userLeftTrigger = this.homey.flow.getDeviceTriggerCardDevice('user_left');
+    this.userLeftTrigger = this.homey.flow.getDeviceTriggerCard('user_left');
 
     this.homey.flow.getConditionCard('a_household_member_is_home')
       .registerRunListener((args, state) => this.householdMemberIsHome(args, state));

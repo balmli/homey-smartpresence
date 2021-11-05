@@ -9,7 +9,7 @@ module.exports = class SmartPresenceDriver extends Homey.Driver {
     this.log('SmartPresence driver has been initialized');
   }
 
-  onPair(session) {
+  async onPair(session) {
     session.setHandler('device_input', async (data) => {
       //this.log('device_input', data);
       if (!data.devicename) {
