@@ -158,7 +158,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     const currentPresent = this.getPresenceStatus();
 
     if (present && !currentPresent) {
-      this.log(`${this.getHost()} - ${this.getDeviceName()}: is online`);
+      this.log(`${this.getHost()} - ${this.getName()}: is online`);
       await this.setPresenceStatus(present);
       this.homey.app.deviceArrived(this);
       this.homey.app.userEnteredTrigger.trigger(this, this.getFlowCardTokens(), {});
@@ -174,7 +174,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
       }
     } else if (!present && (currentPresent || currentPresent === null)) {
       if (!this.shouldDelayAwayStateSwitch()) {
-        this.log(`${this.getHost()} - ${this.getDeviceName()}: is marked as offline`);
+        this.log(`${this.getHost()} - ${this.getName()}: is marked as offline`);
         await this.setPresenceStatus(present);
         this.homey.app.deviceLeft(this);
         this.homey.app.userLeftTrigger.trigger(this, this.getFlowCardTokens(), {});
@@ -192,12 +192,8 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     }
   }
 
-  getDeviceName() {
-    return this.getSetting('name') || this.getName();
-  }
-
   getFlowCardTokens() {
-    return { who: this.getDeviceName() };
+    return { who: this.getName() };
   }
 
   getPresenceStatus() {

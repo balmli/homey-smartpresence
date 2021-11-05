@@ -49,7 +49,8 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 ## Release Notes:
 
 #### 0.8.0
--
+
+- Fixed rename bug
 - Migrated to SDK3
 
 #### 0.7.6
