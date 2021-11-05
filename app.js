@@ -6,7 +6,6 @@ module.exports = class SmartPresenceApp extends Homey.App {
 
   async onInit() {
     try {
-      Homey.on('unload', () => this._onUninstall());
       await this.initFlows();
       this.log('SmartPresenceApp is running...');
     } catch (err) {
@@ -15,78 +14,55 @@ module.exports = class SmartPresenceApp extends Homey.App {
   }
 
   async initFlows() {
-    this.firstGuestArrivedTrigger = new Homey.FlowCardTrigger('first_guest_arrived');
-    await this.firstGuestArrivedTrigger.register();
+    this.firstGuestArrivedTrigger = this.homey.flow.getDeviceTriggerCard('first_guest_arrived');
 
-    this.firstHouseholdMemberArrivedTrigger = new Homey.FlowCardTrigger('first_household_member_arrived');
-    await this.firstHouseholdMemberArrivedTrigger.register();
+    this.firstHouseholdMemberArrivedTrigger = this.homey.flow.getDeviceTriggerCard('first_household_member_arrived');
 
-    this.firstKidArrivedTrigger = new Homey.FlowCardTrigger('first_kid_arrived');
-    await this.firstKidArrivedTrigger.register();
+    this.firstKidArrivedTrigger = this.homey.flow.getDeviceTriggerCard('first_kid_arrived');
 
-    this.firstPersonEnteredTrigger = new Homey.FlowCardTrigger('first_person_entered');
-    await this.firstPersonEnteredTrigger.register();
+    this.firstPersonEnteredTrigger = this.homey.flow.getDeviceTriggerCard('first_person_entered');
 
-    this.guestArrivedTrigger = new Homey.FlowCardTrigger('guest_arrived');
-    await this.guestArrivedTrigger.register();
+    this.guestArrivedTrigger = this.homey.flow.getDeviceTriggerCard('guest_arrived');
 
-    this.guestLeftTrigger = new Homey.FlowCardTrigger('guest_left');
-    await this.guestLeftTrigger.register();
+    this.guestLeftTrigger = this.homey.flow.getDeviceTriggerCard('guest_left');
 
-    this.householdMemberArrivedTrigger = new Homey.FlowCardTrigger('household_member_arrived');
-    await this.householdMemberArrivedTrigger.register();
+    this.householdMemberArrivedTrigger = this.homey.flow.getDeviceTriggerCard('household_member_arrived');
 
-    this.householdMemberLeftTrigger = new Homey.FlowCardTrigger('household_member_left');
-    await this.householdMemberLeftTrigger.register();
+    this.householdMemberLeftTrigger = this.homey.flow.getDeviceTriggerCard('household_member_left');
 
-    this.kidArrivedTrigger = new Homey.FlowCardTrigger('kid_arrived');
-    await this.kidArrivedTrigger.register();
+    this.kidArrivedTrigger = this.homey.flow.getDeviceTriggerCard('kid_arrived');
 
-    this.kidLeftTrigger = new Homey.FlowCardTrigger('kid_left');
-    await this.kidLeftTrigger.register();
+    this.kidLeftTrigger = this.homey.flow.getDeviceTriggerCard('kid_left');
 
-    this.lastGuestLeftTrigger = new Homey.FlowCardTrigger('last_guest_left');
-    await this.lastGuestLeftTrigger.register();
+    this.lastGuestLeftTrigger = this.homey.flow.getDeviceTriggerCard('last_guest_left');
 
-    this.lastHouseholdMemberLeftTrigger = new Homey.FlowCardTrigger('last_household_member_left');
-    await this.lastHouseholdMemberLeftTrigger.register();
+    this.lastHouseholdMemberLeftTrigger = this.homey.flow.getDeviceTriggerCard('last_household_member_left');
 
-    this.lastKidLeftTrigger = new Homey.FlowCardTrigger('last_kid_left');
-    await this.lastKidLeftTrigger.register();
+    this.lastKidLeftTrigger = this.homey.flow.getDeviceTriggerCard('last_kid_left');
 
-    this.lastPersonLeftTrigger = new Homey.FlowCardTrigger('last_person_left');
-    await this.lastPersonLeftTrigger.register();
+    this.lastPersonLeftTrigger = this.homey.flow.getDeviceTriggerCard('last_person_left');
 
-    this.someoneEnteredTrigger = new Homey.FlowCardTrigger('someone_entered');
-    await this.someoneEnteredTrigger.register();
+    this.someoneEnteredTrigger = this.homey.flow.getDeviceTriggerCard('someone_entered');
 
-    this.someoneLeftTrigger = new Homey.FlowCardTrigger('someone_left');
-    await this.someoneLeftTrigger.register();
+    this.someoneLeftTrigger = this.homey.flow.getDeviceTriggerCard('someone_left');
 
-    this.userEnteredTrigger = new Homey.FlowCardTriggerDevice('user_entered');
-    await this.userEnteredTrigger.register();
+    this.userEnteredTrigger = this.homey.flow.getDeviceTriggerCardDevice('user_entered');
 
-    this.userLeftTrigger = new Homey.FlowCardTriggerDevice('user_left');
-    await this.userLeftTrigger.register();
+    this.userLeftTrigger = this.homey.flow.getDeviceTriggerCardDevice('user_left');
 
-    new Homey.FlowCardCondition('a_household_member_is_home')
-      .register()
+    this.homey.flow.getConditionCard('a_household_member_is_home')
       .registerRunListener((args, state) => this.householdMemberIsHome(args, state));
 
-    new Homey.FlowCardCondition('kids_at_home')
-      .register()
+    this.homey.flow.getConditionCard('kids_at_home')
       .registerRunListener((args, state) => this.kidsAtHome(args, state));
 
-    new Homey.FlowCardCondition('having_guests')
-      .register()
+    this.homey.flow.getConditionCard('having_guests')
       .registerRunListener((args, state) => this.havingGuests(args, state));
 
-    new Homey.FlowCardCondition('someone_at_home')
-      .register()
+    this.homey.flow.getConditionCard('someone_at_home')
       .registerRunListener((args, state) => this.someoneAtHome(args, state));
 
-    new Homey.FlowCardCondition('user_at_home')
-      .register()
+    this.homey.flow.getConditionCard('user_at_home')
       .registerRunListener((args, state) => args.device.userAtHome());
   }
 
@@ -108,7 +84,7 @@ module.exports = class SmartPresenceApp extends Homey.App {
 
   getPresenceStatus() {
     const status = [];
-    const driver = Homey.ManagerDrivers.getDriver('smart_presence');
+    const driver = this.homey.drivers.getDriver('smart_presence');
     const devices = driver.getDevices();
     for (let device of devices) {
       status.push({
@@ -128,16 +104,16 @@ module.exports = class SmartPresenceApp extends Homey.App {
     const deviceid = device.getData().id;
     const presentAndNotSameDevice = currentPrecenseStatus.filter(d => d.id !== deviceid && d.present);
     if (presentAndNotSameDevice.length === 0) {
-      Homey.app.firstPersonEnteredTrigger.trigger(device.getFlowCardTokens(), {});
+      this.homey.app.firstPersonEnteredTrigger.trigger(device.getFlowCardTokens(), {});
     }
     if (device.isHouseHoldMember() && presentAndNotSameDevice.filter(d => !d.guest).length === 0) {
-      Homey.app.firstHouseholdMemberArrivedTrigger.trigger(device.getFlowCardTokens(), {});
+      this.homey.app.firstHouseholdMemberArrivedTrigger.trigger(device.getFlowCardTokens(), {});
     }
     if (device.isKid() && presentAndNotSameDevice.filter(d => d.kid).length === 0) {
-      Homey.app.firstKidArrivedTrigger.trigger(device.getFlowCardTokens(), {});
+      this.homey.app.firstKidArrivedTrigger.trigger(device.getFlowCardTokens(), {});
     }
     if (device.isGuest() && presentAndNotSameDevice.filter(d => d.guest).length === 0) {
-      Homey.app.firstGuestArrivedTrigger.trigger(device.getFlowCardTokens(), {});
+      this.homey.app.firstGuestArrivedTrigger.trigger(device.getFlowCardTokens(), {});
     }
   }
 
@@ -145,35 +121,16 @@ module.exports = class SmartPresenceApp extends Homey.App {
     const currentPrecenseStatus = this.getPresenceStatus();
     this.log('deviceLeft', currentPrecenseStatus);
     if (currentPrecenseStatus.filter(d => d.present).length === 0) {
-      Homey.app.lastPersonLeftTrigger.trigger(device.getFlowCardTokens(), {});
+      this.homey.app.lastPersonLeftTrigger.trigger(device.getFlowCardTokens(), {});
     }
     if (device.isHouseHoldMember() && currentPrecenseStatus.filter(d => d.present && !d.guest).length === 0) {
-      Homey.app.lastHouseholdMemberLeftTrigger.trigger(device.getFlowCardTokens(), {});
+      this.homey.app.lastHouseholdMemberLeftTrigger.trigger(device.getFlowCardTokens(), {});
     }
     if (device.isKid() && currentPrecenseStatus.filter(d => d.present && d.kid).length === 0) {
-      Homey.app.lastKidLeftTrigger.trigger(device.getFlowCardTokens(), {});
+      this.homey.app.lastKidLeftTrigger.trigger(device.getFlowCardTokens(), {});
     }
     if (device.isGuest() && currentPrecenseStatus.filter(d => d.present && d.guest).length === 0) {
-      Homey.app.lastGuestLeftTrigger.trigger(device.getFlowCardTokens(), {});
-    }
-  }
-
-  _onUninstall() {
-    this._deleted = true;
-    try {
-      this._clearTimers();
-    } catch (err) {
-      this.log('_onUninstall error', err);
-    }
-  }
-
-  _clearTimers() {
-    const driver = Homey.ManagerDrivers.getDriver('smart_presence');
-    const devices = driver.getDevices();
-    for (let device of devices) {
-      if (device.clearScanTimer) {
-        device.clearScanTimer();
-      }
+      this.homey.app.lastGuestLeftTrigger.trigger(device.getFlowCardTokens(), {});
     }
   }
 

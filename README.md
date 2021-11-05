@@ -48,6 +48,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.8.0
+-
+- Migrated to SDK3
+
 #### 0.7.6
 
 - Language support

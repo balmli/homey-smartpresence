@@ -9,17 +9,15 @@ module.exports = class SmartPresenceDriver extends Homey.Driver {
     this.log('SmartPresence driver has been initialized');
   }
 
-  onPair(socket) {
-    socket.on('device_input', (data, callback) => {
+  onPair(session) {
+    session.setHandler('device_input', async (data) => {
       //this.log('device_input', data);
       if (!data.devicename) {
-        callback(new Error(Homey.__('pair.configuration.invalid_device_name')));
+        throw new Error(this.homey.__('pair.configuration.invalid_device_name'));
       } else if (!data.ip_address) {
-        callback(new Error(Homey.__('pair.configuration.missing_ip_address')));
+        throw new Error(this.homey.__('pair.configuration.missing_ip_address'));
       } else if (!net.isIP(data.ip_address)) {
-        callback(new Error(Homey.__('pair.configuration.invalid_ip_address')));
-      } else {
-        callback(null, true);
+        throw new Error(this.homey.__('pair.configuration.invalid_ip_address'));
       }
     });
   }

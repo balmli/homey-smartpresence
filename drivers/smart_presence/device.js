@@ -8,7 +8,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
   async onInit() {
     this._settings = this.getSettings();
     await this._migrate();
-    this._client = new Network({ log: this.log });
+    this._client = new Network({ homey: this.homey, log: this.log });
     this._present = this.getCapabilityValue('onoff');
     this._lastSeen = this.getStoreValue('lastSeen') || 0;
     this.scan();
@@ -40,9 +40,8 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     this.log('device deleted');
   }
 
-  async onSettings(oldSettingsObj, newSettingsObj, changedKeysArr, callback) {
+  async onSettings({ oldSettingsObj, newSettingsObj, changedKeysArr }) {
     this._settings = newSettingsObj;
-    callback(null, true);
   }
 
   getHost() {
@@ -121,7 +120,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
 
   clearScanTimer() {
     if (this.scanTimer) {
-      clearTimeout(this.scanTimer);
+      this.homey.clearTimeout(this.scanTimer);
       this.scanTimer = undefined;
     }
   }
@@ -131,7 +130,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
       return;
     }
     this.clearScanTimer();
-    this.scanTimer = setTimeout(this.scan.bind(this), interval);
+    this.scanTimer = this.homey.setTimeout(this.scan.bind(this), interval);
   }
 
   async scan() {
@@ -161,33 +160,33 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     if (present && !currentPresent) {
       this.log(`${this.getHost()} - ${this.getDeviceName()}: is online`);
       await this.setPresenceStatus(present);
-      Homey.app.deviceArrived(this);
-      Homey.app.userEnteredTrigger.trigger(this, this.getFlowCardTokens(), {});
-      Homey.app.someoneEnteredTrigger.trigger(this.getFlowCardTokens(), {});
+      this.homey.app.deviceArrived(this);
+      this.homey.app.userEnteredTrigger.trigger(this, this.getFlowCardTokens(), {});
+      this.homey.app.someoneEnteredTrigger.trigger(this.getFlowCardTokens(), {});
       if (this.isHouseHoldMember()) {
-        Homey.app.householdMemberArrivedTrigger.trigger(this.getFlowCardTokens(), {});
+        this.homey.app.householdMemberArrivedTrigger.trigger(this.getFlowCardTokens(), {});
       }
       if (this.isKid()) {
-        Homey.app.kidArrivedTrigger.trigger(this.getFlowCardTokens(), {});
+        this.homey.app.kidArrivedTrigger.trigger(this.getFlowCardTokens(), {});
       }
       if (this.isGuest()) {
-        Homey.app.guestArrivedTrigger.trigger(this.getFlowCardTokens(), {});
+        this.homey.app.guestArrivedTrigger.trigger(this.getFlowCardTokens(), {});
       }
     } else if (!present && (currentPresent || currentPresent === null)) {
       if (!this.shouldDelayAwayStateSwitch()) {
         this.log(`${this.getHost()} - ${this.getDeviceName()}: is marked as offline`);
         await this.setPresenceStatus(present);
-        Homey.app.deviceLeft(this);
-        Homey.app.userLeftTrigger.trigger(this, this.getFlowCardTokens(), {});
-        Homey.app.someoneLeftTrigger.trigger(this.getFlowCardTokens(), {});
+        this.homey.app.deviceLeft(this);
+        this.homey.app.userLeftTrigger.trigger(this, this.getFlowCardTokens(), {});
+        this.homey.app.someoneLeftTrigger.trigger(this.getFlowCardTokens(), {});
         if (this.isHouseHoldMember()) {
-          Homey.app.householdMemberLeftTrigger.trigger(this.getFlowCardTokens(), {});
+          this.homey.app.householdMemberLeftTrigger.trigger(this.getFlowCardTokens(), {});
         }
         if (this.isKid()) {
-          Homey.app.kidLeftTrigger.trigger(this.getFlowCardTokens(), {});
+          this.homey.app.kidLeftTrigger.trigger(this.getFlowCardTokens(), {});
         }
         if (this.isGuest()) {
-          Homey.app.guestLeftTrigger.trigger(this.getFlowCardTokens(), {});
+          this.homey.app.guestLeftTrigger.trigger(this.getFlowCardTokens(), {});
         }
       }
     }
