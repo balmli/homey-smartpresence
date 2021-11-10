@@ -48,6 +48,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.8.1
+
+- Fixed memory issue
+
 #### 0.8.0
 
 - Added presence to the Timeline

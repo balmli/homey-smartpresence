@@ -98,39 +98,41 @@ module.exports = class SmartPresenceApp extends Homey.App {
     return status;
   }
 
-  deviceArrived(device) {
+  async deviceArrived(device) {
     const currentPrecenseStatus = this.getPresenceStatus();
+    const tokens = device.getFlowCardTokens();
     this.log('deviceArrived', currentPrecenseStatus);
     const deviceid = device.getData().id;
     const presentAndNotSameDevice = currentPrecenseStatus.filter(d => d.id !== deviceid && d.present);
     if (presentAndNotSameDevice.length === 0) {
-      this.homey.app.firstPersonEnteredTrigger.trigger(device.getFlowCardTokens(), {});
+      await this.homey.app.firstPersonEnteredTrigger.trigger(tokens, {}).catch(this.error);
     }
     if (device.isHouseHoldMember() && presentAndNotSameDevice.filter(d => !d.guest).length === 0) {
-      this.homey.app.firstHouseholdMemberArrivedTrigger.trigger(device.getFlowCardTokens(), {});
+      await this.homey.app.firstHouseholdMemberArrivedTrigger.trigger(tokens, {}).catch(this.error);
     }
     if (device.isKid() && presentAndNotSameDevice.filter(d => d.kid).length === 0) {
-      this.homey.app.firstKidArrivedTrigger.trigger(device.getFlowCardTokens(), {});
+      await this.homey.app.firstKidArrivedTrigger.trigger(tokens, {}).catch(this.error);
     }
     if (device.isGuest() && presentAndNotSameDevice.filter(d => d.guest).length === 0) {
-      this.homey.app.firstGuestArrivedTrigger.trigger(device.getFlowCardTokens(), {});
+      await this.homey.app.firstGuestArrivedTrigger.trigger(tokens, {}).catch(this.error);
     }
   }
 
-  deviceLeft(device) {
+  async deviceLeft(device) {
     const currentPrecenseStatus = this.getPresenceStatus();
+    const tokens = device.getFlowCardTokens();
     this.log('deviceLeft', currentPrecenseStatus);
     if (currentPrecenseStatus.filter(d => d.present).length === 0) {
-      this.homey.app.lastPersonLeftTrigger.trigger(device.getFlowCardTokens(), {});
+      await this.homey.app.lastPersonLeftTrigger.trigger(tokens, {}).catch(this.error);
     }
     if (device.isHouseHoldMember() && currentPrecenseStatus.filter(d => d.present && !d.guest).length === 0) {
-      this.homey.app.lastHouseholdMemberLeftTrigger.trigger(device.getFlowCardTokens(), {});
+      await this.homey.app.lastHouseholdMemberLeftTrigger.trigger(tokens, {}).catch(this.error);
     }
     if (device.isKid() && currentPrecenseStatus.filter(d => d.present && d.kid).length === 0) {
-      this.homey.app.lastKidLeftTrigger.trigger(device.getFlowCardTokens(), {});
+      await this.homey.app.lastKidLeftTrigger.trigger(tokens, {}).catch(this.error);
     }
     if (device.isGuest() && currentPrecenseStatus.filter(d => d.present && d.guest).length === 0) {
-      this.homey.app.lastGuestLeftTrigger.trigger(device.getFlowCardTokens(), {});
+      await this.homey.app.lastGuestLeftTrigger.trigger(tokens, {}).catch(this.error);
     }
   }
 

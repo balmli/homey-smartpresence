@@ -1,4 +1,7 @@
 {
+  "0.8.1": {
+    "en": "Fixed memory issue. "
+  },
   "0.8.0": {
     "en": "Added presence to the Timeline. Fixed rename bug. Migrated to SDK3. "
   },

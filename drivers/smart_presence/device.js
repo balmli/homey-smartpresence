@@ -1,14 +1,13 @@
 'use strict';
 
 const Homey = require('homey');
-const Network = require('../../lib/network');
+const net = require('net');
 
 module.exports = class SmartPresenceDevice extends Homey.Device {
 
   async onInit() {
     this._settings = this.getSettings();
     await this._migrate();
-    this._client = new Network({ homey: this.homey, log: this.log });
     this._present = this.getCapabilityValue('presence');
     this._lastSeen = this.getStoreValue('lastSeen') || 0;
     this.scan();
@@ -41,6 +40,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
 
   onDeleted() {
     this._deleted = true;
+    this.destroyClient();
     this.clearScanTimer();
     this.log('device deleted');
   }
@@ -144,54 +144,97 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
     const stressTest = this.shouldStressCheck();
     const interval = stressTest ? this.getStressModeInterval() : this.getNormalModeInterval();
     const timeout = stressTest ? this.getStressModeTimeout() : this.getNormalModeTimeout();
-    const start = Date.now();
     try {
       //this.log(`${host}:${port}: scanning, timeout: ${timeout}, interval: ${interval}`);
-      await this._client.scan(host, port, timeout);
-      await this.updateLastSeen();
-      //this.log(`${host}:${port}: timeout: ${timeout}, interval: ${interval} -> online (${Date.now() - start} ms)`);
-      await this.setPresent(true);
-    } catch (err) {
-      //this.log(`${host}:${port}: timeout: ${timeout}, interval: ${interval} -> offline  (${Date.now() - start} ms):`, err.message);
-      await this.setPresent(false);
+      this.scanDevice(host, port, timeout);
     } finally {
       this.scheduleScans(interval);
     }
   }
 
+  destroyClient() {
+    if (this.client) {
+      this.client.destroy();
+      this.client = undefined;
+    }
+    if (this.cancelCheck) {
+      this.homey.clearTimeout(this.cancelCheck);
+      this.cancelCheck = undefined;
+    }
+  }
+
+  scanDevice(host, port, timeout) {
+    this.destroyClient();
+    this.client = new net.Socket();
+
+    this.cancelCheck = this.homey.setTimeout(() => {
+      this.destroyClient();
+      //this.log(`${host}:${port}: Timeout -> Offline`);
+      this.setPresent(false);
+    }, timeout);
+
+    this.client.on('error', (err) => {
+      this.destroyClient();
+      if (err && err.errno === "ECONNREFUSED") {
+        //this.log(`${host}:${port}: Connection refused -> Online`);
+        this.setPresent(true);
+      } else {
+        //this.log(`${host}:${port}: Error -> Offline`);
+        this.setPresent(false);
+      }
+    });
+
+    try {
+      this.client.connect(port, host, () => {
+        this.destroyClient();
+        //this.log(`${host}:${port}: Connected -> Online`);
+        this.setPresent(true);
+      });
+    } catch (err) {
+      this.destroyClient();
+      //this.log(`${host}:${port}: Connection error -> Offline`);
+      this.setPresent(false);
+    }
+  }
+
   async setPresent(present) {
     const currentPresent = this.getPresenceStatus();
+    const tokens = this.getFlowCardTokens();
+
+    if (present) {
+      this.updateLastSeen();
+    }
 
     if (present && !currentPresent) {
       this.log(`${this.getHost()} - ${this.getName()}: is online`);
       await this.setPresenceStatus(present);
-      this.homey.app.deviceArrived(this);
-      this.homey.app.userEnteredTrigger.trigger(this, this.getFlowCardTokens(), {});
-      this.homey.app.someoneEnteredTrigger.trigger(this.getFlowCardTokens(), {});
+      await this.homey.app.deviceArrived(this);
+      await this.homey.app.userEnteredTrigger.trigger(this, tokens, {}).catch(this.error);
+      await this.homey.app.someoneEnteredTrigger.trigger(tokens, {}).catch(this.error);
       if (this.isHouseHoldMember()) {
-        this.homey.app.householdMemberArrivedTrigger.trigger(this.getFlowCardTokens(), {});
+        await this.homey.app.householdMemberArrivedTrigger.trigger(tokens, {}).catch(this.error);
       }
       if (this.isKid()) {
-        this.homey.app.kidArrivedTrigger.trigger(this.getFlowCardTokens(), {});
+        await this.homey.app.kidArrivedTrigger.trigger(tokens, {}).catch(this.error);
       }
       if (this.isGuest()) {
-        this.homey.app.guestArrivedTrigger.trigger(this.getFlowCardTokens(), {});
+        await this.homey.app.guestArrivedTrigger.trigger(tokens, {}).catch(this.error);
       }
     } else if (!present && (currentPresent || currentPresent === null)) {
       if (!this.shouldDelayAwayStateSwitch()) {
         this.log(`${this.getHost()} - ${this.getName()}: is marked as offline`);
         await this.setPresenceStatus(present);
-        this.homey.app.deviceLeft(this);
-        this.homey.app.userLeftTrigger.trigger(this, this.getFlowCardTokens(), {});
-        this.homey.app.someoneLeftTrigger.trigger(this.getFlowCardTokens(), {});
+        await this.homey.app.deviceLeft(this);
+        await this.homey.app.userLeftTrigger.trigger(this, tokens, {}).catch(this.error);
+        await this.homey.app.someoneLeftTrigger.trigger(tokens, {}).catch(this.error);
         if (this.isHouseHoldMember()) {
-          this.homey.app.householdMemberLeftTrigger.trigger(this.getFlowCardTokens(), {});
+          await this.homey.app.householdMemberLeftTrigger.trigger(tokens, {}).catch(this.error);
         }
         if (this.isKid()) {
-          this.homey.app.kidLeftTrigger.trigger(this.getFlowCardTokens(), {});
+          await this.homey.app.kidLeftTrigger.trigger(tokens, {}).catch(this.error);
         }
         if (this.isGuest()) {
-          this.homey.app.guestLeftTrigger.trigger(this.getFlowCardTokens(), {});
+          await this.homey.app.guestLeftTrigger.trigger(tokens, {}).catch(this.error);
         }
       }
     }
