@@ -3,3 +3,7 @@ env.json
 .idea
 node_modules/*
 test/
+
+
+# Added by Homey CLI
+/.homeybuild/

@@ -175,7 +175,7 @@ module.exports = class SmartPresenceDevice extends Homey.Device {
 
     this.client.on('error', (err) => {
       this.destroyClient();
-      if (err && err.errno === "ECONNREFUSED") {
+      if (err && (err.errno === "ECONNREFUSED" || err.code === "ECONNREFUSED")) {
         //this.log(`${host}:${port}: Connection refused -> Online`);
         this.setPresent(true);
       } else {
