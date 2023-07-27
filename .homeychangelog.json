@@ -1,4 +1,7 @@
 {
+  "0.8.3": {
+    "en": "Use community link for support issues"
+  },
   "0.8.2": {
     "en": "Fixed issue with v. 7.4.0 / Node.js v16"
   },

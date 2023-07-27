@@ -48,6 +48,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.8.3
+
+- Use community link for support issues
+
 #### 0.8.2
 
 - Fixed issue with v. 7.4.0 / Node.js v16
