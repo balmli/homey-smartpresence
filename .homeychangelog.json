@@ -1,4 +1,7 @@
 {
+  "0.8.4": {
+    "en": "Fixed token for the 'A specific user arrived / left' triggers"
+  },
   "0.8.3": {
     "en": "Use community link for support issues"
   },

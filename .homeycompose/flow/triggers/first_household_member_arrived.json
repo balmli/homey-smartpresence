@@ -11,6 +11,7 @@
   "tokens": [
     {
       "name": "who",
+      "type": "string",
       "title": {
         "en": "Who",
         "nl": "Wie",

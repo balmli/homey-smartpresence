@@ -48,6 +48,10 @@ Please report issues at the [issues section on Github](https://github.com/balmli
 
 ## Release Notes:
 
+#### 0.8.4
+
+- Fixed token for the 'A specific user arrived / left' triggers
+
 #### 0.8.3
 
 - Use community link for support issues
